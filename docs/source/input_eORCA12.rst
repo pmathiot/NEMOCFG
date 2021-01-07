@@ -2,9 +2,6 @@
 eORCA12 input files
 *******************
 
-.. contents::
-   :local:
-
 Coordinates
 ===========
 

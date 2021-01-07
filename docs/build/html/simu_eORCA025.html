@@ -321,187 +321,18 @@
             
   <div class="section" id="eorca025-simulations">
 <h1>eORCA025 simulations<a class="headerlink" href="#eorca025-simulations" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#eorca025-l121-opm006" id="id9">eORCA025.L121-OPM006</a></p>
-<ul>
-<li><p><a class="reference internal" href="#summary" id="id10">Summary</a></p></li>
-<li><p><a class="reference internal" href="#namelist" id="id11">Namelist</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namelist-oce" id="id12">namelist_oce</a></p>
-<ul>
-<li><p><a class="reference internal" href="#nam-vvl" id="id13">nam_vvl</a></p></li>
-<li><p><a class="reference internal" href="#namtsd" id="id14">namtsd</a></p></li>
-<li><p><a class="reference internal" href="#namsbc" id="id15">namsbc</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namsbc-blk" id="id16">namsbc_blk</a></p></li>
-<li><p><a class="reference internal" href="#namsbc-ssr" id="id17">namsbc_ssr</a></p></li>
-<li><p><a class="reference internal" href="#namsbc-rnf" id="id18">namsbc_rnf</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#namberg" id="id19">namberg</a></p></li>
-<li><p><a class="reference internal" href="#namisf" id="id20">namisf</a></p></li>
-<li><p><a class="reference internal" href="#namlbc" id="id21">namlbc</a></p></li>
-<li><p><a class="reference internal" href="#namdrg" id="id22">namdrg</a></p></li>
-<li><p><a class="reference internal" href="#nambbc" id="id23">nambbc</a></p></li>
-<li><p><a class="reference internal" href="#nambbl" id="id24">nambbl</a></p></li>
-<li><p><a class="reference internal" href="#nameos" id="id25">nameos</a></p></li>
-<li><p><a class="reference internal" href="#namtra" id="id26">namtra</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namtra-dmp" id="id27">namtra_dmp</a></p></li>
-<li><p><a class="reference internal" href="#namtra-qsr" id="id28">namtra_qsr</a></p></li>
-<li><p><a class="reference internal" href="#namtra-adv" id="id29">namtra_adv</a></p></li>
-<li><p><a class="reference internal" href="#namtra-ldf" id="id30">namtra_ldf</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#namdyn" id="id31">namdyn</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namdyn-adv" id="id32">namdyn_adv</a></p></li>
-<li><p><a class="reference internal" href="#namdyn-vor" id="id33">namdyn_vor</a></p></li>
-<li><p><a class="reference internal" href="#namdyn-ldf" id="id34">namdyn_ldf</a></p></li>
-<li><p><a class="reference internal" href="#namdyn-spg" id="id35">namdyn_spg</a></p></li>
-<li><p><a class="reference internal" href="#namdyn-hpg" id="id36">namdyn_hpg</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#namzdf" id="id37">namzdf</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namzdf-tke" id="id38">namzdf_tke</a></p></li>
-<li><p><a class="reference internal" href="#namzdf-iwm" id="id39">namzdf_iwm</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#namelist-ice" id="id40">namelist_ice</a></p>
-<ul>
-<li><p><a class="reference internal" href="#nampar" id="id41">nampar</a></p></li>
-<li><p><a class="reference internal" href="#namitd" id="id42">namitd</a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id43">namdyn</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namdyn-rdgrft" id="id44">namdyn_rdgrft</a></p></li>
-<li><p><a class="reference internal" href="#namdyn-rhg" id="id45">namdyn_rhg</a></p></li>
-<li><p><a class="reference internal" href="#id2" id="id46">namdyn_adv</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#id3" id="id47">namsbc</a></p></li>
-<li><p><a class="reference internal" href="#namthd" id="id48">namthd</a></p>
-<ul>
-<li><p><a class="reference internal" href="#namthd-zdf" id="id49">namthd_zdf</a></p></li>
-<li><p><a class="reference internal" href="#namthd-da" id="id50">namthd_da</a></p></li>
-<li><p><a class="reference internal" href="#namthd-do" id="id51">namthd_do</a></p></li>
-<li><p><a class="reference internal" href="#namthd-sal" id="id52">namthd_sal</a></p></li>
-<li><p><a class="reference internal" href="#namthd-pnd" id="id53">namthd_pnd</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#namini" id="id54">namini</a></p></li>
-<li><p><a class="reference internal" href="#namalb" id="id55">namalb</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#input-files" id="id56">Input files</a></p>
-<ul>
-<li><p><a class="reference internal" href="#domain-cfg" id="id57">domain_cfg</a></p></li>
-<li><p><a class="reference internal" href="#atmospheric-forcing" id="id58">atmospheric forcing</a></p></li>
-<li><p><a class="reference internal" href="#runoff" id="id59">runoff</a></p></li>
-<li><p><a class="reference internal" href="#iceberg-calving" id="id60">iceberg calving</a></p></li>
-<li><p><a class="reference internal" href="#top-tidal-velocity" id="id61">top tidal velocity</a></p></li>
-<li><p><a class="reference internal" href="#geothermal-heat-flux" id="id62">geothermal heat flux</a></p></li>
-<li><p><a class="reference internal" href="#internal-wave-mixing" id="id63">internal wave mixing</a></p></li>
-<li><p><a class="reference internal" href="#chlorophyl" id="id64">chlorophyl</a></p></li>
-<li><p><a class="reference internal" href="#intial-condition" id="id65">intial condition</a></p></li>
-<li><p><a class="reference internal" href="#sea-surface-salinity" id="id66">sea surface salinity</a></p></li>
-<li><p><a class="reference internal" href="#distance-to-coast" id="id67">distance to coast</a></p></li>
-<li><p><a class="reference internal" href="#slip-condition" id="id68">slip condition</a></p></li>
-<li><p><a class="reference internal" href="#enhance-bottom-friction" id="id69">enhance bottom friction</a></p></li>
-<li><p><a class="reference internal" href="#indonesian-through-flow" id="id70">Indonesian Through Flow</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#code" id="id71">Code</a></p>
-<ul>
-<li><p><a class="reference internal" href="#xios" id="id72">XIOS</a></p></li>
-<li><p><a class="reference internal" href="#compilation" id="id73">Compilation</a></p></li>
-<li><p><a class="reference internal" href="#base" id="id74">base</a></p></li>
-<li><p><a class="reference internal" href="#bugs-fixes-included" id="id75">bugs fixes included</a></p></li>
-<li><p><a class="reference internal" href="#id4" id="id76">drakkar layer</a></p></li>
-<li><p><a class="reference internal" href="#iceberg-changes" id="id77">iceberg changes</a></p></li>
-<li><p><a class="reference internal" href="#ice-shelf-changes" id="id78">ice shelf changes</a></p></li>
-<li><p><a class="reference internal" href="#sea-ice-changes" id="id79">sea ice changes</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#outputs" id="id80">Outputs</a></p>
-<ul>
-<li><p><a class="reference internal" href="#generalities" id="id81">Generalities</a></p></li>
-<li><p><a class="reference internal" href="#ocean" id="id82">Ocean</a></p></li>
-<li><p><a class="reference internal" href="#ice" id="id83">Ice</a></p></li>
-<li><p><a class="reference internal" href="#extra-output-at-monthly-and-yearly-output-frequency" id="id84">Extra output at monthly and yearly output_frequency</a></p></li>
-<li><p><a class="reference internal" href="#output-testing" id="id85">Output testing</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#performance" id="id86">Performance</a></p>
-<ul>
-<li><p><a class="reference internal" href="#nemo-performance" id="id87">NEMO Performance</a></p></li>
-<li><p><a class="reference internal" href="#selected-decomposition" id="id88">Selected decomposition</a></p></li>
-<li><p><a class="reference internal" href="#xios-performance" id="id89">XIOS performance</a></p></li>
-<li><p><a class="reference internal" href="#cost" id="id90">Cost</a></p>
-<ul>
-<li><p><a class="reference internal" href="#computer-time" id="id91">Computer time</a></p></li>
-<li><p><a class="reference internal" href="#data-output" id="id92">Data output</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#log" id="id93">Log</a></p></li>
-<li><p><a class="reference internal" href="#monitoring" id="id94">Monitoring</a></p>
-<ul>
-<li><p><a class="reference internal" href="#global-indicators" id="id95">Global indicators</a></p></li>
-<li><p><a class="reference internal" href="#regional-indicators" id="id96">Regional indicators</a></p></li>
-<li><p><a class="reference internal" href="#local-indicators" id="id97">Local indicators</a></p></li>
-<li><p><a class="reference internal" href="#amundsen-sea" id="id98">Amundsen sea</a></p></li>
-<li><p><a class="reference internal" href="#ice-shelves" id="id99">Ice shelves</a></p>
-<ul>
-<li><p><a class="reference internal" href="#amery" id="id100">Amery</a></p></li>
-<li><p><a class="reference internal" href="#ross" id="id101">Ross</a></p></li>
-<li><p><a class="reference internal" href="#getz" id="id102">Getz</a></p></li>
-<li><p><a class="reference internal" href="#pine-island" id="id103">Pine island</a></p></li>
-<li><p><a class="reference internal" href="#george-vi" id="id104">George VI</a></p></li>
-<li><p><a class="reference internal" href="#filschner-ronne" id="id105">Filschner Ronne</a></p></li>
-<li><p><a class="reference internal" href="#riiser" id="id106">Riiser</a></p></li>
-<li><p><a class="reference internal" href="#fimbul" id="id107">Fimbul</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#evaluation" id="id108">Evaluation</a></p></li>
-<li><p><a class="reference internal" href="#possible-improvement" id="id109">Possible improvement</a></p>
-<ul>
-<li><p><a class="reference internal" href="#icebergs" id="id110">Icebergs</a></p>
-<ul>
-<li><p><a class="reference internal" href="#grounding" id="id111">grounding</a></p></li>
-<li><p><a class="reference internal" href="#iceberg-distribution" id="id112">Iceberg distribution</a></p></li>
-<li><p><a class="reference internal" href="#fragmentation" id="id113">fragmentation</a></p></li>
-<li><p><a class="reference internal" href="#ice-interaction" id="id114">Ice interaction</a></p></li>
-<li><p><a class="reference internal" href="#melt-formulation" id="id115">Melt formulation</a></p></li>
-<li><p><a class="reference internal" href="#how-to-link-all-together" id="id116">How to link all together</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 <div class="section" id="eorca025-l121-opm006">
-<h2><a class="toc-backref" href="#id9">eORCA025.L121-OPM006</a><a class="headerlink" href="#eorca025-l121-opm006" title="Permalink to this headline">¶</a></h2>
+<h2>eORCA025.L121-OPM006<a class="headerlink" href="#eorca025-l121-opm006" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="summary">
-<h3><a class="toc-backref" href="#id10">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="namelist">
-<h3><a class="toc-backref" href="#id11">Namelist</a><a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
+<h3>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h3>
 <p>Only the activated blocks are presented here:</p>
 <div class="section" id="namelist-oce">
-<h4><a class="toc-backref" href="#id12">namelist_oce</a><a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h4>
+<h4>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="nam-vvl">
-<h5><a class="toc-backref" href="#id13">nam_vvl</a><a class="headerlink" href="#nam-vvl" title="Permalink to this headline">¶</a></h5>
+<h5>nam_vvl<a class="headerlink" href="#nam-vvl" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>non linear ssh is used (ie model levels not fixed in time)</p></li>
 <li><p>z* is used</p></li>
@@ -537,7 +368,7 @@
 </div>
 </div>
 <div class="section" id="namtsd">
-<h5><a class="toc-backref" href="#id14">namtsd</a><a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h5>
+<h5>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>Start from rest</p></li>
 <li><p>TS from WOA2018 (<a class="reference internal" href="input_eORCA025.html#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4"><span class="std std-ref">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</span></a>)</p></li>
@@ -566,7 +397,7 @@
 </div>
 </div>
 <div class="section" id="namsbc">
-<h5><a class="toc-backref" href="#id15">namsbc</a><a class="headerlink" href="#namsbc" title="Permalink to this headline">¶</a></h5>
+<h5>namsbc<a class="headerlink" href="#namsbc" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>atmospheric flux are computed using a blk formulation</p></li>
 <li><p>sea-ice is used</p></li>
@@ -628,7 +459,7 @@ up in shallow water due to this in case of strong unbalanced in empmr - icb - is
 </pre></div>
 </div>
 <div class="section" id="namsbc-blk">
-<h6><a class="toc-backref" href="#id16">namsbc_blk</a><a class="headerlink" href="#namsbc-blk" title="Permalink to this headline">¶</a></h6>
+<h6>namsbc_blk<a class="headerlink" href="#namsbc-blk" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>NCAR formulation is used (as recommended in Tsujino et al. 2020)</p></li>
 <li><p>JRA55 files are drowned and described <a class="reference internal" href="input_DATA.html#jra55-v1-4"><span class="std std-ref">here</span></a></p></li>
@@ -673,7 +504,7 @@ up in shallow water due to this in case of strong unbalanced in empmr - icb - is
 </div>
 </div>
 <div class="section" id="namsbc-ssr">
-<h6><a class="toc-backref" href="#id17">namsbc_ssr</a><a class="headerlink" href="#namsbc-ssr" title="Permalink to this headline">¶</a></h6>
+<h6>namsbc_ssr<a class="headerlink" href="#namsbc-ssr" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>sea surface salinity restoring is caped</p></li>
 <li><p>sea surface restoring is applied everywhere except in the first 150 km of the continent or large islands in order to avoid killing coastal circulation,
@@ -719,7 +550,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namsbc-rnf">
-<h6><a class="toc-backref" href="#id18">namsbc_rnf</a><a class="headerlink" href="#namsbc-rnf" title="Permalink to this headline">¶</a></h6>
+<h6>namsbc_rnf<a class="headerlink" href="#namsbc-rnf" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>runoff is mixed in the top 10 meters by adding some additional mixing (2.e-3 m2/s)</p></li>
 </ul>
@@ -755,7 +586,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namberg">
-<h5><a class="toc-backref" href="#id19">namberg</a><a class="headerlink" href="#namberg" title="Permalink to this headline">¶</a></h5>
+<h5>namberg<a class="headerlink" href="#namberg" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>iceberg lagrangian model activated.</p></li>
 <li><p>trajectory updated every day</p></li>
@@ -809,7 +640,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namisf">
-<h5><a class="toc-backref" href="#id20">namisf</a><a class="headerlink" href="#namisf" title="Permalink to this headline">¶</a></h5>
+<h5>namisf<a class="headerlink" href="#namisf" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>all cavities are opened. We do not use yet the capability to split open cavities and parametrised cavities</p></li>
 <li><p>3 equation formulation as in ISOMIP+ is used</p></li>
@@ -889,7 +720,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namlbc">
-<h5><a class="toc-backref" href="#id21">namlbc</a><a class="headerlink" href="#namlbc" title="Permalink to this headline">¶</a></h5>
+<h5>namlbc<a class="headerlink" href="#namlbc" title="Permalink to this headline">¶</a></h5>
 <ul>
 <li><p>no slip condition is used.</p></li>
 <li><p>Local change has been made to:</p>
@@ -924,7 +755,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namdrg">
-<h5><a class="toc-backref" href="#id22">namdrg</a><a class="headerlink" href="#namdrg" title="Permalink to this headline">¶</a></h5>
+<h5>namdrg<a class="headerlink" href="#namdrg" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>quadratic bottom and top friction formulation is used.</p></li>
 <li><p>implicit top/bottom/ice friction used for stability.</p></li>
@@ -991,7 +822,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="nambbc">
-<h5><a class="toc-backref" href="#id23">nambbc</a><a class="headerlink" href="#nambbc" title="Permalink to this headline">¶</a></h5>
+<h5>nambbc<a class="headerlink" href="#nambbc" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>geothermal heat flux is prescribed by an annual climatology</p></li>
 </ul>
@@ -1013,7 +844,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="nambbl">
-<h5><a class="toc-backref" href="#id24">nambbl</a><a class="headerlink" href="#nambbl" title="Permalink to this headline">¶</a></h5>
+<h5>nambbl<a class="headerlink" href="#nambbl" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>bottom boundary layer parametrisation is used as in GO6 simulation (does this param really efficient, I don’t know).</p></li>
 <li><p>bbl activated on k level (not on depth)</p></li>
@@ -1036,7 +867,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="nameos">
-<h5><a class="toc-backref" href="#id25">nameos</a><a class="headerlink" href="#nameos" title="Permalink to this headline">¶</a></h5>
+<h5>nameos<a class="headerlink" href="#nameos" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>we use eos10 instead of eos80. =&gt; ALL OUPUT WILL USE EOS10 UNITS</p></li>
 </ul>
@@ -1061,9 +892,9 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namtra">
-<h5><a class="toc-backref" href="#id26">namtra</a><a class="headerlink" href="#namtra" title="Permalink to this headline">¶</a></h5>
+<h5>namtra<a class="headerlink" href="#namtra" title="Permalink to this headline">¶</a></h5>
 <div class="section" id="namtra-dmp">
-<h6><a class="toc-backref" href="#id27">namtra_dmp</a><a class="headerlink" href="#namtra-dmp" title="Permalink to this headline">¶</a></h6>
+<h6>namtra_dmp<a class="headerlink" href="#namtra-dmp" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>3d tracer damping is done in Red sea and persic gulf (180 days)</p></li>
 <li><p>strong restoring downstream of Gib, Bab el mandel and Ormuz strait (6d)</p></li>
@@ -1100,7 +931,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namtra-qsr">
-<h6><a class="toc-backref" href="#id28">namtra_qsr</a><a class="headerlink" href="#namtra-qsr" title="Permalink to this headline">¶</a></h6>
+<h6>namtra_qsr<a class="headerlink" href="#namtra-qsr" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>RGB light penetration is activated</p></li>
 <li><p>2d climatology of chlorophyl is provided (<a class="reference internal" href="input_eORCA025.html#chlorophyl-v0-0"><span class="std std-ref">chlorophyl_v0.0.nc</span></a>)</p></li>
@@ -1130,7 +961,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namtra-adv">
-<h6><a class="toc-backref" href="#id29">namtra_adv</a><a class="headerlink" href="#namtra-adv" title="Permalink to this headline">¶</a></h6>
+<h6>namtra_adv<a class="headerlink" href="#namtra-adv" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>tracer advection scheme is FCT (old TVD scheme)</p></li>
 <li><p>2th order is used on horizontal and vertical (4th order not compatible with iceshelf need to be investigated)</p></li>
@@ -1155,7 +986,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namtra-ldf">
-<h6><a class="toc-backref" href="#id30">namtra_ldf</a><a class="headerlink" href="#namtra-ldf" title="Permalink to this headline">¶</a></h6>
+<h6>namtra_ldf<a class="headerlink" href="#namtra-ldf" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>isopycnal laplacian tracers</p></li>
 <li><p>2d variation (scale with the grid size)</p></li>
@@ -1201,9 +1032,9 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namdyn">
-<h5><a class="toc-backref" href="#id31">namdyn</a><a class="headerlink" href="#namdyn" title="Permalink to this headline">¶</a></h5>
+<h5>namdyn<a class="headerlink" href="#namdyn" title="Permalink to this headline">¶</a></h5>
 <div class="section" id="namdyn-adv">
-<h6><a class="toc-backref" href="#id32">namdyn_adv</a><a class="headerlink" href="#namdyn-adv" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_adv<a class="headerlink" href="#namdyn-adv" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>vector form advection scheme is used with Hollingsworth Correction</p></li>
 </ul>
@@ -1220,7 +1051,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namdyn-vor">
-<h6><a class="toc-backref" href="#id33">namdyn_vor</a><a class="headerlink" href="#namdyn-vor" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_vor<a class="headerlink" href="#namdyn-vor" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>vorticity scheme is een with the old formulation (e3f computation) (as used by GO8 prototype)</p></li>
 </ul>
@@ -1242,7 +1073,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namdyn-ldf">
-<h6><a class="toc-backref" href="#id34">namdyn_ldf</a><a class="headerlink" href="#namdyn-ldf" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_ldf<a class="headerlink" href="#namdyn-ldf" title="Permalink to this headline">¶</a></h6>
 <ul>
 <li><p>bilaplacian formulation</p></li>
 <li><p>2d variation (grid size scaling)</p></li>
@@ -1288,7 +1119,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </ul>
 </div>
 <div class="section" id="namdyn-spg">
-<h6><a class="toc-backref" href="#id35">namdyn_spg</a><a class="headerlink" href="#namdyn-spg" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_spg<a class="headerlink" href="#namdyn-spg" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>split explicity formulation</p></li>
 <li><p>same set up as in GO8 prototype</p></li>
@@ -1312,7 +1143,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namdyn-hpg">
-<h6><a class="toc-backref" href="#id36">namdyn_hpg</a><a class="headerlink" href="#namdyn-hpg" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_hpg<a class="headerlink" href="#namdyn-hpg" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>use of the isf formulation (as sco but with isf load included)</p></li>
 </ul>
@@ -1331,7 +1162,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namzdf">
-<h5><a class="toc-backref" href="#id37">namzdf</a><a class="headerlink" href="#namzdf" title="Permalink to this headline">¶</a></h5>
+<h5>namzdf<a class="headerlink" href="#namzdf" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>convection represented by an increase of kz (enhance vertical diffusion)</p></li>
 <li><p>double diffusion activated (as in GO8 prototype)</p></li>
@@ -1377,7 +1208,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </pre></div>
 </div>
 <div class="section" id="namzdf-tke">
-<h6><a class="toc-backref" href="#id38">namzdf_tke</a><a class="headerlink" href="#namzdf-tke" title="Permalink to this headline">¶</a></h6>
+<h6>namzdf_tke<a class="headerlink" href="#namzdf-tke" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>tke emin adjusted to take into account iwm activation (as advised by Casimir De Lavergne)</p></li>
 <li><p>as GO8 prototype except for the type of exponential decrease of tke below the mixed layer (as DRAKKAR)</p></li>
@@ -1421,7 +1252,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namzdf-iwm">
-<h6><a class="toc-backref" href="#id39">namzdf_iwm</a><a class="headerlink" href="#namzdf-iwm" title="Permalink to this headline">¶</a></h6>
+<h6>namzdf_iwm<a class="headerlink" href="#namzdf-iwm" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>inernal wave mixing setup as advised by Casimir (see description of the param in <a class="reference internal" href="input_DATA.html#de-lavergne-et-al-2016"><span class="std std-ref">De_Lavergne_2016</span></a>)</p></li>
 </ul>
@@ -1452,9 +1283,9 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namelist-ice">
-<h4><a class="toc-backref" href="#id40">namelist_ice</a><a class="headerlink" href="#namelist-ice" title="Permalink to this headline">¶</a></h4>
+<h4>namelist_ice<a class="headerlink" href="#namelist-ice" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="nampar">
-<h5><a class="toc-backref" href="#id41">nampar</a><a class="headerlink" href="#nampar" title="Permalink to this headline">¶</a></h5>
+<h5>nampar<a class="headerlink" href="#nampar" title="Permalink to this headline">¶</a></h5>
 <p>SI3 is run with:
 * 5 ice categories
 * 2 layer of ice
@@ -1482,7 +1313,7 @@ runoff plumes and others not represented in the climatology.</p></li>
 </div>
 </div>
 <div class="section" id="namitd">
-<h5><a class="toc-backref" href="#id42">namitd</a><a class="headerlink" href="#namitd" title="Permalink to this headline">¶</a></h5>
+<h5>namitd<a class="headerlink" href="#namitd" title="Permalink to this headline">¶</a></h5>
 <p>The definition of the jpl categories is automatically defined.
 The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
@@ -1499,7 +1330,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="id1">
-<h5><a class="toc-backref" href="#id43">namdyn</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<h5>namdyn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
 <p>All the ice dynamics component are activated:
 * rheology
 * advection
@@ -1526,7 +1357,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </pre></div>
 </div>
 <div class="section" id="namdyn-rdgrft">
-<h6><a class="toc-backref" href="#id44">namdyn_rdgrft</a><a class="headerlink" href="#namdyn-rdgrft" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_rdgrft<a class="headerlink" href="#namdyn-rdgrft" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>ice strength use Hibler 79 and the defult values</p></li>
 <li><p>ridging and rafting activated with default values</p></li>
@@ -1560,7 +1391,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namdyn-rhg">
-<h6><a class="toc-backref" href="#id45">namdyn_rhg</a><a class="headerlink" href="#namdyn-rhg" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_rhg<a class="headerlink" href="#namdyn-rhg" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><dl class="simple">
 <dt>EVP rheology activated with:</dt><dd><ul>
@@ -1591,7 +1422,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h6><a class="toc-backref" href="#id46">namdyn_adv</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h6>
+<h6>namdyn_adv<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>Prather advection scheme used</p></li>
 </ul>
@@ -1607,7 +1438,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="id3">
-<h5><a class="toc-backref" href="#id47">namsbc</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<h5>namsbc<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>ocean-ice drag coeficient set to 12.0e-3 (instead of 5, C. Rousset advise)</p></li>
 <li><p>solar transmition use Lebrun et al. 2019 scheme.</p></li>
@@ -1637,7 +1468,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namthd">
-<h5><a class="toc-backref" href="#id48">namthd</a><a class="headerlink" href="#namthd" title="Permalink to this headline">¶</a></h5>
+<h5>namthd<a class="headerlink" href="#namthd" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>all the thermodynamics is activated
 - thickness change from growing/melting.
@@ -1659,7 +1490,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </pre></div>
 </div>
 <div class="section" id="namthd-zdf">
-<h6><a class="toc-backref" href="#id49">namthd_zdf</a><a class="headerlink" href="#namthd-zdf" title="Permalink to this headline">¶</a></h6>
+<h6>namthd_zdf<a class="headerlink" href="#namthd-zdf" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>heat diffusion: Bitz and Lipscomb 1999</p></li>
 <li><p>si thermal conductivity: Pringle et al., 2007</p></li>
@@ -1683,7 +1514,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namthd-da">
-<h6><a class="toc-backref" href="#id50">namthd_da</a><a class="headerlink" href="#namthd-da" title="Permalink to this headline">¶</a></h6>
+<h6>namthd_da<a class="headerlink" href="#namthd-da" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>default coeficient</p></li>
 </ul>
@@ -1702,7 +1533,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namthd-do">
-<h6><a class="toc-backref" href="#id51">namthd_do</a><a class="headerlink" href="#namthd-do" title="Permalink to this headline">¶</a></h6>
+<h6>namthd_do<a class="headerlink" href="#namthd-do" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>frazil parametrisation activated (C. Rousset advise)</p></li>
 <li><p>0.1 m minimal thickness for new sea ice created in open water</p></li>
@@ -1720,7 +1551,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namthd-sal">
-<h6><a class="toc-backref" href="#id52">namthd_sal</a><a class="headerlink" href="#namthd-sal" title="Permalink to this headline">¶</a></h6>
+<h6>namthd_sal<a class="headerlink" href="#namthd-sal" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>ice salinity is depth and time dependent</p></li>
 <li><p>use of the default coefficient for min/max, restoring time scale and ice salinity</p></li>
@@ -1744,7 +1575,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namthd-pnd">
-<h6><a class="toc-backref" href="#id53">namthd_pnd</a><a class="headerlink" href="#namthd-pnd" title="Permalink to this headline">¶</a></h6>
+<h6>namthd_pnd<a class="headerlink" href="#namthd-pnd" title="Permalink to this headline">¶</a></h6>
 <ul class="simple">
 <li><p>melt pond activated with level ice melt pond scheme</p></li>
 </ul>
@@ -1766,7 +1597,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namini">
-<h5><a class="toc-backref" href="#id54">namini</a><a class="headerlink" href="#namini" title="Permalink to this headline">¶</a></h5>
+<h5>namini<a class="headerlink" href="#namini" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>initialisation activated</p></li>
 <li><p>initialisation from file <a class="reference internal" href="input_eORCA025.html#eorca025-seaice-c3-0-v19802004-0"><span class="std std-ref">eORCA025_seaice_c3.0_v19802004.0.nc</span></a></p></li>
@@ -1817,7 +1648,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="namalb">
-<h5><a class="toc-backref" href="#id55">namalb</a><a class="headerlink" href="#namalb" title="Permalink to this headline">¶</a></h5>
+<h5>namalb<a class="headerlink" href="#namalb" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>default values</p></li>
 </ul>
@@ -1837,9 +1668,9 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div>
 </div>
 <div class="section" id="input-files">
-<h3><a class="toc-backref" href="#id56">Input files</a><a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h3>
+<h3>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="domain-cfg">
-<h4><a class="toc-backref" href="#id57">domain_cfg</a><a class="headerlink" href="#domain-cfg" title="Permalink to this headline">¶</a></h4>
+<h4>domain_cfg<a class="headerlink" href="#domain-cfg" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
@@ -1847,7 +1678,7 @@ The minimum/maximum sea ice thickness being 0.1/99 meters of ice.</p>
 </div></blockquote>
 </div>
 <div class="section" id="atmospheric-forcing">
-<h4><a class="toc-backref" href="#id58">atmospheric forcing</a><a class="headerlink" href="#atmospheric-forcing" title="Permalink to this headline">¶</a></h4>
+<h4>atmospheric forcing<a class="headerlink" href="#atmospheric-forcing" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_DATA.html#jra55-v1-4"><span class="std std-ref">drowned_*_JRA55_y????.nc</span></a></p></li>
@@ -1859,7 +1690,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="runoff">
-<h4><a class="toc-backref" href="#id59">runoff</a><a class="headerlink" href="#runoff" title="Permalink to this headline">¶</a></h4>
+<h4>runoff<a class="headerlink" href="#runoff" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-runoff-b0-2-v0-0"><span class="std std-ref">eORCA025_runoff_b0.2_v0.0.nc</span></a></p></li>
@@ -1869,7 +1700,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="iceberg-calving">
-<h4><a class="toc-backref" href="#id60">iceberg calving</a><a class="headerlink" href="#iceberg-calving" title="Permalink to this headline">¶</a></h4>
+<h4>iceberg calving<a class="headerlink" href="#iceberg-calving" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-calving-b0-2-v2-3"><span class="std std-ref">eORCA025_calving_b0.2_v2.nc</span></a></p></li>
@@ -1879,7 +1710,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="top-tidal-velocity">
-<h4><a class="toc-backref" href="#id61">top tidal velocity</a><a class="headerlink" href="#top-tidal-velocity" title="Permalink to this headline">¶</a></h4>
+<h4>top tidal velocity<a class="headerlink" href="#top-tidal-velocity" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-ttv-b0-2-v0-0"><span class="std std-ref">eORCA025_ttv_b0.2_v0.0.nc</span></a></p></li>
@@ -1889,7 +1720,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="geothermal-heat-flux">
-<h4><a class="toc-backref" href="#id62">geothermal heat flux</a><a class="headerlink" href="#geothermal-heat-flux" title="Permalink to this headline">¶</a></h4>
+<h4>geothermal heat flux<a class="headerlink" href="#geothermal-heat-flux" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA12.html#ghflux-v2-0"><span class="std std-ref">ghflux_v2.0.nc</span></a></p></li>
@@ -1900,7 +1731,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="internal-wave-mixing">
-<h4><a class="toc-backref" href="#id63">internal wave mixing</a><a class="headerlink" href="#internal-wave-mixing" title="Permalink to this headline">¶</a></h4>
+<h4>internal wave mixing<a class="headerlink" href="#internal-wave-mixing" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-iwm-b0-2-v0-0"><span class="std std-ref">eORCA025_iwm_b0.2_v0.0.nc</span></a></p></li>
@@ -1910,7 +1741,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="chlorophyl">
-<h4><a class="toc-backref" href="#id64">chlorophyl</a><a class="headerlink" href="#chlorophyl" title="Permalink to this headline">¶</a></h4>
+<h4>chlorophyl<a class="headerlink" href="#chlorophyl" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#chlorophyl-v0-0"><span class="std std-ref">chlorophyl_v0.0.nc</span></a></p></li>
@@ -1921,7 +1752,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="intial-condition">
-<h4><a class="toc-backref" href="#id65">intial condition</a><a class="headerlink" href="#intial-condition" title="Permalink to this headline">¶</a></h4>
+<h4>intial condition<a class="headerlink" href="#intial-condition" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4"><span class="std std-ref">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</span></a></p></li>
@@ -1931,7 +1762,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="sea-surface-salinity">
-<h4><a class="toc-backref" href="#id66">sea surface salinity</a><a class="headerlink" href="#sea-surface-salinity" title="Permalink to this headline">¶</a></h4>
+<h4>sea surface salinity<a class="headerlink" href="#sea-surface-salinity" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: sss_WOA2018r04_v19812010.1.nc</p></li>
@@ -1942,7 +1773,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="distance-to-coast">
-<h4><a class="toc-backref" href="#id67">distance to coast</a><a class="headerlink" href="#distance-to-coast" title="Permalink to this headline">¶</a></h4>
+<h4>distance to coast<a class="headerlink" href="#distance-to-coast" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-distcoast-b0-2-v0-0"><span class="std std-ref">eORCA025_distcoast_b0.2_v0.0.nc</span></a></p></li>
@@ -1951,7 +1782,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="slip-condition">
-<h4><a class="toc-backref" href="#id68">slip condition</a><a class="headerlink" href="#slip-condition" title="Permalink to this headline">¶</a></h4>
+<h4>slip condition<a class="headerlink" href="#slip-condition" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-shlat2d-v0-0"><span class="std std-ref">eORCA025_shlat2d_v0.0.nc</span></a></p></li>
@@ -1960,7 +1791,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="enhance-bottom-friction">
-<h4><a class="toc-backref" href="#id69">enhance bottom friction</a><a class="headerlink" href="#enhance-bottom-friction" title="Permalink to this headline">¶</a></h4>
+<h4>enhance bottom friction<a class="headerlink" href="#enhance-bottom-friction" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-bfr2d-v0-0"><span class="std std-ref">eORCA025_bfr2d_v0.0.nc</span></a></p></li>
@@ -1969,7 +1800,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="indonesian-through-flow">
-<h4><a class="toc-backref" href="#id70">Indonesian Through Flow</a><a class="headerlink" href="#indonesian-through-flow" title="Permalink to this headline">¶</a></h4>
+<h4>Indonesian Through Flow<a class="headerlink" href="#indonesian-through-flow" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>finename: <a class="reference internal" href="input_eORCA025.html#eorca025-mskitf-v1-0"><span class="std std-ref">eORCA025_mskitf_v1.0.nc</span></a></p></li>
@@ -1979,12 +1810,12 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 </div>
 </div>
 <div class="section" id="code">
-<h3><a class="toc-backref" href="#id71">Code</a><a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="xios">
-<h4><a class="toc-backref" href="#id72">XIOS</a><a class="headerlink" href="#xios" title="Permalink to this headline">¶</a></h4>
+<h4>XIOS<a class="headerlink" href="#xios" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="compilation">
-<h4><a class="toc-backref" href="#id73">Compilation</a><a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h4>
+<h4>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>XIOS:
 - xios-2.5_r1903</p></li>
@@ -2007,7 +1838,7 @@ and to recompile netcdf 4.6.3-intel-19.0.4-intelmpi-2019.4.243 for fortran</p></
 </ul>
 </div>
 <div class="section" id="base">
-<h4><a class="toc-backref" href="#id74">base</a><a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h4>
+<h4>base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>The latest stable version available has been choosen: NEMO4.0.4.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">svn co -r 13653  https://forge.ipsl.jussieu.fr/nemo/svn/NEMO/releases/r4.0/r4.0.4 NEMO4</span>
@@ -2016,7 +1847,7 @@ and to recompile netcdf 4.6.3-intel-19.0.4-intelmpi-2019.4.243 for fortran</p></
 </div></blockquote>
 </div>
 <div class="section" id="bugs-fixes-included">
-<h4><a class="toc-backref" href="#id75">bugs fixes included</a><a class="headerlink" href="#bugs-fixes-included" title="Permalink to this headline">¶</a></h4>
+<h4>bugs fixes included<a class="headerlink" href="#bugs-fixes-included" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>restartability issue and behavior of nn_fwb==1 : see #2551</p></li>
 </ul>
@@ -2040,7 +1871,7 @@ the MetO developed a branch to do this. We add the changes (diaprod, step and st
 </div>
 </div>
 <div class="section" id="iceberg-changes">
-<h4><a class="toc-backref" href="#id77">iceberg changes</a><a class="headerlink" href="#iceberg-changes" title="Permalink to this headline">¶</a></h4>
+<h4>iceberg changes<a class="headerlink" href="#iceberg-changes" title="Permalink to this headline">¶</a></h4>
 <p>On top of this Merino work has been included. A branch based on NEMO trunk has been developed for futur inclusion into the trunk.
 The corresponding NEMO tickets are <a class="reference external" href="https://forge.ipsl.jussieu.fr/nemo/ticket/2494">#2494</a>,
 <a class="reference external" href="https://forge.ipsl.jussieu.fr/nemo/ticket/2375">#2375</a> and <a class="reference external" href="https://forge.ipsl.jussieu.fr/nemo/ticket/1900">#1900</a>.
@@ -2054,7 +1885,7 @@ The merge is done by cherry picking and the conflic are fixed by hand (no major 
 </div>
 </div>
 <div class="section" id="ice-shelf-changes">
-<h4><a class="toc-backref" href="#id78">ice shelf changes</a><a class="headerlink" href="#ice-shelf-changes" title="Permalink to this headline">¶</a></h4>
+<h4>ice shelf changes<a class="headerlink" href="#ice-shelf-changes" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>2019 trunk development (ie possibilities to run open cavities and parametrisation and new ice sheet coupling method):
 The phasing work between trunk and NEMO4 has already been done in the branch NEMO_4.0.2_GO8_package_ENHANCE-02_ISF_nemo.
@@ -2072,7 +1903,7 @@ This has been added in the DRAKKAR layer.</p></li>
 </ul>
 </div>
 <div class="section" id="sea-ice-changes">
-<h4><a class="toc-backref" href="#id79">sea ice changes</a><a class="headerlink" href="#sea-ice-changes" title="Permalink to this headline">¶</a></h4>
+<h4>sea ice changes<a class="headerlink" href="#sea-ice-changes" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>In case of constant supply of super cooled water, sea ice can growth rapidly and exceed the maximum allowed
 (energy budget done in surface, so freezing point only do not take into account the pressure).
@@ -2082,9 +1913,9 @@ Fix is done in icethd.F90</p></li>
 </div>
 </div>
 <div class="section" id="outputs">
-<h3><a class="toc-backref" href="#id80">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="generalities">
-<h4><a class="toc-backref" href="#id81">Generalities</a><a class="headerlink" href="#generalities" title="Permalink to this headline">¶</a></h4>
+<h4>Generalities<a class="headerlink" href="#generalities" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><dl>
 <dt>multiple files:</dt><dd><ul class="simple">
@@ -2126,7 +1957,7 @@ Fix is done in icethd.F90</p></li>
 </ul>
 </div>
 <div class="section" id="ocean">
-<h4><a class="toc-backref" href="#id82">Ocean</a><a class="headerlink" href="#ocean" title="Permalink to this headline">¶</a></h4>
+<h4>Ocean<a class="headerlink" href="#ocean" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><dl>
 <dt>grid T file:</dt><dd><ul class="simple">
@@ -2305,7 +2136,7 @@ Fix is done in icethd.F90</p></li>
 </ul>
 </div>
 <div class="section" id="ice">
-<h4><a class="toc-backref" href="#id83">Ice</a><a class="headerlink" href="#ice" title="Permalink to this headline">¶</a></h4>
+<h4>Ice<a class="headerlink" href="#ice" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><dl>
 <dt>mask variables:</dt><dd><ul class="simple">
@@ -2472,7 +2303,7 @@ Fix is done in icethd.F90</p></li>
 </ul>
 </div>
 <div class="section" id="extra-output-at-monthly-and-yearly-output-frequency">
-<h4><a class="toc-backref" href="#id84">Extra output at monthly and yearly output_frequency</a><a class="headerlink" href="#extra-output-at-monthly-and-yearly-output-frequency" title="Permalink to this headline">¶</a></h4>
+<h4>Extra output at monthly and yearly output_frequency<a class="headerlink" href="#extra-output-at-monthly-and-yearly-output-frequency" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>isfgammat squared:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;field</span> <span class="na">field_ref=</span><span class="s">&quot;isfgammat&quot;</span>    <span class="na">name=</span><span class="s">&quot;sogammat2_cav&quot;</span> <span class="nt">&gt;</span>   isfgammat*isfgammat  <span class="nt">&lt;/field&gt;</span>
@@ -2493,7 +2324,7 @@ Fix is done in icethd.F90</p></li>
 </ul>
 </div>
 <div class="section" id="output-testing">
-<h4><a class="toc-backref" href="#id85">Output testing</a><a class="headerlink" href="#output-testing" title="Permalink to this headline">¶</a></h4>
+<h4>Output testing<a class="headerlink" href="#output-testing" title="Permalink to this headline">¶</a></h4>
 <p>In order to ensure isf output are correct I try to rebuild each flux using the ocean properties in the tbl.
 - To do so some extra output are needed otherwise non linear terms will lead to significant missmatch when looking at 5d output:</p>
 <blockquote>
@@ -2569,9 +2400,9 @@ Fix is done in icethd.F90</p></li>
 </div>
 </div>
 <div class="section" id="performance">
-<h3><a class="toc-backref" href="#id86">Performance</a><a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h3>
+<h3>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="nemo-performance">
-<h4><a class="toc-backref" href="#id87">NEMO Performance</a><a class="headerlink" href="#nemo-performance" title="Permalink to this headline">¶</a></h4>
+<h4>NEMO Performance<a class="headerlink" href="#nemo-performance" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>module used:</p></li>
 </ul>
@@ -2631,7 +2462,7 @@ As I only run this test once, this not really significant.</p></li>
 <img alt="_images/scal_eORCA025-OPM000.png" src="_images/scal_eORCA025-OPM000.png" />
 </div>
 <div class="section" id="selected-decomposition">
-<h4><a class="toc-backref" href="#id88">Selected decomposition</a><a class="headerlink" href="#selected-decomposition" title="Permalink to this headline">¶</a></h4>
+<h4>Selected decomposition<a class="headerlink" href="#selected-decomposition" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>configuration 1150 NEMO cores with 26 XIOS servers (on 49 node) has these characteristics:</p>
 <blockquote>
@@ -2674,7 +2505,7 @@ As I only run this test once, this not really significant.</p></li>
 <p>=&gt; similar speed.</p>
 </div>
 <div class="section" id="xios-performance">
-<h4><a class="toc-backref" href="#id89">XIOS performance</a><a class="headerlink" href="#xios-performance" title="Permalink to this headline">¶</a></h4>
+<h4>XIOS performance<a class="headerlink" href="#xios-performance" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>server:</p></li>
@@ -2701,9 +2532,9 @@ As I only run this test once, this not really significant.</p></li>
 </div></blockquote>
 </div>
 <div class="section" id="cost">
-<h4><a class="toc-backref" href="#id90">Cost</a><a class="headerlink" href="#cost" title="Permalink to this headline">¶</a></h4>
+<h4>Cost<a class="headerlink" href="#cost" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="computer-time">
-<h5><a class="toc-backref" href="#id91">Computer time</a><a class="headerlink" href="#computer-time" title="Permalink to this headline">¶</a></h5>
+<h5>Computer time<a class="headerlink" href="#computer-time" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>1 time step is 1350s and last 0.63.
 So lets use 0.7s for 1 steps (pessimistic).</p></li>
@@ -2715,7 +2546,7 @@ So lets use 0.7s for 1 steps (pessimistic).</p></li>
 <p><strong>So to sumarise, 1 simulation of 60 years is expected to cost : 325 000 h on occigen</strong></p>
 </div>
 <div class="section" id="data-output">
-<h5><a class="toc-backref" href="#id92">Data output</a><a class="headerlink" href="#data-output" title="Permalink to this headline">¶</a></h5>
+<h5>Data output<a class="headerlink" href="#data-output" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>data (5d, monthly and yearly are the same):</p>
 <ul>
@@ -2741,7 +2572,7 @@ So lets use 0.7s for 1 steps (pessimistic).</p></li>
 </div>
 </div>
 <div class="section" id="log">
-<h3><a class="toc-backref" href="#id93">Log</a><a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h3>
+<h3>Log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Run 5 years than we stop the run for analysis</p>
 <ul>
@@ -2772,9 +2603,9 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 </ul>
 </div>
 <div class="section" id="monitoring">
-<h3><a class="toc-backref" href="#id94">Monitoring</a><a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h3>
+<h3>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="global-indicators">
-<h4><a class="toc-backref" href="#id95">Global indicators</a><a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h4>
+<h4>Global indicators<a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h4>
 <p>On these plot you can find a time series of:
 - ACC transport
 - AMOC at rapid array
@@ -2786,7 +2617,7 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 <img alt="_images/VALGLO_eORCA025.L121-OPM006.png" src="_images/VALGLO_eORCA025.L121-OPM006.png" />
 </div>
 <div class="section" id="regional-indicators">
-<h4><a class="toc-backref" href="#id96">Regional indicators</a><a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h4>
+<h4>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h4>
 <p>On these plot, you can find time series of:
 - ACC transport
 - Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)
@@ -2795,58 +2626,58 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 <img alt="_images/VALSO_eORCA025.L121-OPM006.png" src="_images/VALSO_eORCA025.L121-OPM006.png" />
 </div>
 <div class="section" id="local-indicators">
-<h4><a class="toc-backref" href="#id97">Local indicators</a><a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h4>
+<h4>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h4>
 <p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
 <img alt="_images/VALSI_eORCA025.L121-OPM006.png" src="_images/VALSI_eORCA025.L121-OPM006.png" />
 </div>
 <div class="section" id="amundsen-sea">
-<h4><a class="toc-backref" href="#id98">Amundsen sea</a><a class="headerlink" href="#amundsen-sea" title="Permalink to this headline">¶</a></h4>
+<h4>Amundsen sea<a class="headerlink" href="#amundsen-sea" title="Permalink to this headline">¶</a></h4>
 <p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
 .. image:: _static/VALAMU_eORCA025.L121-OPM006.png</p>
 </div>
 <div class="section" id="ice-shelves">
-<h4><a class="toc-backref" href="#id99">Ice shelves</a><a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h4>
+<h4>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="amery">
-<h5><a class="toc-backref" href="#id100">Amery</a><a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h5>
+<h5>Amery<a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/AMER.png" src="_images/AMER.png" />
 </div>
 <div class="section" id="ross">
-<h5><a class="toc-backref" href="#id101">Ross</a><a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h5>
+<h5>Ross<a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/ROSS.png" src="_images/ROSS.png" />
 </div>
 <div class="section" id="getz">
-<h5><a class="toc-backref" href="#id102">Getz</a><a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h5>
+<h5>Getz<a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/GETZ.png" src="_images/GETZ.png" />
 </div>
 <div class="section" id="pine-island">
-<h5><a class="toc-backref" href="#id103">Pine island</a><a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h5>
+<h5>Pine island<a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/PINE.png" src="_images/PINE.png" />
 </div>
 <div class="section" id="george-vi">
-<h5><a class="toc-backref" href="#id104">George VI</a><a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h5>
+<h5>George VI<a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/GEVI.png" src="_images/GEVI.png" />
 </div>
 <div class="section" id="filschner-ronne">
-<h5><a class="toc-backref" href="#id105">Filschner Ronne</a><a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h5>
+<h5>Filschner Ronne<a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/FRIS.png" src="_images/FRIS.png" />
 </div>
 <div class="section" id="riiser">
-<h5><a class="toc-backref" href="#id106">Riiser</a><a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h5>
+<h5>Riiser<a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/RIIS.png" src="_images/RIIS.png" />
 </div>
 <div class="section" id="fimbul">
-<h5><a class="toc-backref" href="#id107">Fimbul</a><a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h5>
+<h5>Fimbul<a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h5>
 <img alt="_images/FIMB.png" src="_images/FIMB.png" />
 </div>
 </div>
 </div>
 <div class="section" id="evaluation">
-<h3><a class="toc-backref" href="#id108">Evaluation</a><a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
+<h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="possible-improvement">
-<h3><a class="toc-backref" href="#id109">Possible improvement</a><a class="headerlink" href="#possible-improvement" title="Permalink to this headline">¶</a></h3>
+<h3>Possible improvement<a class="headerlink" href="#possible-improvement" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="icebergs">
-<h4><a class="toc-backref" href="#id110">Icebergs</a><a class="headerlink" href="#icebergs" title="Permalink to this headline">¶</a></h4>
+<h4>Icebergs<a class="headerlink" href="#icebergs" title="Permalink to this headline">¶</a></h4>
 <p>The main idea is to be able to represent the iceberg tongue and there interaction with sea ice.
 It could be see as easy at first order but it raise many point to works efficiently.
 It require some code changes in SI3 and ICB Module to better represent:
@@ -2855,7 +2686,7 @@ It require some code changes in SI3 and ICB Module to better represent:
 - fragmentation
 - icb/ice interactions</p>
 <div class="section" id="grounding">
-<h5><a class="toc-backref" href="#id111">grounding</a><a class="headerlink" href="#grounding" title="Permalink to this headline">¶</a></h5>
+<h5>grounding<a class="headerlink" href="#grounding" title="Permalink to this headline">¶</a></h5>
 <p>Since the inclusion of M2016 work, iceberg can be grounded over shallow bank if the icb draft large enough.
 To do this, icebergs generation need to be slightly updated to respect at least this condition:</p>
 <ul class="simple">
@@ -2865,7 +2696,7 @@ For example a 250 m thick iceberg cannot be generated if the source ice shelf ha
 <p>To do so, we need to change the distribution mechanism.</p>
 </div>
 <div class="section" id="iceberg-distribution">
-<h5><a class="toc-backref" href="#id112">Iceberg distribution</a><a class="headerlink" href="#iceberg-distribution" title="Permalink to this headline">¶</a></h5>
+<h5>Iceberg distribution<a class="headerlink" href="#iceberg-distribution" title="Permalink to this headline">¶</a></h5>
 <p>Tournadre et al. (2016) show that the size (area) distribution of calved iceberg follow a -3/2 power law.
 In the same study, with a minimum size of 0.1 Km2, they show that 96.7% of the total icb surface is concentrated in icb larger than 10km2.
 Assuming same icb draft for all the icb, same number can be found for the volume. This raise some extra comments:</p>
@@ -2879,7 +2710,7 @@ So probably the NEMO distribution need to be change with more large icebergs.</p
 <p>Have large icebergs with a fragmentation law is unrealistic (England et al. 2016). So a break-up solution needs to be implemented.</p>
 </div>
 <div class="section" id="fragmentation">
-<h5><a class="toc-backref" href="#id113">fragmentation</a><a class="headerlink" href="#fragmentation" title="Permalink to this headline">¶</a></h5>
+<h5>fragmentation<a class="headerlink" href="#fragmentation" title="Permalink to this headline">¶</a></h5>
 <p>Two fragmentation methods are available:</p>
 <ul class="simple">
 <li><p>England et al. (2016) based on poisson law for the fragmentation
@@ -2889,7 +2720,7 @@ The children icebergs need also to be generated using a -3/2 power law size dist
 </ul>
 </div>
 <div class="section" id="ice-interaction">
-<h5><a class="toc-backref" href="#id114">Ice interaction</a><a class="headerlink" href="#ice-interaction" title="Permalink to this headline">¶</a></h5>
+<h5>Ice interaction<a class="headerlink" href="#ice-interaction" title="Permalink to this headline">¶</a></h5>
 <ul>
 <li><p>Having some grounded icb (especially large one) grounded on shallow bank lead to generation of icb tongues that can create polynya (see Bett et al. (2020)).
 Looking at satelite imagery show that similar processes is happening at various scale in various places (Mertz icb tongue polynya for example).
@@ -2905,7 +2736,7 @@ sea Rackow et al. (2017) for details on implementation.</p></li>
 </ul>
 </div>
 <div class="section" id="melt-formulation">
-<h5><a class="toc-backref" href="#id115">Melt formulation</a><a class="headerlink" href="#melt-formulation" title="Permalink to this headline">¶</a></h5>
+<h5>Melt formulation<a class="headerlink" href="#melt-formulation" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>forced convection melt is applied only at the base of the icb but Bigg et al. (1997) note that
 “‘‘basal’’ turbulent heat transfer also occurs on the sides of the berg past which the water flows.”.
@@ -2913,7 +2744,7 @@ As done in Rackow et al. (2017) it should be added to the side of the icb using 
 </ul>
 </div>
 <div class="section" id="how-to-link-all-together">
-<h5><a class="toc-backref" href="#id116">How to link all together</a><a class="headerlink" href="#how-to-link-all-together" title="Permalink to this headline">¶</a></h5>
+<h5>How to link all together<a class="headerlink" href="#how-to-link-all-together" title="Permalink to this headline">¶</a></h5>
 <p>So to improve on this points we need (point X.? are independent):</p>
 <ul class="simple">
 <li><p>1.0 A distribution by class for the parent icb generation at the isf front with icb from 0.1 to 1000 km2 (?)</p></li>
