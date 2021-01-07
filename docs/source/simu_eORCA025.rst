@@ -2,9 +2,6 @@
 eORCA025 simulations
 ####################
 
-.. contents::
-   :local:
-
 ********************
 eORCA025.L121-OPM006
 ********************
@@ -2124,7 +2121,7 @@ Previous action fixed the repeated issue on wall time issue.
   (via acceleration scaling down, see ticket #2581).
   Namelist is modify to enforce a cfl of 0.45 for icb.
 - Leg 56 Namelist is modify to enforce a cfl of 0.46 for icb.
-- Leg 60 Namelist is modify to enforce a cfl of 0.40 for icb. 
+- Leg 60 Namelist is modify to enforce a cfl of 0.40 for icb.
 
 Monitoring
 ==========

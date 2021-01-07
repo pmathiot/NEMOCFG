@@ -2,9 +2,6 @@
 Useful tools
 ************
 
-.. contents::
-   :local:
-
 ==========
 NEMO tools
 ==========

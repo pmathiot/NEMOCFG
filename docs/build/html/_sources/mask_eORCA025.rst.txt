@@ -2,9 +2,6 @@
 eORCA025 mask files
 *******************
 
-.. contents::
-   :local:
-
 Mesh mask
 =========
 

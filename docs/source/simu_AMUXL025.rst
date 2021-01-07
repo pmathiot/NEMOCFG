@@ -2,9 +2,6 @@
 AMUXL025 simulations
 ####################
 
-.. contents::
-   :local:
-
 Performance
 ===========
 

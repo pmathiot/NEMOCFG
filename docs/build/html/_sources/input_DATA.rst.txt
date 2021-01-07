@@ -2,9 +2,6 @@
 Original data set
 *****************
 
-.. contents::
-   :local:
-
 Bathymetry
 ==========
 
