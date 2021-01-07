@@ -18,7 +18,3 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-publish:
-	@cd build ; rsync -rvlt doctrees html drakkar@ige-meom-drakkar.u-ga.fr:/home/drakkar/DRAKKAR/DOC_CFG/.
-	@echo "rsync -rvlt doctrees html drakkar@ige-meom-drakkar.u-ga.fr:/home/drakkar/DRAKKAR/DOC_CFG/."
