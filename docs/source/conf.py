@@ -53,3 +53,7 @@ html_theme_options = {'includehidden': True, 'navigation_depth': -1 }
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# set width
+def setup(app):
+    app.add_css_file('style.css')
