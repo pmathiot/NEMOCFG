@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025 mask files &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eORCA025 simulations" href="simu_eORCA025.html" />
+    <link rel="prev" title="eORCA025 input files" href="input_eORCA025.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eORCA025 mask files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mesh-mask">Mesh mask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-mesh-mask-b0-2-c3-0-d1-0-nc">eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sub-bassins">Sub bassins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-subbassin-b0-2-v0-0-nc">eORCA025_subbassin_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#isf-mask">isf mask</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-mskisf-b0-2-c3-0-d1-0-v0-0-nc">eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">Useful tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>eORCA025 mask files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mask_eORCA025.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-mask-files">
+<h1>eORCA025 mask files<a class="headerlink" href="#eorca025-mask-files" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#mesh-mask" id="id1">Mesh mask</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-l121-mesh-mask-b0-2-c3-0-d1-0-nc" id="id2">eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#sub-bassins" id="id3">Sub bassins</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-subbassin-b0-2-v0-0-nc" id="id4">eORCA025_subbassin_b0.2_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#isf-mask" id="id5">isf mask</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-mskisf-b0-2-c3-0-d1-0-v0-0-nc" id="id6">eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="mesh-mask">
+<h2><a class="toc-backref" href="#id1">Mesh mask</a><a class="headerlink" href="#mesh-mask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-l121-mesh-mask-b0-2-c3-0-d1-0-nc">
+<span id="eorca025-l121-mesh-mask-b0-2-c3-0-d1-0"></span><h3><a class="toc-backref" href="#id2">eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc</a><a class="headerlink" href="#eorca025-l121-mesh-mask-b0-2-c3-0-d1-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>domain cfg: <a class="reference internal" href="input_eORCA025.html#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comment:</dt><dd><ul>
+<li><p>build at the same time as the domain cfg file</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>tools:</dt><dd><ul>
+<li><p>r13390 of NEMO DOMAIN_cfg tools</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>paths:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="sub-bassins">
+<h2><a class="toc-backref" href="#id3">Sub bassins</a><a class="headerlink" href="#sub-bassins" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-subbassin-b0-2-v0-0-nc">
+<h3><a class="toc-backref" href="#id4">eORCA025_subbassin_b0.2_v0.0.nc</a><a class="headerlink" href="#eorca025-subbassin-b0-2-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<p>In order to post process output file, a subbassin file has been built. It contains an atlantic, indian, pacific and southern ocean mask.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>core tool:</dt><dd><ul>
+<li><p>cdfmkmask</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>atlmask contains part of the Arctic and not the med</p></li>
+<li><p>somask include under ice shelf seas</p></li>
+<li><p>section defining the basins are hard coded in separate file for eORCA025 (index not lat/lon)</p></li>
+<li><p>compatible with the <span class="xref std std-ref">ORCA025_bathymetry_b0.2</span> file (if coast line change, mask need to be rebuild)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="isf-mask">
+<h2><a class="toc-backref" href="#id5">isf mask</a><a class="headerlink" href="#isf-mask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-mskisf-b0-2-c3-0-d1-0-v0-0-nc">
+<h3><a class="toc-backref" href="#id6">eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc</a><a class="headerlink" href="#eorca025-mskisf-b0-2-c3-0-d1-0-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<p>In order to compute easily isf diagnostics (mean, melt …) a mask with one value per isf has been produced.
+The list making the link between the isf id and its name is in eORCA025_mskisf_c3.0_v0.0.txt.
+In addition to this, total melt for each ice shelf from Rignot is also added in the txt file.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>tools:</dt><dd><ul>
+<li><p>cdfisf_fill (./cdfisf_fill -f eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -v isfdraft -l eORCA025_mskisf_c3.0_v0.0.txt -nc4 -o eORCA025_mskisf_b0.2_c3.0_d1.0.nc -ew -bf eORCA025_isfbnd_c3.0_v0.0.txt)</p></li>
+<li><p>github.com:pmathiot/CDFTOOLS_4.0_ISF.git &#64; 5b6938c</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility:</dt><dd><ul>
+<li><p><a class="reference internal" href="input_eORCA025.html#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a> (each time the bathy or the isf discretisation change, this file need to be rebuild)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_eORCA025.html" class="btn btn-neutral float-right" title="eORCA025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="input_eORCA025.html" class="btn btn-neutral float-left" title="eORCA025 input files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

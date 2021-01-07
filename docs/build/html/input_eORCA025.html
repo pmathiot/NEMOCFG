@@ -1,0 +1,1155 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025 input files &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eORCA025 mask files" href="mask_eORCA025.html" />
+    <link rel="prev" title="eORCA12 input files" href="input_eORCA12.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eORCA025 input files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#coordinates">Coordinates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-coord-c3-0-nc">eORCA025_coord_c3.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bathymetry-and-ice-shelf-draft">Bathymetry and ice shelf draft</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-0-nc">eORCA025_bathymetry_b0.0.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-1-nc">eORCA025_bathymetry_b0.1.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-2-nc">eORCA025_bathymetry_b0.2.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#domaincfg">Domaincfg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#runoff">Runoff</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-runoff-file">First_runoff_file:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-runoff-b0-2-v0-0-nc">eORCA025_runoff_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ts-initial-condition">TS Initial condition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ice-initial-condition">Ice Initial condition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-seaice-c3-0-v19802004-0-nc">eORCA025_seaice_c3.0_v19802004.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#restoring">Restoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sss-woa2018r04-v19812010-2-nc">sss_WOA2018r04_v19812010.2.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#iceberg-calving">Iceberg calving</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-calving-b0-2-v2-3-nc">eORCA025_calving_b0.2_v2.3.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#geothermal-heating">Geothermal heating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ghflux-v2-0-nc">ghflux_v2.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#top-tidal-velocity">Top tidal velocity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-ttv-b0-2-v0-0-nc">eORCA025_ttv_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-wave-mixing">Internal wave mixing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-iwm-b0-2-v0-0-nc">eORCA025_iwm_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chlorophyle">Chlorophyle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chlorophyl-v0-0-nc">chlorophyl_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#d-lateral-slip-conditions">2d lateral slip conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-shlat2d-v0-0-nc">eORCA025_shlat2d_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#d-bottom-friction">2d bottom friction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-bfr2d-v0-0-nc">eORCA025_bfr2d_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#indonesian-through-flow">Indonesian Through Flow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-mskitf-v1-0-nc">eORCA025_mskitf_v1.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#distance-to-coast">Distance to coast</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-distcoast-b0-2-v0-0-nc">eORCA025_distcoast_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">Useful tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>eORCA025 input files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/input_eORCA025.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-input-files">
+<h1>eORCA025 input files<a class="headerlink" href="#eorca025-input-files" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#coordinates" id="id1">Coordinates</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-coord-c3-0-nc" id="id2">eORCA025_coord_c3.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bathymetry-and-ice-shelf-draft" id="id3">Bathymetry and ice shelf draft</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-bathymetry-b0-0-nc" id="id4">eORCA025_bathymetry_b0.0.nc</a></p></li>
+<li><p><a class="reference internal" href="#eorca025-bathymetry-b0-1-nc" id="id5">eORCA025_bathymetry_b0.1.nc</a></p></li>
+<li><p><a class="reference internal" href="#eorca025-bathymetry-b0-2-nc" id="id6">eORCA025_bathymetry_b0.2.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#domaincfg" id="id7">Domaincfg</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc" id="id8">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#runoff" id="id9">Runoff</a></p>
+<ul>
+<li><p><a class="reference internal" href="#first-runoff-file" id="id10">First_runoff_file:</a></p></li>
+<li><p><a class="reference internal" href="#eorca025-runoff-b0-2-v0-0-nc" id="id11">eORCA025_runoff_b0.2_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ts-initial-condition" id="id12">TS Initial condition</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc" id="id13">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</a></p></li>
+<li><p><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc" id="id14">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ice-initial-condition" id="id15">Ice Initial condition</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-seaice-c3-0-v19802004-0-nc" id="id16">eORCA025_seaice_c3.0_v19802004.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#restoring" id="id17">Restoring</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sss-woa2018r04-v19812010-2-nc" id="id18">sss_WOA2018r04_v19812010.2.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#iceberg-calving" id="id19">Iceberg calving</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-calving-b0-2-v2-3-nc" id="id20">eORCA025_calving_b0.2_v2.3.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#geothermal-heating" id="id21">Geothermal heating</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ghflux-v2-0-nc" id="id22">ghflux_v2.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#top-tidal-velocity" id="id23">Top tidal velocity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-ttv-b0-2-v0-0-nc" id="id24">eORCA025_ttv_b0.2_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#internal-wave-mixing" id="id25">Internal wave mixing</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-iwm-b0-2-v0-0-nc" id="id26">eORCA025_iwm_b0.2_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#chlorophyle" id="id27">Chlorophyle</a></p>
+<ul>
+<li><p><a class="reference internal" href="#chlorophyl-v0-0-nc" id="id28">chlorophyl_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#d-lateral-slip-conditions" id="id29">2d lateral slip conditions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-shlat2d-v0-0-nc" id="id30">eORCA025_shlat2d_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#d-bottom-friction" id="id31">2d bottom friction</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-bfr2d-v0-0-nc" id="id32">eORCA025_bfr2d_v0.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#indonesian-through-flow" id="id33">Indonesian Through Flow</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-mskitf-v1-0-nc" id="id34">eORCA025_mskitf_v1.0.nc</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#distance-to-coast" id="id35">Distance to coast</a></p>
+<ul>
+<li><p><a class="reference internal" href="#eorca025-distcoast-b0-2-v0-0-nc" id="id36">eORCA025_distcoast_b0.2_v0.0.nc</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="coordinates">
+<h2><a class="toc-backref" href="#id1">Coordinates</a><a class="headerlink" href="#coordinates" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-coord-c3-0-nc">
+<span id="eorca025-coord-c3-0"></span><h3><a class="toc-backref" href="#id2">eORCA025_coord_c3.0.nc</a><a class="headerlink" href="#eorca025-coord-c3-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>file build at Mercator (Clement Bricaud):</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>Bug in the north corrected.</p></li>
+<li><p>add proper extension under masked area</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>eORCA_R025_coordinates_v3.0.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>reference for the south extension:</dt><dd><ul>
+<li><p>Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised impacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10, 2849–2874, <a class="reference external" href="https://doi.org/10.5194/gmd-10-2849-2017">https://doi.org/10.5194/gmd-10-2849-2017</a>, 2017.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="bathymetry-and-ice-shelf-draft">
+<h2><a class="toc-backref" href="#id3">Bathymetry and ice shelf draft</a><a class="headerlink" href="#bathymetry-and-ice-shelf-draft" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-bathymetry-b0-0-nc">
+<span id="eorca025-bathymetry-b0-0"></span><h3><a class="toc-backref" href="#id4">eORCA025_bathymetry_b0.0.nc</a><a class="headerlink" href="#eorca025-bathymetry-b0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>bathy_noisf_ORCA025_IBCSO_ETOPO1_mask75L_v2.2_landsuppression.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Source:</dt><dd><ul>
+<li><p>File used in GO6 (cite GO6 paper)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>references:</dt><dd><ul>
+<li><p>Storkey, D., Blaker, A. T., Mathiot, P., Megann, A., Aksenov, Y., Blockley, E. W., Calvert, D., Graham, T., Hewitt, H. T., Hyder, P., Kuhlbrodt, T., Rae, J. G. L., and Sinha, B.: UK Global Ocean GO6 and GO7: a traceable hierarchy of model resolutions, Geosci. Model Dev., 11, 3187–3213, <a class="reference external" href="https://doi.org/10.5194/gmd-11-3187-2018">https://doi.org/10.5194/gmd-11-3187-2018</a>, 2018.</p></li>
+<li><p>Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised im    pacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10,     2849–2874, <a class="reference external" href="https://doi.org/10.5194/gmd-10-2849-2017">https://doi.org/10.5194/gmd-10-2849-2017</a>, 2017.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>Method for the southern extention described in Mathiot et al., 2017</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="eorca025-bathymetry-b0-1-nc">
+<span id="eorca025-bathymetry-b0-1"></span><h3><a class="toc-backref" href="#id5">eORCA025_bathymetry_b0.1.nc</a><a class="headerlink" href="#eorca025-bathymetry-b0-1-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>eORCA025_bathymetry_isf_v2.3.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Source :</dt><dd><ul>
+<li><p>File used in GO7 (cite GO6 paper)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>references:</dt><dd><ul>
+<li><p>Storkey, D., Blaker, A. T., Mathiot, P., Megann, A., Aksenov, Y., Blockley, E. W., Calvert, D., Graham, T., Hewitt, H. T., Hyder, P., Kuhlbrodt, T., Rae, J. G. L., and Sinha, B.: UK Global Ocean GO6 and GO7: a traceable hierarchy of model resolutions, Geosci. Model Dev., 11, 3187–3213, <a class="reference external" href="https://doi.org/10.5194/gmd-11-3187-2018">https://doi.org/10.5194/gmd-11-3187-2018</a>, 2018.</p></li>
+<li><p>Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised im    pacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10,     2849–2874, <a class="reference external" href="https://doi.org/10.5194/gmd-10-2849-2017">https://doi.org/10.5194/gmd-10-2849-2017</a>, 2017.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>as b0.0 but with under ice shelf data (isf draft and bathy) from bedmap2.</p></li>
+<li><p>Method for the southern extention described in Mathiot et al., 2017</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="eorca025-bathymetry-b0-2-nc">
+<span id="eorca025-bathymetry-b0-2"></span><h3><a class="toc-backref" href="#id6">eORCA025_bathymetry_b0.2.nc</a><a class="headerlink" href="#eorca025-bathymetry-b0-2-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>heritage:</dt><dd><ul>
+<li><p><a class="reference internal" href="#eorca025-bathymetry-b0-1"><span class="std std-ref">eORCA025_bathymetry_b0.1.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>Bathymetry north of Antarctic continental slope: <a class="reference internal" href="#eorca025-bathymetry-b0-1"><span class="std std-ref">eORCA025_bathymetry_b0.1.nc</span></a></p></li>
+<li><p>Bathymetry south of Antarctic continental slope: Bed Machine (BedMachineAntarctica-2020-07-15.nc). Version available on the server is bugged (issue with reference for the IBCSO part).</p></li>
+<li><p>ice shelf draft is from BedMachineAntarctica-2020-07-15.nc</p></li>
+<li><p>path to raw data: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>reference:</dt><dd><ul>
+<li><p>Morlighem, M., E. Rignot, T. Binder, D. D. Blankenship, R. Drews, G. Eagles, O. Eisen, F. Ferraccioli, R. Forsberg, P. Fretwell, V. Goel, J. S. Greenbaum, H. Gudmundsson, J. Guo, V. Helm, C. Hofstede, I. Howat, A. Humbert, W. Jokat, N. B. Karlsson, W. Lee, K. Matsuoka, R. Millan, J. Mouginot, J. Paden, F. Pattyn, J. L. Roberts, S. Rosier, A. Ruppel, H. Seroussi, E. C. Smith, D. Steinhage, B. Sun, M. R. van den Broeke, T. van Ommen, M. van Wessem, and D. A. Young. 2020. Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet, Nature Geoscience. 13. 132-137. <a class="reference external" href="https://doi.org/10.1038/s41561-019-0510-8">https://doi.org/10.1038/s41561-019-0510-8</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>method:</dt><dd><ul>
+<li><p>step 1: create the lat/lon variable associated to the netcdf file (BedMachine2NEMOBAT.py)</p></li>
+<li><p>step 2: run interpolation for bathymetry, isfdraft, mask</p></li>
+<li><p>step 3: smooth as eORCA025 bathymetry</p></li>
+<li><p>step 4: enforce compatibility and build mask before combining data set</p></li>
+<li><p>step 5: combine with reference eORCA025 bathymetry (b0.0) files</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>tools:</dt><dd><ul>
+<li><p>NEMOBAT: <a class="reference external" href="https://github.com/pmathiot/NEMOBAT">https://github.com/pmathiot/NEMOBAT</a> (ce3db4f..78d1867)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path to building directory:</dt><dd><ul>
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="domaincfg">
+<h2><a class="toc-backref" href="#id7">Domaincfg</a><a class="headerlink" href="#domaincfg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc">
+<span id="eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"></span><h3><a class="toc-backref" href="#id8">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</a><a class="headerlink" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+<li><p>horiz. coordinates: <a class="reference internal" href="#eorca025-coord-c3-0"><span class="std std-ref">eORCA025_coord_c3.0.nc</span></a></p></li>
+<li><p>vert. coordinates: z + 121 levels selected to have rougly constant resolution between 100m and 1000m (ie range of depth spanning by the isf cavities.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>full namelist available in the namelist_cfg variable in the netcdf file.</p></li>
+<li><p>closed seas removed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>tools:</dt><dd><ul>
+<li><p>r13390 of NEMO DOMAIN_cfg tools</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>paths:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="runoff">
+<h2><a class="toc-backref" href="#id9">Runoff</a><a class="headerlink" href="#runoff" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-runoff-file">
+<h3><a class="toc-backref" href="#id10">First_runoff_file:</a><a class="headerlink" href="#first-runoff-file" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>The runoffs data file comes from the Dai and Trenberth study . It is documented in a publication (Dai and Trenberth, 2002, hereafter DT02). The spatial resolution of this file is 1◦ ×1◦ with monthly data. This data are available on the web : http ://www.cgd.ucar.edu/cas/catalog/dai/</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>reference:</dt><dd><ul>
+<li><p><a class="reference external" href="https://www.drakkar-ocean.eu/publications/reports/runoff-mercator-06.pdf">https://www.drakkar-ocean.eu/publications/reports/runoff-mercator-06.pdf</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="eorca025-runoff-b0-2-v0-0-nc">
+<span id="eorca025-runoff-b0-2-v0-0"></span><h3><a class="toc-backref" href="#id11">eORCA025_runoff_b0.2_v0.0.nc</a><a class="headerlink" href="#eorca025-runoff-b0-2-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>sources:</dt><dd><ul>
+<li><p>The runoffs data file comes from the Dai and Trenberth study . It is documented in a publication (Dai and Trenberth, 2002, hereafter DT02). The spatial resolution of this file is 1◦ ×1◦ with monthly data. This data are available on the web : http ://www.cgd.ucar.edu/cas/catalog/dai/</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>ORCA025_rnficbisf_rignot2013_noberg.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility:</dt><dd><ul>
+<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Comments:</dt><dd><ul>
+<li><p>original file from the Met Office. As the coastline north of Antactica did not change, the GO6 runoff is adapted to the bathymetry 0.3.</p></li>
+<li><p>Antarctic runoff has been removed in Mathiot et al. (2017).</p></li>
+<li><p>GO6 runoff variable name is confusing. This is: sornficb (even if no icb are present in it.</p></li>
+<li><p>we rename runoff variable name to sorunoff.</p></li>
+<li><p>we extract only the variable related to runoff (sorunoff,socoefr,nav_lat,nav_lon)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ts-initial-condition">
+<h2><a class="toc-backref" href="#id12">TS Initial condition</a><a class="headerlink" href="#ts-initial-condition" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc">
+<span id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4"></span><h3><a class="toc-backref" href="#id13">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</a><a class="headerlink" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="simple">
+<dt>source:</dt><dd><ul class="simple">
+<li><p>Open ocean: WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)</p></li>
+<li><p>Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>methode:</dt><dd><ul class="simple">
+<li><p>WOA are drowned and interpolated to <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+<li><p>WOA is only provided for each season, so we build the monthly 3D file with a linear interpolation</p></li>
+<li><p>WOA is only provided monthly data between surface and 1450m depth, we used this data for first 1400m
+(ie level 89, last level fully included in the monthly data).</p></li>
+</ul>
+<p>A linear transition from one to the other data set is done between 1200m and depth of level 90.
+- UKMO data are downloaded monthly and a climatology is built
+- Merge between the 2 data set is done in the open ocean. UKMO data are kept until 10km offshore the Antarctic ice shelves. WOA is kept for cell further away than 70 km offshore the Antarctic ice shelves. A linear transition in the transition area is applied.
+- A non penetrative convection scheme is applied to avoid static instability
+- A shapiro filter is applied to remove strong gradient (3 passes)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility:</dt><dd><ul class="simple">
+<li><p>eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is masked.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul class="simple">
+<li><p>directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc">
+<span id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5"></span><h3><a class="toc-backref" href="#id14">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</a><a class="headerlink" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>source:
+- Open ocean: WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)
+- Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005)</p></li>
+<li><p>methode:
+- as <a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4"><span class="std std-ref">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</span></a>
+- convert to TEOS10 using GSW-Fortran-3.05-6 package (see TEOS10 directory in building directory)
+- then check and correct overlap cells with check_lbclnk_v3.py</p></li>
+<li><p>compatibility:
+- eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is masked.</p></li>
+<li><p>path:
+- directory: TOADD
+- file: TOADD</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="ice-initial-condition">
+<h2><a class="toc-backref" href="#id15">Ice Initial condition</a><a class="headerlink" href="#ice-initial-condition" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-seaice-c3-0-v19802004-0-nc">
+<span id="eorca025-seaice-c3-0-v19802004-0"></span><h3><a class="toc-backref" href="#id16">eORCA025_seaice_c3.0_v19802004.0.nc</a><a class="headerlink" href="#eorca025-seaice-c3-0-v19802004-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>source:
+- Data comes from bt705 JRA run from the UKMO</p></li>
+<li><p>variables:
+- ice concentration (siconc)
+- ice thickness (sithic)
+- snow thickness (snvolu)</p></li>
+<li><p>method :
+- climatology is done for each month over period 1980 to 2004 (siconc, sithic, snvolu)
+- snthic computed using snthic=snvolu/siconc for point where siconc &gt; 0 each month</p>
+<blockquote>
+<div><p>then average over the whole period.</p>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul class="simple">
+<li><p>directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="restoring">
+<h2><a class="toc-backref" href="#id17">Restoring</a><a class="headerlink" href="#restoring" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sss-woa2018r04-v19812010-2-nc">
+<h3><a class="toc-backref" href="#id18">sss_WOA2018r04_v19812010.2.nc</a><a class="headerlink" href="#sss-woa2018r04-v19812010-2-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>methode:</dt><dd><ul>
+<li><p>monthly WOA surface data are drowned.</p></li>
+<li><p>original file is compressed to level 1 and we used a smaller chunk size.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>variable:</dt><dd><ul>
+<li><p>s_an in PSU</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>frequency:</dt><dd><ul>
+<li><p>monthly</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>weights:</dt><dd><ul>
+<li><p>eORCA025_sss_WOA2018r04_v19812010_c3.0_weights_bilin.nc
+(compatible with <a class="reference internal" href="#eorca025-coord-c3-0"><span class="std std-ref">eORCA025_coord_c3.0.nc</span></a> or <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a>)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="iceberg-calving">
+<h2><a class="toc-backref" href="#id19">Iceberg calving</a><a class="headerlink" href="#iceberg-calving" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-calving-b0-2-v2-3-nc">
+<span id="eorca025-calving-b0-2-v2-3"></span><h3><a class="toc-backref" href="#id20">eORCA025_calving_b0.2_v2.3.nc</a><a class="headerlink" href="#eorca025-calving-b0-2-v2-3-nc" title="Permalink to this headline">¶</a></h3>
+<p>the amount of calving per ice shelves comes from Rignot et al. (2013). The distribution along the ice shelf front is random (the idea is as I don’t know where are the calving site and the amount of calving per site, I draw a random distribution of calving scale to the total amount provided by the climatology).</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>sources:</dt><dd><ul>
+<li><p>north: as in March et al. (2015).</p></li>
+<li><p>south: Rignot et al. (2013).</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>useful tools:</dt><dd><ul>
+<li><p>git project: <a class="reference external" href="https://github.com/pmathiot/CDFTOOLS_4.0_ISF">https://github.com/pmathiot/CDFTOOLS_4.0_ISF</a></p></li>
+<li><p>tag: v3.0.2-330-g40595ba</p></li>
+<li><p>path on dahu: /home/mathiotp/TOOLS/CDFTOOLS/20200823_40595ba/src</p></li>
+<li><p>script: cdfisf_fill, cdficb_clv</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility:</dt><dd><ul>
+<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>in this version only 1 time frame is provided, we can easily extend the logic to interannual calving or monthly calving by drawing X different state.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>variable:</dt><dd><ul>
+<li><p>soicbclv</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>frequency:</dt><dd><ul>
+<li><p>annual</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path to building directory:</dt><dd><ul>
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path to file:</dt><dd><ul>
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="geothermal-heating">
+<h2><a class="toc-backref" href="#id21">Geothermal heating</a><a class="headerlink" href="#geothermal-heating" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ghflux-v2-0-nc">
+<span id="ghflux-v2-0"></span><h3><a class="toc-backref" href="#id22">ghflux_v2.0.nc</a><a class="headerlink" href="#ghflux-v2-0-nc" title="Permalink to this headline">¶</a></h3>
+<p>Goutorbe geothermal heat flux with online interpolation</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>old name:</dt><dd><ul>
+<li><p>Goutorbe_ghflux.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>weights availables:</dt><dd><ul>
+<li><p>eORCA025_ghflux_v2.0_c3.0_weights_bilin.nc: weight compatible with <a class="reference internal" href="#eorca025-coord-c3-0"><span class="std std-ref">eORCA025_coord_c3.0.nc</span></a> or <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="top-tidal-velocity">
+<h2><a class="toc-backref" href="#id23">Top tidal velocity</a><a class="headerlink" href="#top-tidal-velocity" title="Permalink to this headline">¶</a></h2>
+<p>As shown in Jourdain et al. (2018): including tidal velocities into the equation of the turbulent heat flux is a good approach to account for tide-induced melting in ocean models that do not explicitly represent tides. It is nonetheless important to keep the horizontal patterns of tidal velocities, and prescribing uniform tidal velocities leads to large errors.</p>
+<div class="section" id="eorca025-ttv-b0-2-v0-0-nc">
+<span id="eorca025-ttv-b0-2-v0-0"></span><h3><a class="toc-backref" href="#id24">eORCA025_ttv_b0.2_v0.0.nc</a><a class="headerlink" href="#eorca025-ttv-b0-2-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>CATS2008: CATS2008 is a regional inverse barotropic tide model for the circum-Antarctic ocean on a 4 km grid. The model domain includes ocean cavities under the floating ice shelves. The coastline is based on the MODIS MOA [Scambos et al., 2007; Remote Sensing of Environment] feature identification files, adjusted to match ICESat-derived grounding lines for the Ross and Filchner-Ronne ice shelves and Interferometric Synthetic Aperture Radar (InSAR) grounding lines. The water depth map for open water is based on the 2007 release update to Smith and Sandwell [1997; Science]. Adjustments to this map have been made in various regions, including the open continental shelf in front of the Larsen-C Ice Shelf which has been blended with GEBCO bathymetry.</p></li>
+<li><p>Data downloaded: 12/08/2020 from here: <a class="reference external" href="https://www.usap-dc.org/view/dataset/601235">https://www.usap-dc.org/view/dataset/601235</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>method:</dt><dd><ul>
+<li><p>see Jourdain et al. (2018) on how to compute the mean tidal velocity for detailed. Here we used the first 6 component : m2 s2 n2 k1 q1 o1 (the one provided by CATS). The average is done over 190d with a sampling of 15 minutes. The mean velocity is computed from the tidal transport using the CATS water column thickness. The data a drown then interpolated on NEMO grid then drowned again. At the end, we masked it for visualisation and for the simulation. In case other bathymetry/grounding line used, you can simply redo the step 2 to 4 described below as ttv.nc is a drowned file.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility:</dt><dd><ul>
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>discontinuity are visible close to the calving front on E FRIS.
+This is because the claving front in CATS2008 and NEMO is not located at the same location.
+As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file, I had to use the open ocean CATS velocity to file this points.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path to data and building directory</dt><dd><ul>
+<li><p>TOADD</p></li>
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="internal-wave-mixing">
+<h2><a class="toc-backref" href="#id25">Internal wave mixing</a><a class="headerlink" href="#internal-wave-mixing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-iwm-b0-2-v0-0-nc">
+<span id="eorca025-iwm-b0-2-v0-0"></span><h3><a class="toc-backref" href="#id26">eORCA025_iwm_b0.2_v0.0.nc</a><a class="headerlink" href="#eorca025-iwm-b0-2-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<p>The mixing variables correspond to the column-integrated power available for mixing. Each goes with a different vertical structure of the dissipation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘cri’: exponential decay from the seafloor, with a spatially variable e-folding length given by ‘decay_scale_cri.nc’.</p></li>
+<li><p>‘bot’: exponential decay from the seafloor in WKB z-coordinate (a z-coordinate that depends on stratification), with a spatially variable e-folding length given by ‘decay_scale_bot.nc’.</p></li>
+<li><p>‘pyc’: pycnocline-intensified dissipation, proportional to N.</p></li>
+</ul>
+</div></blockquote>
+<p>These variable replace the older input files for the tidal mixing parameterization.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>see De Lavergne et al. (2016) and details in <a class="reference internal" href="input_DATA.html#de-lavergne-et-al-2016"><span class="std std-ref">De_Lavergne_2016</span></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>methode:</dt><dd><ul>
+<li><p>Interpolation from the regular 0.5 degree resolution dataset to eORCA025 grid.</p></li>
+<li><p>from email discussion with Casimir, I decided to fill land and isf cavities to the backgrou    nd value instead of drowning data.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>reference:</dt><dd><ul>
+<li><p>de Lavergne, C., G. Madec, J. L. Sommer, A. J. G. Nurser, and A. C. N. Garabato, 2016: The impact of a variable mixing efficiency on the abyssal overturning. Journal of Physical Oceanography, 46, <a class="reference external" href="mailto:663?~&#37;&#52;&#48;~S681">663?~<span>&#64;</span>~S681</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="chlorophyle">
+<h2><a class="toc-backref" href="#id27">Chlorophyle</a><a class="headerlink" href="#chlorophyle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="chlorophyl-v0-0-nc">
+<span id="chlorophyl-v0-0"></span><h3><a class="toc-backref" href="#id28">chlorophyl_v0.0.nc</a><a class="headerlink" href="#chlorophyl-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>merge between ESACCI and biomer (CMEMS reanalysis)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>file created by Romain Bourdalie Badie (Mercator)</p></li>
+<li><p>file use as it is with on the fly interpolation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>compatibility of weight files:</dt><dd><ul>
+<li><p><a class="reference internal" href="#eorca025-coord-c3-0"><span class="std std-ref">eORCA025_coord_c3.0.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>weights: eORCA025_chlorophyl_v0.0_c3.0_weights_bilin.nc</dt><dd><ul>
+<li><p>computed using /home/mathiotp/TOOLS/NEMO/WEIGHTS/r13204/ and mkweights in ../TOOLS/WEIGHTS/</p></li>
+<li><p>namelist used: eORCA025_chlorophyl_v0.0_c3.0_namelist_bilin</p></li>
+<li><p>need to increase the stack on dahu (ulimit -s unlimited)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>building directory: TOADD</p></li>
+<li><p>files: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="d-lateral-slip-conditions">
+<h2><a class="toc-backref" href="#id29">2d lateral slip conditions</a><a class="headerlink" href="#d-lateral-slip-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-shlat2d-v0-0-nc">
+<span id="eorca025-shlat2d-v0-0"></span><h3><a class="toc-backref" href="#id30">eORCA025_shlat2d_v0.0.nc</a><a class="headerlink" href="#eorca025-shlat2d-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Purpose:</dt><dd><ul>
+<li><p>no slip condition along West greenland (generation of EKE close to cape desolation)</p></li>
+<li><p>no slip condition in Med. sea (Bernard Barnier and Balear university experts)</p></li>
+<li><p>no slip condition in Bering strait to decrease the transport.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>source:</dt><dd><ul>
+<li><p>DRAKKAR ORCA025 GRD100 simulation (file has simply been extended south)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>from GRD100 report, it seems the fix for greenland has only a marginal impact.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="d-bottom-friction">
+<h2><a class="toc-backref" href="#id31">2d bottom friction</a><a class="headerlink" href="#d-bottom-friction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-bfr2d-v0-0-nc">
+<span id="eorca025-bfr2d-v0-0"></span><h3><a class="toc-backref" href="#id32">eORCA025_bfr2d_v0.0.nc</a><a class="headerlink" href="#eorca025-bfr2d-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<p>Increase bottom friction in Torres strait, Denmark strait and Bab el Mandel strait.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>bfr_coef.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>history:</dt><dd><ul>
+<li><p>file used in GO6 (UKMO)</p></li>
+<li><p>full detail unknown (who build it, for what …)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="indonesian-through-flow">
+<h2><a class="toc-backref" href="#id33">Indonesian Through Flow</a><a class="headerlink" href="#indonesian-through-flow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-mskitf-v1-0-nc">
+<span id="eorca025-mskitf-v1-0"></span><h3><a class="toc-backref" href="#id34">eORCA025_mskitf_v1.0.nc</a><a class="headerlink" href="#eorca025-mskitf-v1-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>original name:</dt><dd><ul>
+<li><p>mask_itf_ORCA025ext.nc</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>full history unknown</p></li>
+<li><p>this file is simply an extension for the eORCA025 grid from an older file</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>path:</dt><dd><ul>
+<li><p>file: TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="distance-to-coast">
+<h2><a class="toc-backref" href="#id35">Distance to coast</a><a class="headerlink" href="#distance-to-coast" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-distcoast-b0-2-v0-0-nc">
+<span id="eorca025-distcoast-b0-2-v0-0"></span><h3><a class="toc-backref" href="#id36">eORCA025_distcoast_b0.2_v0.0.nc</a><a class="headerlink" href="#eorca025-distcoast-b0-2-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>tools:</dt><dd><ul>
+<li><p>cdfcofdis (./cdfcofdis -H eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -M eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -T eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -jperio 4 -surf -noisland 50)</p></li>
+<li><p>github.com:pmathiot/CDFTOOLS_4.0_ISF.git (master &#64; 14ab158..67ee63f)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>comments:</dt><dd><ul>
+<li><p>To switch off restoring along the the restoring near the coastal boundaries, in order to let the dynamics build the coherent water masses.
+We removed all the islands bigger than 50 cells.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mask_eORCA025.html" class="btn btn-neutral float-right" title="eORCA025 mask files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="input_eORCA12.html" class="btn btn-neutral float-left" title="eORCA12 input files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
