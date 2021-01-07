@@ -2129,6 +2129,7 @@ Monitoring
 Global indicators
 -----------------
 On these plot you can find a time series of:
+
 - ACC transport
 - AMOC at rapid array
 - AMHT at rapid array
@@ -2142,6 +2143,7 @@ On these plot you can find a time series of:
 Regional indicators
 -------------------
 On these plot, you can find time series of:
+
 - ACC transport
 - Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)
 - Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)
@@ -2158,6 +2160,7 @@ These plots monitor the evolution of ice shelf melting and the corresponding she
 Amundsen sea
 ------------
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
+
 .. image:: _static/VALAMU_eORCA025.L121-OPM006.png
 
 Ice shelves
