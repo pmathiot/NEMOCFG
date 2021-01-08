@@ -81,6 +81,8 @@ To use python on Occigen, the easiest is to use conda.
 GRICAD
 ======
 
+For full details on how to have a login, log in and how to use the computer, see the documentation `here <https://gricad-doc.univ-grenoble-alpes.fr/en/hpc/connexion/>`_
+
 ***************
 Parallelisation
 ***************

@@ -2,14 +2,15 @@
 NEMO tools
 **********
 
-DOMAIN_cfg
-----------
+A complete list of the NEMO tools is available `here <(https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#list-of-tools)>`_.
 
-WEIGHTS
--------
+The main NEMO tools are the tools used to :
+ - build the domain_cfg.nc NEMO start up file (`DOMAINcfg <https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#domaincfg>`_)
+ - build the weight file used for the online interpolation (`WEIGHTS <https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#weights>`_)
+ - rebuild the restart file and other split files (`REBUILD_NEMO <https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#rebuild-nemo>`_)
 
-REBUILD_NEMO
-------------
+The tools are included in the NEMO distribution.
+So the best to download these tools, is to check out the NEMO version you plan to use and go in the tools directory
 
 *************
 DRAKKAR tools
