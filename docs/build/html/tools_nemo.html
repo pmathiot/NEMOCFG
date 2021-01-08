@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Useful tools &mdash; NEMO@IGE  documentation</title>
+  <title>NEMO tools &mdash; NEMO@IGE  documentation</title>
   
 
   
@@ -101,24 +101,21 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Useful tools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#nemo-tools">NEMO tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#domain-cfg">DOMAIN_cfg</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#weights">WEIGHTS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#rebuild-nemo">REBUILD_NEMO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NEMO tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#domain-cfg">DOMAIN_cfg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weights">WEIGHTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rebuild-nemo">REBUILD_NEMO</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#drakkar-tools">DRAKKAR tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nemobat">NEMOBAT</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cdftools">CDFTOOLS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sosie">SOSIE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#drakkar-tools">DRAKKAR tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nemobat">NEMOBAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cdftools">CDFTOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sosie">SOSIE</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#others-tools">OTHERS tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#valso">VALSO</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#valis">VALIS</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="#others-tools">OTHERS tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#valso">VALSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valis">VALIS</a></li>
 </ul>
 </li>
 </ul>
@@ -172,7 +169,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Useful tools</li>
+      <li>NEMO tools</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,40 +188,84 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="useful-tools">
-<h1>Useful tools<a class="headerlink" href="#useful-tools" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="nemo-tools">
-<h2>NEMO tools<a class="headerlink" href="#nemo-tools" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="nemo-tools">
+<h1>NEMO tools<a class="headerlink" href="#nemo-tools" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="domain-cfg">
-<h3>DOMAIN_cfg<a class="headerlink" href="#domain-cfg" title="Permalink to this headline">¶</a></h3>
+<h2>DOMAIN_cfg<a class="headerlink" href="#domain-cfg" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="weights">
-<h3>WEIGHTS<a class="headerlink" href="#weights" title="Permalink to this headline">¶</a></h3>
+<h2>WEIGHTS<a class="headerlink" href="#weights" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="rebuild-nemo">
-<h3>REBUILD_NEMO<a class="headerlink" href="#rebuild-nemo" title="Permalink to this headline">¶</a></h3>
+<h2>REBUILD_NEMO<a class="headerlink" href="#rebuild-nemo" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 <div class="section" id="drakkar-tools">
-<h2>DRAKKAR tools<a class="headerlink" href="#drakkar-tools" title="Permalink to this headline">¶</a></h2>
+<h1>DRAKKAR tools<a class="headerlink" href="#drakkar-tools" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="nemobat">
-<h3>NEMOBAT<a class="headerlink" href="#nemobat" title="Permalink to this headline">¶</a></h3>
+<h2>NEMOBAT<a class="headerlink" href="#nemobat" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="cdftools">
-<h3>CDFTOOLS<a class="headerlink" href="#cdftools" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h2>CDFTOOLS<a class="headerlink" href="#cdftools" title="Permalink to this headline">¶</a></h2>
+<p>CDFTOOLS is a diagnostic package written in fortran 90 for the analysis of NEMO model output,
+initialized in the frame of the DRAKKAR project (<a class="reference external" href="https://www.drakkar-ocean.eu/">https://www.drakkar-ocean.eu/</a>).</p>
+<p>The version described here differs from the original package mostly in how the netcdf variable and dimension named are managed.
+With this version, there is no need to recompile the code when you change your output dimensions/variables name
+once it has beed added to the list of available names.</p>
+<ul class="simple">
+<li><p>How to download it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/CDFTOOLS_4.0_ISF.git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>description and README available here: <a class="reference external" href="https://github.com/pmathiot/CDFTOOLS_4.0_ISF">https://github.com/pmathiot/CDFTOOLS_4.0_ISF</a></p></li>
+</ul>
 </div>
 <div class="section" id="sosie">
-<h3>SOSIE<a class="headerlink" href="#sosie" title="Permalink to this headline">¶</a></h3>
+<h2>SOSIE<a class="headerlink" href="#sosie" title="Permalink to this headline">¶</a></h2>
+<p>SOSIE is an interpolation package for NetCDF files (full description available here: <a class="reference external" href="https://brodeau.github.io/sosie/">https://brodeau.github.io/sosie/</a>).
+It is mainly used to pre-process file in order to start a NEMO simulation or to post-process output files.</p>
+<ul class="simple">
+<li><p>How to download it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/brodeau/sosie.git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>description and README available here: <a class="reference external" href="https://github.com/brodeau/sosie">https://github.com/brodeau/sosie</a></p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="others-tools">
-<h2>OTHERS tools<a class="headerlink" href="#others-tools" title="Permalink to this headline">¶</a></h2>
+<h1>OTHERS tools<a class="headerlink" href="#others-tools" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="valso">
-<h3>VALSO<a class="headerlink" href="#valso" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h2>VALSO<a class="headerlink" href="#valso" title="Permalink to this headline">¶</a></h2>
+<p>VALSO is the toolbox used to produce the plots in the eORCA025.L121 OPM006 monitoring section (<a class="reference internal" href="simu_eORCA025.html#eorca025-l121-opm006-monitoring"><span class="std std-ref">here</span></a>).
+It is based on the <a class="reference internal" href="#cdftools"><span class="std std-ref">CDFTOOLS</span></a> for the processing of the NEMO output files, python and image magic for plotting.</p>
+<ul class="simple">
+<li><p>How to download it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/VALSO.git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>description and README available here: <a class="reference external" href="https://github.com/pmathiot/VALSO">https://github.com/pmathiot/VALSO</a></p></li>
+</ul>
 </div>
 <div class="section" id="valis">
-<h3>VALIS<a class="headerlink" href="#valis" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h2>VALIS<a class="headerlink" href="#valis" title="Permalink to this headline">¶</a></h2>
+<p>VALIS is a toolbox used to produced the plots in the eORCA025.L121 OPM006 ice shelf monitoring section (<a class="reference internal" href="simu_eORCA025.html#eorca025-l121-opm006-isf-monitoring"><span class="std std-ref">here</span></a>).
+It is python based and as input file it used the filed processed by <a class="reference internal" href="#valso"><span class="std std-ref">VALSO</span></a>.</p>
+<ul class="simple">
+<li><p>How to download it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/VALIS.git</span>
+</pre></div>
 </div>
+<ul class="simple">
+<li><p>description and README available here: <a class="reference external" href="https://github.com/pmathiot/VALIS">https://github.com/pmathiot/VALIS</a></p></li>
+</ul>
 </div>
 </div>
 

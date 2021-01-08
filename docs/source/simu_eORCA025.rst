@@ -2123,8 +2123,11 @@ Previous action fixed the repeated issue on wall time issue.
 - Leg 56 Namelist is modify to enforce a cfl of 0.46 for icb.
 - Leg 60 Namelist is modify to enforce a cfl of 0.40 for icb.
 
+
 Monitoring
 ==========
+
+.. _eORCA025.L121-OPM006_monitoring:
 
 Global indicators
 -----------------
@@ -2162,6 +2165,8 @@ Amundsen sea
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
 
 .. image:: _static/VALAMU_eORCA025.L121-OPM006.png
+
+.. _eORCA025.L121-OPM006_isf_monitoring:
 
 Ice shelves
 -----------
