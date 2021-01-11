@@ -228,7 +228,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#evaluation">Evaluation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#possible-improvement">Possible improvement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#possible-improvement-in-nemo">Possible improvement in NEMO</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#icebergs">Icebergs</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#grounding">grounding</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#iceberg-distribution">Iceberg distribution</a></li>
@@ -2681,21 +2681,24 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 <div class="section" id="evaluation">
 <h3>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="possible-improvement">
-<h3>Possible improvement<a class="headerlink" href="#possible-improvement" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="possible-improvement-in-nemo">
+<h3>Possible improvement in NEMO<a class="headerlink" href="#possible-improvement-in-nemo" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="icebergs">
 <h4>Icebergs<a class="headerlink" href="#icebergs" title="Permalink to this headline">¶</a></h4>
-<p>The main idea is to be able to represent the iceberg tongue and there interaction with sea ice.
+<p>The main idea is to be able to represent the iceberg tongue and their interactions with sea ice.
 It could be see as easy at first order but it raise many point to works efficiently.
-It require some code changes in SI3 and ICB Module to better represent:
-- grounding
-- size distribution
-- fragmentation
-- icb/ice interactions</p>
+It requires some code changes in SI3 and ICB Module to better represent:</p>
+<ul class="simple">
+<li><p>grounding</p></li>
+<li><p>size distribution</p></li>
+<li><p>fragmentation</p></li>
+<li><p>icb/ice interactions</p></li>
+</ul>
 <div class="section" id="grounding">
 <h5>grounding<a class="headerlink" href="#grounding" title="Permalink to this headline">¶</a></h5>
-<p>Since the inclusion of M2016 work, iceberg can be grounded over shallow bank if the icb draft large enough.
-To do this, icebergs generation need to be slightly updated to respect at least this condition:</p>
+<p>Since the inclusion of Merino (2016) work in 2020 NEMO merge party, icebergs can be grounded over shallow bank if the icb draft is large enough.
+However current icebergs generation in NEMO is far from perfect.
+Icebergs generation need to be slightly updated to respect at least this condition:</p>
 <ul class="simple">
 <li><p>icb draft of calved iceberg need to be set to the ice shelf draft at calving site.
 For example a 250 m thick iceberg cannot be generated if the source ice shelf has a thickness of 50 m at the front.</p></li>
@@ -2705,25 +2708,30 @@ For example a 250 m thick iceberg cannot be generated if the source ice shelf ha
 <div class="section" id="iceberg-distribution">
 <h5>Iceberg distribution<a class="headerlink" href="#iceberg-distribution" title="Permalink to this headline">¶</a></h5>
 <p>Tournadre et al. (2016) show that the size (area) distribution of calved iceberg follow a -3/2 power law.
-In the same study, with a minimum size of 0.1 Km2, they show that 96.7% of the total icb surface is concentrated in icb larger than 10km2.
-Assuming same icb draft for all the icb, same number can be found for the volume. This raise some extra comments:</p>
+In the same study, with a minimum size of 0.1 Km2, they shown that 96.7% of the total icb surface is concentrated in icb larger than 10km2.
+Assuming same icb draft for all the icb, same numbers can be found for the volume. This raise some extra comments:</p>
 <ul class="simple">
-<li><p>The maximum icb size in NEMO is 3.3 km2, so NEMO simulation are biased toward small icebergs because all the icb mass is concentrated into these type of icb.
+<li><p>The maximum icb size in NEMO is 3.3 km2, so NEMO simulation are biased toward small icebergs because all the icb mass in NEMO is concentrated into these type of icb.
 This bais impact a lot the melt distribution (England et al. 2020 and Stern et al. 2016) with more fwf injected on the Antarctic shelf and less in the ACC.
 So probably the NEMO distribution need to be change with more large icebergs.</p></li>
 <li><p>Correction is needed in the code for the filling of the categories if the size distri is fixed but not the isf draft.</p></li>
-<li><p>If isf draft varying between classes the size distribution is not correctly applied in NEMO (mass weighted distribution as mentioned in Stern et al., 2016)</p></li>
+<li><p>If isf draft varying between classes (as it is the case in NEMO by default),
+the size distribution is not correctly applied in NEMO (mass weighted distribution as mentioned in Stern et al., 2016)</p></li>
 </ul>
 <p>Have large icebergs with a fragmentation law is unrealistic (England et al. 2016). So a break-up solution needs to be implemented.</p>
 </div>
 <div class="section" id="fragmentation">
 <h5>fragmentation<a class="headerlink" href="#fragmentation" title="Permalink to this headline">¶</a></h5>
-<p>Two fragmentation methods are available:</p>
+<p>To represent realistically large icebergs, a fragmentation law is needed (England et al. (2020)).
+Two fragmentation methods are available:</p>
 <ul class="simple">
-<li><p>England et al. (2016) based on poisson law for the fragmentation
+<li><p>England et al. (2020) based on poisson law for the fragmentation
 children generated icb size if based on typical scale retreived from mechanical consideration in a presence of a footlose.</p></li>
 <li><p>Bouhier et al. (2018) based on bulk formulation of the daily relative volume loss based on iceberg speed and sst.
 The children icebergs need also to be generated using a -3/2 power law size distribution.</p></li>
+<li><p>Breaking of the very large icebergs via collision with ice shelves/islands or hydrofracturing are represented in these studies.
+However England et al. (2020) mentioned that “it is relatively rare for icebergs to emerge from the sea ice edge with an area larger than 1000 km2;
+hence, the impact of this omission on the drift trajectories and freshwater distribution in the open ocean may be limited.”</p></li>
 </ul>
 </div>
 <div class="section" id="ice-interaction">
