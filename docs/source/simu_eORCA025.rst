@@ -2243,8 +2243,15 @@ Assuming same icb draft for all the icb, same numbers can be found for the volum
 - Correction is needed in the code for the filling of the categories if the size distri is fixed but not the isf draft.
 - If isf draft varying between classes (as it is the case in NEMO by default),
   the size distribution is not correctly applied in NEMO (mass weighted distribution as mentioned in Stern et al., 2016)
+- What is the maximum size we should include in the distribution ? The larger they are the less frequent they calved,
+  so at some point they became to rare to be included in.
+  Should the very large one be forgoted somehow (see consideration from England et al. (2020) in the fragmentation part)
+- Database of icebergs larger than 5km is presented here: https://www.scp.byu.edu/data/iceberg/database1.html (how precise is this data base, I have no idea).
+  A rapid overview give that 557 icb (larger than 5km) are observed between 1978 and 2019), so it make a calving 'rate' of 14 icb per years large enough to be in this data based
+- Database of icebergs small than 3km is presented here: https://wwz.ifremer.fr/cersat_fr/News/Altiberg-a-database-for-small-icebergs
 
-Have large icebergs with a fragmentation law is unrealistic (England et al. 2016). So a break-up solution needs to be implemented.
+The biggest issue to represent iceberg larger than the default in NEMO is that
+without a fragmentation law, representation of theses icebergs are unrealistic (England et al. 2016). So a break-up solution needs to be implemented.
 
 fragmentation
 ^^^^^^^^^^^^^
@@ -2297,7 +2304,7 @@ The difficulties are:
     - Classes are often defined by 1 area per class as far as I understand, classes should be defined by bin (A1->A2,A2->A3, ...)
       and cover the full range defined by Amin -> Amax
     - Even when I think I understood what value they used, I am not able to find their size distribution
-    
+
 - How to defined the new distributions ?
 - How this apply to the NH ?
 - Should we applied the fragmentation only to parents or only to icb larger than Xkm2 ?
