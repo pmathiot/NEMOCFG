@@ -2166,6 +2166,10 @@ These plot monitoring the evolution of temperature, salinity and ice shelf melt 
 
 .. image:: _static/VALAMU_eORCA025.L121-OPM006.png
 
+.. image:: _static/AMUSill.png
+
+.. image:: _static/GETZSill.png
+
 .. _eORCA025.L121-OPM006_isf_monitoring:
 
 Ice shelves
