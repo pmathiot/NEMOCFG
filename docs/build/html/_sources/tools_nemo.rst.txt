@@ -84,3 +84,37 @@ It is python based and as input file it used the filed processed by :ref:`VALSO 
   git clone https://github.com/pmathiot/VALIS.git
 
 * description and README available here: https://github.com/pmathiot/VALIS
+
+PYCHART
+-------
+
+* How to download it:
+
+.. code-block:: console
+
+  git clone https://github.com/pmathiot/PyChart.git
+
+PYTIME
+------
+PyTimes is a tools to build easily multiple time series from a bench of simulations. It manages list of input files with multiple
+ time frame or multiple files of 1 time frame. This is one of the core tools for VALSO.
+
+* How to download it:
+
+.. code-block:: console
+
+  git clone https://github.com/pmathiot/PyTimes.git
+
+PYTOOLS
+-------
+PyTools is a list of tools used when NEMO is not cooperative:
+
+- filechek.py check if 2 netcdf files are identical. It checks data, attributes (...).
+- get_value.py display value of a list of variable value at a specific points.
+- get_klevel.py find the closest level of a specific depth.
+
+* How to download it:
+
+.. code-block:: console
+
+  git clone https://github.com/pmathiot/PyTools.git

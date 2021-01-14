@@ -171,7 +171,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">Useful tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
 </ul>
 <p class="caption"><span class="caption-text">HPC</span></p>
 <ul>
@@ -421,9 +423,38 @@
 </dd>
 </dl>
 </li>
+</ul>
+<div class="figure align-default" id="id2">
+<img alt="_images/L121_zgrid.png" src="_images/L121_zgrid.png" />
+<p class="caption"><span class="caption-text">Vertical levels discretization (depth in x-axis and e3 in y-axis).
+Lines are the reference 75L in black, the first 121L guess in purple and the final discretisation in red dots.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<ul class="simple">
+<li><p>The key namelist parameters are:</p></li>
+</ul>
+</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ppsur  = -9010.587848403375</span>
+<span class="go">ppa0   =   106.31862889828116</span>
+<span class="go">ppa1   =     7.952358497085131</span>
+<span class="go">ppa2   =    97.73124662753601</span>
+
+<span class="go">ppkth  =    22.180677730800767</span>
+<span class="go">ppacr  =    11.02538019814476</span>
+
+<span class="go">ppkth2 =   100.00000000000</span>
+<span class="go">ppacr2 =    13.00000000000</span>
+
+<span class="go">ppdzmin     =  999999.0             !  Minimum vertical spacing</span>
+<span class="go">pphmax      =  999999.0             !  Maximum depth</span>
+<span class="go">ldbletanh   =    .TRUE.             !  Use/do not use double tanf function for vertical coordinates</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><dl class="simple">
 <dt>comments:</dt><dd><ul>
-<li><p>full namelist available in the namelist_cfg variable in the netcdf file.</p></li>
+<li><p>full namelist available in the namelist_cfg variable in the netcdf file and tools to extract it is available in
+the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#domaincfg">DOMAINcfg</a>)</p></li>
 <li><p>closed seas removed</p></li>
 </ul>
 </dd>
