@@ -2210,6 +2210,12 @@ Fimbul
 Evaluation
 ==========
 
+.. _bsf_OPM006:
+.. figure:: _static/bsf_OPM006.png
+
+   Barotropic stream function in the last 4 decades of the eORCA025.L121-OPM006
+
+
 Possible improvement in NEMO
 ============================
 

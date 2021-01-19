@@ -114,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#pychart">PYCHART</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pytime">PYTIME</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pytools">PYTOOLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-climato">BUILD_CLIMATO</a></li>
 </ul>
 </li>
 </ul>
@@ -202,6 +203,7 @@ So the best to download these tools, is to check out the NEMO version you plan t
 </div>
 <div class="section" id="drakkar-tools">
 <h1>DRAKKAR tools<a class="headerlink" href="#drakkar-tools" title="Permalink to this headline">¶</a></h1>
+<p>For all these tools, see the README available in the git directory. If there is no README ask the main developer.</p>
 <div class="section" id="nemobat">
 <h2>NEMOBAT<a class="headerlink" href="#nemobat" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -275,6 +277,35 @@ It is python based and as input file it used the filed processed by <a class="re
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/PyChart.git</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>Example of a command (the one used to produce the figure <a class="reference internal" href="simu_eORCA025.html#bsf-opm006"><span class="std std-numref">Fig. 2</span></a>):</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python ~/GIT/PyChart/plot_maps.py \</span>
+<span class="go"> --ft &#39;BSF (OPM006)&#39; \</span>
+<span class="go"> --spfid &#39;1979-1988&#39;                            &#39;1989-1998&#39;                           &#39;1999-2008&#39;                            &#39;2009-2018&#39;                         \</span>
+<span class="go"> --mapf eORCA025.L121-OPM006_10y_y1979_psi.nc eORCA025.L121-OPM006_10y_y1989_psi.nc eORCA025.L121-OPM006_10y_y1999_psi.nc eORCA025.L121-OPM006_10y_y2009_psi.nc  \</span>
+<span class="go"> --cntf eORCA025.L121-OPM006_10y_y1979_psi.nc eORCA025.L121-OPM006_10y_y1989_psi.nc eORCA025.L121-OPM006_10y_y1999_psi.nc eORCA025.L121-OPM006_10y_y2009_psi.nc  \</span>
+<span class="go"> --mapv sobarstf \</span>
+<span class="go"> --cntv sobarstf \</span>
+<span class="go"> --cblvl  0 100 10 \</span>
+<span class="go"> --cntlvl 0 100 10 \</span>
+<span class="go"> --cbu Sv \</span>
+<span class="go"> --cbn magma_r \</span>
+<span class="go"> --mapsf 0.000001 \</span>
+<span class="go"> --cntsf 0.000001 \</span>
+<span class="go"> --cbext both \</span>
+<span class="go"> --mesh   mesh.nc     \</span>
+<span class="go"> --bathyf mesh.nc     \</span>
+<span class="go"> --bathyv bathy_metry \</span>
+<span class="go"> --bathylvl 1000 2000 3000 4000 \</span>
+<span class="go"> -p south_ocean \</span>
+<span class="go"> --sp 2x2 \</span>
+<span class="go"> -o bsf_OPM006</span>
+</pre></div>
+</div>
+<p>–*v, –*v, –mesh, –bathy? can allow 1 or nfile arguments
+-p is the projection among a predefined list, –sp the disposition you want (can be 1x3 even if you ask only 2 plots)
+-o the output</p>
 </div>
 <div class="section" id="pytime">
 <h2>PYTIME<a class="headerlink" href="#pytime" title="Permalink to this headline">¶</a></h2>
@@ -301,6 +332,18 @@ It is python based and as input file it used the filed processed by <a class="re
 <li><p>How to download it:</p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/PyTools.git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-climato">
+<h2>BUILD_CLIMATO<a class="headerlink" href="#build-climato" title="Permalink to this headline">¶</a></h2>
+<p>BUILD_CLIMATO is tools to build multi year mean from NEMO output.
+To have support of the thickness weighting, variable attributes need to specify a correct cell_methods: “time: mean (thickness weighted)”.
+This can be set up before the start of the run in XIOS by using cell_methods=”time: mean (thickness weighted)” in XIOS variable definition.</p>
+<ul class="simple">
+<li><p>How to download it:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/pmathiot/BUILD_CLIMATO.git</span>
 </pre></div>
 </div>
 </div>

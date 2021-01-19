@@ -16,6 +16,8 @@ So the best to download these tools, is to check out the NEMO version you plan t
 DRAKKAR tools
 *************
 
+For all these tools, see the README available in the git directory. If there is no README ask the main developer.
+
 NEMOBAT
 -------
 
@@ -94,6 +96,36 @@ PYCHART
 
   git clone https://github.com/pmathiot/PyChart.git
 
+* Example of a command (the one used to produce the figure :numref:`bsf_OPM006`):
+
+.. code-block:: console
+
+  python ~/GIT/PyChart/plot_maps.py \
+   --ft 'BSF (OPM006)' \
+   --spfid '1979-1988'                            '1989-1998'                           '1999-2008'                            '2009-2018'                         \
+   --mapf eORCA025.L121-OPM006_10y_y1979_psi.nc eORCA025.L121-OPM006_10y_y1989_psi.nc eORCA025.L121-OPM006_10y_y1999_psi.nc eORCA025.L121-OPM006_10y_y2009_psi.nc  \
+   --cntf eORCA025.L121-OPM006_10y_y1979_psi.nc eORCA025.L121-OPM006_10y_y1989_psi.nc eORCA025.L121-OPM006_10y_y1999_psi.nc eORCA025.L121-OPM006_10y_y2009_psi.nc  \
+   --mapv sobarstf \
+   --cntv sobarstf \
+   --cblvl  0 100 10 \
+   --cntlvl 0 100 10 \
+   --cbu Sv \
+   --cbn magma_r \
+   --mapsf 0.000001 \
+   --cntsf 0.000001 \
+   --cbext both \
+   --mesh   mesh.nc     \
+   --bathyf mesh.nc     \
+   --bathyv bathy_metry \
+   --bathylvl 1000 2000 3000 4000 \
+   -p south_ocean \
+   --sp 2x2 \
+   -o bsf_OPM006
+
+--\*v, --\*v, --mesh, --bathy? can allow 1 or nfile arguments
+-p is the projection among a predefined list, --sp the disposition you want (can be 1x3 even if you ask only 2 plots)
+-o the output
+
 PYTIME
 ------
 PyTimes is a tools to build easily multiple time series from a bench of simulations. It manages list of input files with multiple
@@ -118,3 +150,15 @@ PyTools is a list of tools used when NEMO is not cooperative:
 .. code-block:: console
 
   git clone https://github.com/pmathiot/PyTools.git
+
+BUILD_CLIMATO
+-------------
+BUILD_CLIMATO is tools to build multi year mean from NEMO output.
+To have support of the thickness weighting, variable attributes need to specify a correct cell_methods: "time: mean (thickness weighted)".
+This can be set up before the start of the run in XIOS by using cell_methods="time: mean (thickness weighted)" in XIOS variable definition.
+
+* How to download it:
+
+.. code-block:: console
+
+  git clone https://github.com/pmathiot/BUILD_CLIMATO.git
