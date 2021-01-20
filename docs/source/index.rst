@@ -40,3 +40,9 @@ NEMO
    :caption: HPC
 
    HPC_centres
+
+.. toctree::
+   :hidden:
+   :caption: Miscellaneous
+
+   miscellaneous
