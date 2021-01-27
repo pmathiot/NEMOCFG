@@ -2215,6 +2215,11 @@ Evaluation
 
    Barotropic stream function in the last 4 decades of the eORCA025.L121-OPM006
 
+.. _isfmlt_2009.10y_OPM006:
+.. figure:: _static/melt_sector_eORCA025.L121-OPM006_2009-2018.png
+   :scale: 30
+
+   Melt rate and bottom temperature for the last decade of the eORCA025.L121-OPM006 simulations
 
 Possible improvement in NEMO
 ============================

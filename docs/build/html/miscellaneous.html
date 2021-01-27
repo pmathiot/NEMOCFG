@@ -97,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
@@ -123,6 +124,10 @@
 <li class="toctree-l1"><a class="reference internal" href="#restructuredtext">reStructuredText</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creation-of-the-html-from-rst-file">Creation of the html from rst file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#syntax-of-rst-file">Syntax of rst file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#cmip6-data">CMIP6 data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wget">Wget</a></li>
 </ul>
 </li>
 </ul>
@@ -420,6 +425,31 @@ The site will be in ‘<a class="reference external" href="https://username.gith
 <li><p>a quick and detailed guide is available here: <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">https://docutils.sourceforge.io/docs/user/rst/quickref.html</a></p></li>
 <li><p>All this site is written in rst, so for any option you see in these pages, you can refer to the source code.</p></li>
 </ul>
+</div>
+</div>
+<div class="section" id="cmip6-data">
+<h1>CMIP6 data<a class="headerlink" href="#cmip6-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="wget">
+<h2>Wget<a class="headerlink" href="#wget" title="Permalink to this headline">¶</a></h2>
+<p>You can find all the available name, variable … here: <a class="reference external" href="https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/">https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</a>
+A listing of all the facet available for the query is described here: <a class="reference external" href="https://esgf-node.llnl.gov/esg-search/search?project=CMIP6&amp;facets=*&amp;limit=0">https://esgf-node.llnl.gov/esg-search/search?project=CMIP6&amp;facets=*&amp;limit=0</a></p>
+<p>To create the wget script:
+1. look for your data</p>
+<blockquote>
+<div><p>To do this you have to enter this http: <a class="reference external" href="https://esgf-node.llnl.gov/esg-search/search?experiment_id=ssp585&amp;variable=tob&amp;distrib=true">https://esgf-node.llnl.gov/esg-search/search?experiment_id=ssp585&amp;variable=tob&amp;distrib=true</a>.
+In this case, I am looking for the variable tob in the ssp585 experiment id on all the server. More details on the method here:
+<a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#facet-queries">https://esgf.github.io/esgf-user-support/user_guide.html#facet-queries</a>.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>get your wget script</p></li>
+</ol>
+<blockquote>
+<div><p>Replace in the http, ‘search?’ by ‘wget?’</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>run the script with the -s option</p></li>
+</ol>
+<p>For more advanced method, look at the documentation.</p>
 </div>
 </div>
 

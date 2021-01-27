@@ -28,6 +28,7 @@ NEMO
    simu_eORCA025
    simu_AMUXL025
    simu_AMUXL12
+   simu_AMUXL36
 
 .. toctree::
    :hidden:
