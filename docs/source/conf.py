@@ -15,7 +15,6 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'NEMO@IGE'
@@ -53,3 +52,10 @@ html_theme_options = {'includehidden': True, 'navigation_depth': -1 }
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# figure numbering
+numfig = True
+
+# set width
+def setup(app):
+    app.add_css_file('style.css')

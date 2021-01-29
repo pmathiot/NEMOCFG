@@ -2123,12 +2123,16 @@ Previous action fixed the repeated issue on wall time issue.
 - Leg 56 Namelist is modify to enforce a cfl of 0.46 for icb.
 - Leg 60 Namelist is modify to enforce a cfl of 0.40 for icb.
 
+
 Monitoring
 ==========
+
+.. _eORCA025.L121-OPM006_monitoring:
 
 Global indicators
 -----------------
 On these plot you can find a time series of:
+
 - ACC transport
 - AMOC at rapid array
 - AMHT at rapid array
@@ -2142,6 +2146,7 @@ On these plot you can find a time series of:
 Regional indicators
 -------------------
 On these plot, you can find time series of:
+
 - ACC transport
 - Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)
 - Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)
@@ -2158,7 +2163,14 @@ These plots monitor the evolution of ice shelf melting and the corresponding she
 Amundsen sea
 ------------
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
+
 .. image:: _static/VALAMU_eORCA025.L121-OPM006.png
+
+.. image:: _static/AMUSill.png
+
+.. image:: _static/GETZSill.png
+
+.. _eORCA025.L121-OPM006_isf_monitoring:
 
 Ice shelves
 -----------
@@ -2198,14 +2210,26 @@ Fimbul
 Evaluation
 ==========
 
-Possible improvement
-====================
+.. _bsf_OPM006:
+.. figure:: _static/bsf_OPM006.png
+
+   Barotropic stream function in the last 4 decades of the eORCA025.L121-OPM006
+
+.. _isfmlt_2009.10y_OPM006:
+.. figure:: _static/melt_sector_eORCA025.L121-OPM006_2009-2018.png
+   :scale: 30
+
+   Melt rate and bottom temperature for the last decade of the eORCA025.L121-OPM006 simulations
+
+Possible improvement in NEMO
+============================
 
 Icebergs
 --------
-The main idea is to be able to represent the iceberg tongue and there interaction with sea ice.
+The main idea is to be able to represent the iceberg tongue and their interactions with sea ice.
 It could be see as easy at first order but it raise many point to works efficiently.
-It require some code changes in SI3 and ICB Module to better represent:
+It requires some code changes in SI3 and ICB Module to better represent:
+
 - grounding
 - size distribution
 - fragmentation
@@ -2213,8 +2237,9 @@ It require some code changes in SI3 and ICB Module to better represent:
 
 grounding
 ^^^^^^^^^
-Since the inclusion of M2016 work, iceberg can be grounded over shallow bank if the icb draft large enough.
-To do this, icebergs generation need to be slightly updated to respect at least this condition:
+Since the inclusion of Merino (2016) work in 2020 NEMO merge party, icebergs can be grounded over shallow bank if the icb draft is large enough.
+However current icebergs generation in NEMO is far from perfect.
+Icebergs generation need to be slightly updated to respect at least this condition:
 
 - icb draft of calved iceberg need to be set to the ice shelf draft at calving site.
   For example a 250 m thick iceberg cannot be generated if the source ice shelf has a thickness of 50 m at the front.
@@ -2224,25 +2249,37 @@ To do so, we need to change the distribution mechanism.
 Iceberg distribution
 ^^^^^^^^^^^^^^^^^^^^
 Tournadre et al. (2016) show that the size (area) distribution of calved iceberg follow a -3/2 power law.
-In the same study, with a minimum size of 0.1 Km2, they show that 96.7% of the total icb surface is concentrated in icb larger than 10km2.
-Assuming same icb draft for all the icb, same number can be found for the volume. This raise some extra comments:
+In the same study, with a minimum size of 0.1 Km2, they shown that 96.7% of the total icb surface is concentrated in icb larger than 10km2.
+Assuming same icb draft for all the icb, same numbers can be found for the volume. This raise some extra comments:
 
-- The maximum icb size in NEMO is 3.3 km2, so NEMO simulation are biased toward small icebergs because all the icb mass is concentrated into these type of icb.
+- The maximum icb size in NEMO is 3.3 km2, so NEMO simulation are biased toward small icebergs because all the icb mass in NEMO is concentrated into these type of icb.
   This bais impact a lot the melt distribution (England et al. 2020 and Stern et al. 2016) with more fwf injected on the Antarctic shelf and less in the ACC.
   So probably the NEMO distribution need to be change with more large icebergs.
 - Correction is needed in the code for the filling of the categories if the size distri is fixed but not the isf draft.
-- If isf draft varying between classes the size distribution is not correctly applied in NEMO (mass weighted distribution as mentioned in Stern et al., 2016)
+- If isf draft varying between classes (as it is the case in NEMO by default),
+  the size distribution is not correctly applied in NEMO (mass weighted distribution as mentioned in Stern et al., 2016)
+- What is the maximum size we should include in the distribution ? The larger they are the less frequent they calved,
+  so at some point they became to rare to be included in.
+  Should the very large one be forgoted somehow (see consideration from England et al. (2020) in the fragmentation part)
+- Database of icebergs larger than 5km is presented here: https://www.scp.byu.edu/data/iceberg/database1.html (how precise is this data base, I have no idea).
+  A rapid overview give that 557 icb (larger than 5km) are observed between 1978 and 2019), so it make a calving 'rate' of 14 icb per years large enough to be in this data based
+- Database of icebergs small than 3km is presented here: https://wwz.ifremer.fr/cersat_fr/News/Altiberg-a-database-for-small-icebergs
 
-Have large icebergs with a fragmentation law is unrealistic (England et al. 2016). So a break-up solution needs to be implemented.
+The biggest issue to represent iceberg larger than the default in NEMO is that
+without a fragmentation law, representation of theses icebergs are unrealistic (England et al. 2016). So a break-up solution needs to be implemented.
 
 fragmentation
 ^^^^^^^^^^^^^
+To represent realistically large icebergs, a fragmentation law is needed (England et al. (2020)).
 Two fragmentation methods are available:
 
-- England et al. (2016) based on poisson law for the fragmentation
+- England et al. (2020) based on poisson law for the fragmentation
   children generated icb size if based on typical scale retreived from mechanical consideration in a presence of a footlose.
 - Bouhier et al. (2018) based on bulk formulation of the daily relative volume loss based on iceberg speed and sst.
   The children icebergs need also to be generated using a -3/2 power law size distribution.
+- Breaking of the very large icebergs via collision with ice shelves/islands or hydrofracturing are represented in these studies.
+  However England et al. (2020) mentioned that "it is relatively rare for icebergs to emerge from the sea ice edge with an area larger than 1000 km2;
+  hence, the impact of this omission on the drift trajectories and freshwater distribution in the open ocean may be limited."
 
 Ice interaction
 ^^^^^^^^^^^^^^^
@@ -2277,10 +2314,12 @@ The difficulties are:
 
 - At his stage I am not able to recompute the distribution proposed by the various author (Stern et al. 2016, Tournadre et al. 2016 and England et al. 2020).
   This step is needed to be confident in what I will do for 1.0 and 1.2
+
     - Often the Amin (area min) and Amax used to defined the power law is not mentioned (not a big issue for Amax).
     - Classes are often defined by 1 area per class as far as I understand, classes should be defined by bin (A1->A2,A2->A3, ...)
       and cover the full range defined by Amin -> Amax
     - Even when I think I understood what value they used, I am not able to find their size distribution
+
 - How to defined the new distributions ?
 - How this apply to the NH ?
 - Should we applied the fragmentation only to parents or only to icb larger than Xkm2 ?

@@ -89,8 +89,35 @@ eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc
    - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
    - horiz. coordinates: :ref:`eORCA025_coord_c3.0`
    - vert. coordinates: z + 121 levels selected to have rougly constant resolution between 100m and 1000m (ie range of depth spanning by the isf cavities.
+
+.. figure:: _static/L121_zgrid.png
+
+   Vertical levels discretization (depth in x-axis and e3 in y-axis).
+   Lines are the reference 75L in black, the first 121L guess in purple and the final discretisation in red dots.
+
+   - The key namelist parameters are:
+
+.. code-block:: console
+
+    ppsur  = -9010.587848403375
+    ppa0   =   106.31862889828116
+    ppa1   =     7.952358497085131
+    ppa2   =    97.73124662753601
+
+    ppkth  =    22.180677730800767
+    ppacr  =    11.02538019814476
+
+    ppkth2 =   100.00000000000
+    ppacr2 =    13.00000000000
+
+    ppdzmin     =  999999.0             !  Minimum vertical spacing
+    pphmax      =  999999.0             !  Maximum depth
+    ldbletanh   =    .TRUE.             !  Use/do not use double tanf function for vertical coordinates
+
+
 * comments:
-   - full namelist available in the namelist_cfg variable in the netcdf file.
+   - full namelist available in the namelist_cfg variable in the netcdf file and tools to extract it is available in
+     the DOMAIN_cfg tools (`DOMAINcfg <https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#domaincfg>`_)
    - closed seas removed
 * tools:
    - r13390 of NEMO DOMAIN_cfg tools
