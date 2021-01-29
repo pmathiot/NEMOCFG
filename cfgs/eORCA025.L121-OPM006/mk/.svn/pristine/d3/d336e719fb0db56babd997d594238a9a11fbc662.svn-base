@@ -1,7 +1,0 @@
-CSHRC :
-setenv PATH ~/NEMOGCM/TOOLS:$PATH
-setenv NEMO_TDIR /users/rblod/tmp
-
-BASH :
-export PATH=$PATH:~/NEMOGCM/TOOLS'
-export NEMO_TDIR=/users/rblod/tmp
