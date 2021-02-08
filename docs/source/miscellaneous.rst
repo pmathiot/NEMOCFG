@@ -236,6 +236,13 @@ and add sphinx_rtd_theme to the extension:
 
   extensions = [...,'sphinx_rtd_theme']
 
+These modules can be installed with these commands:
+
+.. code-block:: console
+
+    conda install -c anaconda sphinx_rtd_theme
+    conda install -c conda-forge sphinxcontrib-bibtex 
+
 - step 6: commit and push the changes to gh-pages branch (you can check in your github interface if the web site is well published).
   The site will be in 'https://username.github.io/REPO/docs/build/html/index.html'. For a quick access, you can add the link to your README.
 
@@ -264,3 +271,34 @@ To create the wget script:
 3. run the script with the -s option
 
 For more advanced method, look at the documentation.
+
+***
+Git
+***
+
+**Create a remote branch:**
+
+- create a local branch (it will create a local from your local branch):
+
+.. code-block:: console
+
+    git checkout -b <branch-name>
+
+- push the branch to the remote directory:
+
+.. code-block:: console
+
+    git push -u origin <branch-name>
+
+**List available branches:**
+
+.. code-block:: console
+
+    git branch
+
+**Checkout remote branch from a team member:**
+
+.. code-block:: console
+
+    git fetch
+    git checkout <branch-name>

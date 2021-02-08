@@ -10,15 +10,17 @@ Coordinates
 eORCA025_coord_c3.0.nc
 ----------------------
 
-* source:
+Source:
    - file build at Mercator (Clement Bricaud):
-* comments:
+Comments:
    - Bug in the north corrected.
    - add proper extension under masked area
-* original name:
+Original name:
    - eORCA_R025_coordinates_v3.0.nc
-* reference for the south extension:
+Reference for the south extension:
    - Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised impacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10, 2849–2874, https://doi.org/10.5194/gmd-10-2849-2017, 2017.
+Path:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_coord_c3.0.nc
 
 Bathymetry and ice shelf draft
 ==============================
@@ -27,29 +29,28 @@ Bathymetry and ice shelf draft
 
 eORCA025_bathymetry_b0.0.nc
 ---------------------------
-* original name:
+Original name:
    - bathy_noisf_ORCA025_IBCSO_ETOPO1_mask75L_v2.2_landsuppression.nc
-* Source:
+Source:
    - File used in GO6 (cite GO6 paper)
-* references:
+References:
    - Storkey, D., Blaker, A. T., Mathiot, P., Megann, A., Aksenov, Y., Blockley, E. W., Calvert, D., Graham, T., Hewitt, H. T., Hyder, P., Kuhlbrodt, T., Rae, J. G. L., and Sinha, B.: UK Global Ocean GO6 and GO7: a traceable hierarchy of model resolutions, Geosci. Model Dev., 11, 3187–3213, https://doi.org/10.5194/gmd-11-3187-2018, 2018.
    - Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised im    pacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10,     2849–2874, https://doi.org/10.5194/gmd-10-2849-2017, 2017.
-* comments:
+Comments:
    - Method for the southern extention described in Mathiot et al., 2017
 
 .. _eORCA025_bathymetry_b0.1:
 
 eORCA025_bathymetry_b0.1.nc
 ---------------------------
-
-* original name:
+Original name:
    - eORCA025_bathymetry_isf_v2.3.nc
-* Source :
+Source :
    - File used in GO7 (cite GO6 paper)
-* references:
+References:
    - Storkey, D., Blaker, A. T., Mathiot, P., Megann, A., Aksenov, Y., Blockley, E. W., Calvert, D., Graham, T., Hewitt, H. T., Hyder, P., Kuhlbrodt, T., Rae, J. G. L., and Sinha, B.: UK Global Ocean GO6 and GO7: a traceable hierarchy of model resolutions, Geosci. Model Dev., 11, 3187–3213, https://doi.org/10.5194/gmd-11-3187-2018, 2018.
    - Mathiot, P., Jenkins, A., Harris, C., and Madec, G.: Explicit representation and parametrised im    pacts of under ice shelf seas in the z∗ coordinate ocean model NEMO 3.6, Geosci. Model Dev., 10,     2849–2874, https://doi.org/10.5194/gmd-10-2849-2017, 2017.
-* comments:
+Comments:
    - as b0.0 but with under ice shelf data (isf draft and bathy) from bedmap2.
    - Method for the southern extention described in Mathiot et al., 2017
 
@@ -57,25 +58,27 @@ eORCA025_bathymetry_b0.1.nc
 
 eORCA025_bathymetry_b0.2.nc
 ---------------------------
-* heritage:
+Heritage:
    - :ref:`eORCA025_bathymetry_b0.1`
-* source:
+Source:
    - Bathymetry north of Antarctic continental slope: :ref:`eORCA025_bathymetry_b0.1`
    - Bathymetry south of Antarctic continental slope: Bed Machine (BedMachineAntarctica-2020-07-15.nc). Version available on the server is bugged (issue with reference for the IBCSO part).
    - ice shelf draft is from BedMachineAntarctica-2020-07-15.nc
    - path to raw data: TOADD
-* reference:
+Reference:
    - Morlighem, M., E. Rignot, T. Binder, D. D. Blankenship, R. Drews, G. Eagles, O. Eisen, F. Ferraccioli, R. Forsberg, P. Fretwell, V. Goel, J. S. Greenbaum, H. Gudmundsson, J. Guo, V. Helm, C. Hofstede, I. Howat, A. Humbert, W. Jokat, N. B. Karlsson, W. Lee, K. Matsuoka, R. Millan, J. Mouginot, J. Paden, F. Pattyn, J. L. Roberts, S. Rosier, A. Ruppel, H. Seroussi, E. C. Smith, D. Steinhage, B. Sun, M. R. van den Broeke, T. van Ommen, M. van Wessem, and D. A. Young. 2020. Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet, Nature Geoscience. 13. 132-137. https://doi.org/10.1038/s41561-019-0510-8
-* method:
+Method:
    - step 1: create the lat/lon variable associated to the netcdf file (BedMachine2NEMOBAT.py)
    - step 2: run interpolation for bathymetry, isfdraft, mask
    - step 3: smooth as eORCA025 bathymetry
    - step 4: enforce compatibility and build mask before combining data set
    - step 5: combine with reference eORCA025 bathymetry (b0.0) files
-* tools:
+Tools:
    - NEMOBAT: https://github.com/pmathiot/NEMOBAT (ce3db4f..78d1867)
-* path to building directory:
-   - TOADD
+Path:
+  - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc
+
+
 
 Domaincfg
 =========
@@ -85,7 +88,7 @@ Domaincfg
 eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc
 ------------------------------------------
 
-* source:
+Source:
    - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
    - horiz. coordinates: :ref:`eORCA025_coord_c3.0`
    - vert. coordinates: z + 121 levels selected to have rougly constant resolution between 100m and 1000m (ie range of depth spanning by the isf cavities.
@@ -115,15 +118,15 @@ eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc
     ldbletanh   =    .TRUE.             !  Use/do not use double tanf function for vertical coordinates
 
 
-* comments:
+Comments:
    - full namelist available in the namelist_cfg variable in the netcdf file and tools to extract it is available in
      the DOMAIN_cfg tools (`DOMAINcfg <https://forge.ipsl.jussieu.fr/nemo/chrome/site/doc/NEMO/guide/html/tools.html#domaincfg>`_)
    - closed seas removed
-* tools:
+Tools:
    - r13390 of NEMO DOMAIN_cfg tools
-* paths:
+Paths:
    - building directory: TOADD
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc
 
 Runoff
 ======
@@ -131,28 +134,29 @@ Runoff
 First_runoff_file:
 ------------------
 
-* source:
+Source:
    - The runoffs data file comes from the Dai and Trenberth study . It is documented in a publication (Dai and Trenberth, 2002, hereafter DT02). The spatial resolution of this file is 1◦ ×1◦ with monthly data. This data are available on the web : http ://www.cgd.ucar.edu/cas/catalog/dai/
-* reference:
+Reference:
    - https://www.drakkar-ocean.eu/publications/reports/runoff-mercator-06.pdf
 
 .. _eORCA025_runoff_b0.2_v0.0:
 
 eORCA025_runoff_b0.2_v0.0.nc
 ----------------------------
-
-* sources:
+Sources:
    - The runoffs data file comes from the Dai and Trenberth study . It is documented in a publication (Dai and Trenberth, 2002, hereafter DT02). The spatial resolution of this file is 1◦ ×1◦ with monthly data. This data are available on the web : http ://www.cgd.ucar.edu/cas/catalog/dai/
-* original name:
+Original name:
    - ORCA025_rnficbisf_rignot2013_noberg.nc
-* compatibility:
+Compatibility:
    - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
-* Comments:
+Comments:
    - original file from the Met Office. As the coastline north of Antactica did not change, the GO6 runoff is adapted to the bathymetry 0.3.
    - Antarctic runoff has been removed in Mathiot et al. (2017).
    - GO6 runoff variable name is confusing. This is: sornficb (even if no icb are present in it.
    - we rename runoff variable name to sorunoff.
    - we extract only the variable related to runoff (sorunoff,socoefr,nav_lat,nav_lon)
+Paths:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_runoff_b0.2_v0.0.nc
 
 TS Initial condition
 ====================
@@ -161,22 +165,22 @@ TS Initial condition
 
 eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc
 ---------------------------------------------------
-* source:
+Source:
    - Open ocean: WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)
    - Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005)
-* methode:
+Methode:
    - WOA are drowned and interpolated to :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc`
    - WOA is only provided for each season, so we build the monthly 3D file with a linear interpolation
    - WOA is only provided monthly data between surface and 1450m depth, we used this data for first 1400m
      (ie level 89, last level fully included in the monthly data).
-   A linear transition from one to the other data set is done between 1200m and depth of level 90.
+   - A linear transition from one to the other data set is done between 1200m and depth of level 90.
    - UKMO data are downloaded monthly and a climatology is built
    - Merge between the 2 data set is done in the open ocean. UKMO data are kept until 10km offshore the Antarctic ice shelves. WOA is kept for cell further away than 70 km offshore the Antarctic ice shelves. A linear transition in the transition area is applied.
    - A non penetrative convection scheme is applied to avoid static instability
    - A shapiro filter is applied to remove strong gradient (3 passes)
-* compatibility:
+Compatibility:
    - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is masked.
-* path:
+Path:
    - directory: TOADD
    - file: TOADD
 
@@ -184,18 +188,18 @@ eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc
 
 eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc
 ---------------------------------------------------
-* source:
-  - Open ocean: WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)
-  - Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005)
-* methode:
-  - as :ref:`eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4`
-  - convert to TEOS10 using GSW-Fortran-3.05-6 package (see TEOS10 directory in building directory)
-  - then check and correct overlap cells with check_lbclnk_v3.py
-* compatibility:
-  - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is masked.
-* path:
-  - directory: TOADD
-  - file: TOADD
+Source:
+   - Open ocean: WOA2018 on period 1981-2010 (see :ref:`WOA2018_v19812010.1` for details)
+   - Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005)
+Methode:
+   - as :ref:`eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4`
+   - convert to TEOS10 using GSW-Fortran-3.05-6 package (see TEOS10 directory in building directory)
+   - then check and correct overlap cells with check_lbclnk_v3.py
+Compatibility:
+   - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is masked.
+Path:
+   - directory: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc
 
 Ice Initial condition
 =====================
@@ -204,37 +208,50 @@ Ice Initial condition
 
 eORCA025_seaice_c3.0_v19802004.0.nc
 -----------------------------------
-* source:
-  - Data comes from bt705 JRA run from the UKMO
-* variables:
-  - ice concentration (siconc)
-  - ice thickness (sithic)
-  - snow thickness (snvolu)
-* method :
-  - climatology is done for each month over period 1980 to 2004 (siconc, sithic, snvolu)
-  - snthic computed using snthic=snvolu/siconc for point where siconc > 0 each month
-    then average over the whole period.
-* path:
+Source:
+   - Data comes from bt705 JRA run from the UKMO
+Variables:
+   - ice concentration (siconc)
+   - ice thickness (sithic)
+   - snow thickness (snvolu)
+Method :
+   - climatology is done for each month over period 1980 to 2004 (siconc, sithic, snvolu)
+   - snthic computed using snthic=snvolu/siconc for point where siconc > 0 each month
+     then average over the whole period.
+Path:
     - directory: TOADD
-    - file: TOADD
+    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_seaice_c3.0_v19802004.0.nc
 
 Restoring
 =========
 
 sss_WOA2018r04_v19812010.2.nc
 -----------------------------
-* source:
+Source:
     - WOA2018 on period 1981-2010 (see :ref:WOA2018_v19812010.1 for details)
-* methode:
+Methode:
     - monthly WOA surface data are drowned.
     - original file is compressed to level 1 and we used a smaller chunk size.
-* variable:
+Variable:
     - s_an in PSU
-* frequency:
+Frequency:
     - monthly
-* weights:
+Weights:
     - eORCA025_sss_WOA2018r04_v19812010_c3.0_weights_bilin.nc
       (compatible with :ref:`eORCA025_coord_c3.0` or :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`)
+
+sss_WOA2018r04_v19812010.5.nc
+-----------------------------
+Source:
+   - WOA2018 on period 1981-2010 (see :ref:`eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5` for details)
+Methode:
+   - extract surface value of :ref:`eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5` file
+Variable:
+   - s_an in absolute salinity
+Frequency:
+   - monthly
+Path:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.nc
 
 Iceberg calving
 ===============
@@ -245,26 +262,25 @@ eORCA025_calving_b0.2_v2.3.nc
 -----------------------------
 the amount of calving per ice shelves comes from Rignot et al. (2013). The distribution along the ice shelf front is random (the idea is as I don't know where are the calving site and the amount of calving per site, I draw a random distribution of calving scale to the total amount provided by the climatology).
 
-* sources:
+Sources:
    - north: as in March et al. (2015).
    - south: Rignot et al. (2013).
-* useful tools:
+Useful tools:
    - git project: https://github.com/pmathiot/CDFTOOLS_4.0_ISF
    - tag: v3.0.2-330-g40595ba
    - path on dahu: /home/mathiotp/TOOLS/CDFTOOLS/20200823_40595ba/src
    - script: cdfisf_fill, cdficb_clv
-* compatibility:
+Compatibility:
    - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
-* comments:
+Comments:
    - in this version only 1 time frame is provided, we can easily extend the logic to interannual calving or monthly calving by drawing X different state.
-* variable:
+Variable:
    - soicbclv
-* frequency:
+Frequency:
    - annual
-* path to building directory:
-   - TOADD
-* path to file:
-   - TOADD
+Path:
+   - directory:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_calving_b0.2_v2.3.nc
 
 Geothermal heating
 ==================
@@ -275,12 +291,13 @@ ghflux_v2.0.nc
 --------------
 Goutorbe geothermal heat flux with online interpolation
 
-* old name:
+Old name:
    - Goutorbe_ghflux.nc
-* weights availables:
+Weights availables:
    - eORCA025_ghflux_v2.0_c3.0_weights_bilin.nc: weight compatible with :ref:`eORCA025_coord_c3.0` or :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`
-* path:
-   - TOADD
+Path:
+   - data file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/ghflux_v2.0.nc
+   - weight file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_ghflux_v2.0_c3.0_weights_bilin.nc
 
 Top tidal velocity
 ==================
@@ -292,20 +309,20 @@ As shown in Jourdain et al. (2018): including tidal velocities into the equation
 eORCA025_ttv_b0.2_v0.0.nc
 -------------------------
 
-* source:
+Source:
    - CATS2008: CATS2008 is a regional inverse barotropic tide model for the circum-Antarctic ocean on a 4 km grid. The model domain includes ocean cavities under the floating ice shelves. The coastline is based on the MODIS MOA [Scambos et al., 2007; Remote Sensing of Environment] feature identification files, adjusted to match ICESat-derived grounding lines for the Ross and Filchner-Ronne ice shelves and Interferometric Synthetic Aperture Radar (InSAR) grounding lines. The water depth map for open water is based on the 2007 release update to Smith and Sandwell [1997; Science]. Adjustments to this map have been made in various regions, including the open continental shelf in front of the Larsen-C Ice Shelf which has been blended with GEBCO bathymetry.
    - Data downloaded: 12/08/2020 from here: https://www.usap-dc.org/view/dataset/601235
-* method:
+Method:
    - see Jourdain et al. (2018) on how to compute the mean tidal velocity for detailed. Here we used the first 6 component : m2 s2 n2 k1 q1 o1 (the one provided by CATS). The average is done over 190d with a sampling of 15 minutes. The mean velocity is computed from the tidal transport using the CATS water column thickness. The data a drown then interpolated on NEMO grid then drowned again. At the end, we masked it for visualisation and for the simulation. In case other bathymetry/grounding line used, you can simply redo the step 2 to 4 described below as ttv.nc is a drowned file.
-* compatibility:
+Compatibility:
    - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`
-* comments:
+Comments:
    - discontinuity are visible close to the calving front on E FRIS.
      This is because the claving front in CATS2008 and NEMO is not located at the same location.
      As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file, I had to use the open ocean CATS velocity to file this points.
-* path to data and building directory
-   - TOADD
-   - TOADD
+Path:
+   - directory:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_ttv_b0.2_v0.0.nc
 
 Internal wave mixing
 ====================
@@ -322,16 +339,16 @@ The mixing variables correspond to the column-integrated power available for mix
 
 These variable replace the older input files for the tidal mixing parameterization.
 
-* source:
+Source:
    - see De Lavergne et al. (2016) and details in :ref:`De_Lavergne_et_al_2016`.
-* methode:
+Methode:
    - Interpolation from the regular 0.5 degree resolution dataset to eORCA025 grid.
    - from email discussion with Casimir, I decided to fill land and isf cavities to the backgrou    nd value instead of drowning data.
-* reference:
+Reference:
    - de Lavergne, C., G. Madec, J. L. Sommer, A. J. G. Nurser, and A. C. N. Garabato, 2016: The impact of a variable mixing efficiency on the abyssal overturning. Journal of Physical Oceanography, 46, 663?~@~S681
-* path:
+Path:
    - building directory: TOADD
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_iwm_b0.2_v0.0.nc
 
 Chlorophyle
 ===========
@@ -341,20 +358,20 @@ Chlorophyle
 chlorophyl_v0.0.nc
 ------------------
 
-* source:
+Source:
    - merge between ESACCI and biomer (CMEMS reanalysis)
-* comments:
+Comments:
    - file created by Romain Bourdalie Badie (Mercator)
    - file use as it is with on the fly interpolation
-* compatibility of weight files:
+Compatibility of weight files:
    - :ref:`eORCA025_coord_c3.0`
-* weights: eORCA025_chlorophyl_v0.0_c3.0_weights_bilin.nc
+Weights: eORCA025_chlorophyl_v0.0_c3.0_weights_bilin.nc
    - computed using /home/mathiotp/TOOLS/NEMO/WEIGHTS/r13204/ and mkweights in ../TOOLS/WEIGHTS/
    - namelist used: eORCA025_chlorophyl_v0.0_c3.0_namelist_bilin
    - need to increase the stack on dahu (ulimit -s unlimited)
-* path:
+Path:
    - building directory: TOADD
-   - files: TOADD
+   - files: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/chlorophyl_v0.0.nc
 
 2d lateral slip conditions
 ==========================
@@ -363,17 +380,17 @@ chlorophyl_v0.0.nc
 
 eORCA025_shlat2d_v0.0.nc
 ------------------------
-* Purpose:
+Purpose:
     - no slip condition along West greenland (generation of EKE close to cape desolation)
     - no slip condition in Med. sea (Bernard Barnier and Balear university experts)
     - no slip condition in Bering strait to decrease the transport.
 
-* source:
+Source:
     - DRAKKAR ORCA025 GRD100 simulation (file has simply been extended south)
-* comments:
+Comments:
     - from GRD100 report, it seems the fix for greenland has only a marginal impact.
-* path:
-    - file: TOADD
+Path:
+    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_shlat2d_v0.0.nc
 
 2d bottom friction
 ==================
@@ -384,13 +401,13 @@ eORCA025_bfr2d_v0.0.nc
 ----------------------
 Increase bottom friction in Torres strait, Denmark strait and Bab el Mandel strait.
 
-* original name:
+Original name:
     - bfr_coef.nc
-* history:
+History:
     - file used in GO6 (UKMO)
     - full detail unknown (who build it, for what ...)
-* path:
-    - file: TOADD
+Path:
+    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bfr2d_v0.0.nc
 
 Indonesian Through Flow
 =======================
@@ -399,13 +416,13 @@ Indonesian Through Flow
 
 eORCA025_mskitf_v1.0.nc
 -----------------------
-* original name:
+Original name:
     - mask_itf_ORCA025ext.nc
-* comments:
+Comments:
     - full history unknown
     - this file is simply an extension for the eORCA025 grid from an older file
-* path:
-    - file: TOADD
+Path:
+    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_mskitf_v1.0.nc
 
 Distance to coast
 =================
@@ -414,9 +431,11 @@ Distance to coast
 
 eORCA025_distcoast_b0.2_v0.0.nc
 -------------------------------
-* tools:
+Tools:
    - cdfcofdis (./cdfcofdis -H eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -M eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -T eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc -jperio 4 -surf -noisland 50)
    - github.com:pmathiot/CDFTOOLS_4.0_ISF.git (master @ 14ab158..67ee63f)
-* comments:
+Comments:
    - To switch off restoring along the the restoring near the coastal boundaries, in order to let the dynamics build the coherent water masses.
      We removed all the islands bigger than 50 cells.
+Path:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_distcoast_b0.2_v0.0.nc

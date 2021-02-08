@@ -17,8 +17,7 @@ eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc
 * tools:
    - r13390 of NEMO DOMAIN_cfg tools
 * paths:
-   - building directory: TOADD
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-MSH/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-MSH/eORCA025.L121_mesh_mask_b0.2_c3.0_d1.0.nc
 
 Sub bassins
 ===========
@@ -36,7 +35,7 @@ In order to post process output file, a subbassin file has been built. It contai
    - compatible with the :ref:`ORCA025_bathymetry_b0.2` file (if coast line change, mask need to be rebuild)
 * path:
    - building directory: TOADD
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-MSH/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-MSH/eORCA025_subbassin_b0.2_v0.0.nc
 
 isf mask
 ========
@@ -54,4 +53,4 @@ In addition to this, total melt for each ice shelf from Rignot is also added in 
    - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0` (each time the bathy or the isf discretisation change, this file need to be rebuild)
 * path:
    - building directory: TOADD
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-MSH/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-MSH/eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc

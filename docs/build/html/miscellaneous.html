@@ -1,7 +1,8 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -11,19 +12,12 @@
   
 
   
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/style.css" type="text/css" />
-
-  
   
   
   
 
   
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -35,6 +29,11 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="HPC centres" href="HPC_centres.html" /> 
@@ -51,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> NEMO@IGE
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
           
 
           
@@ -74,7 +73,6 @@
           
         </div>
 
-        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -130,12 +128,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#wget">Wget</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#git">Git</a></li>
 </ul>
 
             
           
         </div>
-        
       </div>
     </nav>
 
@@ -174,7 +172,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
       <li>NetCDF</li>
     
@@ -313,14 +311,14 @@ out.nc will be written with a deflation level of 1 (-L option) and a chunksize o
 <dt>1: installation of sphinx:</dt><dd><p>conda is your best friends:</p>
 </dd>
 </dl>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda install sphinx
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda install sphinx
 </pre></div>
 </div>
 <dl class="simple">
 <dt>2: run a quick installation:</dt><dd><p>The fastest way to do it is to use sphinx-quickstart</p>
 </dd>
 </dl>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sphinx-quickstart
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sphinx-quickstart
 
 <span class="go">your output should be like this:</span>
 </pre></div>
@@ -367,7 +365,7 @@ out.nc will be written with a deflation level of 1 (-L option) and a chunksize o
 <dt>3: build the web site</dt><dd><p>the command make html will do the job for you.</p>
 </dd>
 </dl>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> make html
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>make html
 
 <span class="go">Running Sphinx v3.2.1</span>
 <span class="go">making output directory... done</span>
@@ -414,6 +412,11 @@ For something similar to this, refer to the conf.py in the source directory of t
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">extensions = [...,&#39;sphinx_rtd_theme&#39;]</span>
 </pre></div>
 </div>
+<p>These modules can be installed with these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c anaconda sphinx_rtd_theme</span>
+<span class="go">conda install -c conda-forge sphinxcontrib-bibtex</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>step 6: commit and push the changes to gh-pages branch (you can check in your github interface if the web site is well published).
 The site will be in ‘<a class="reference external" href="https://username.github.io/REPO/docs/build/html/index.html">https://username.github.io/REPO/docs/build/html/index.html</a>’. For a quick access, you can add the link to your README.</p></li>
@@ -452,6 +455,31 @@ In this case, I am looking for the variable tob in the ssp585 experiment id on a
 <p>For more advanced method, look at the documentation.</p>
 </div>
 </div>
+<div class="section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<p><strong>Create a remote branch:</strong></p>
+<ul class="simple">
+<li><p>create a local branch (it will create a local from your local branch):</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout -b &lt;branch-name&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>push the branch to the remote directory:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push -u origin &lt;branch-name&gt;</span>
+</pre></div>
+</div>
+<p><strong>List available branches:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git branch</span>
+</pre></div>
+</div>
+<p><strong>Checkout remote branch from a team member:</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch</span>
+<span class="go">git checkout &lt;branch-name&gt;</span>
+</pre></div>
+</div>
+</div>
 
 
            </div>
@@ -471,19 +499,11 @@ In this case, I am looking for the variable tob in the ssp585 experiment id on a
 
   <div role="contentinfo">
     <p>
-        
         &copy; Copyright 2020, DRAKKAR
 
     </p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -494,6 +514,7 @@ In this case, I am looking for the variable tob in the ssp585 experiment id on a
 
   </div>
   
+
 
   <script type="text/javascript">
       jQuery(function () {

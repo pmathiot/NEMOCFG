@@ -219,8 +219,9 @@ namsbc_ssr
        !           !  file name              ! frequency (hours) ! variable  ! time interp.!  clim  ! 'yearly'/ ! weights e ! rotation ! land/sea mask !
        !           !                         !  (if <0  months)  !   name    !   (logical) !  (T/F) ! 'monthly' !  filename ! pairing  !    filename   !
        sn_sst      = 'NOT_USED.nc'           ,        24.        ,  'sst'    ,    .false.  , .false., 'yearly'  ,    ''     ,    ''    ,     ''
-       sn_sss      = 'sss_WOA2018r04_v19812010.2.nc , -1.        ,  's_an'   ,    .true.   , .true. , 'yearly'  ,    'eORCA025_sss_WOA2018r04_v19812010_c3.0_weights_bilin.nc'     ,    ''    ,     ''
+       sn_sss      = 'eORCA025_sss_WOA2018_c3.0_v19812010.5' , -1. , 'sosaline' , .true. , .true. , 'yearly' ,  ''     ,    ''    ,     ''
     /
+
     !-----------------------------------------------------------------------
     &namsbc_ssr_drk !   surface boundary condition : sea surface restoring   (ln_ssr =T)
     !-----------------------------------------------------------------------
@@ -2123,6 +2124,12 @@ Previous action fixed the repeated issue on wall time issue.
 - Leg 56 Namelist is modify to enforce a cfl of 0.46 for icb.
 - Leg 60 Namelist is modify to enforce a cfl of 0.40 for icb.
 
+Known issues
+============
+- Yearly U and V wrongly weighted: Instead of doing averaged of ``@uoce_e3t/@e3t`` every year (``freq_op=1y``),
+  this is done every month (``freq_op=1m``) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data):
+    * budget will not be perfectly closed because the averaging of the 12 months
+      does not take into account the thickness weighting properly
 
 Monitoring
 ==========
