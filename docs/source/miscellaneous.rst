@@ -241,7 +241,7 @@ These modules can be installed with these commands:
 .. code-block:: console
 
     conda install -c anaconda sphinx_rtd_theme
-    conda install -c conda-forge sphinxcontrib-bibtex 
+    conda install -c conda-forge sphinxcontrib-bibtex
 
 - step 6: commit and push the changes to gh-pages branch (you can check in your github interface if the web site is well published).
   The site will be in 'https://username.github.io/REPO/docs/build/html/index.html'. For a quick access, you can add the link to your README.
@@ -263,11 +263,11 @@ A listing of all the facet available for the query is described here: https://es
 
 To create the wget script:
 1. look for your data
-  To do this you have to enter this http: https://esgf-node.llnl.gov/esg-search/search?experiment_id=ssp585&variable=tob&distrib=true.
-  In this case, I am looking for the variable tob in the ssp585 experiment id on all the server. More details on the method here:
-  https://esgf.github.io/esgf-user-support/user_guide.html#facet-queries.
+   To do this you have to enter this http: https://esgf-node.llnl.gov/esg-search/search?experiment_id=ssp585&variable=tob&distrib=true.
+   In this case, I am looking for the variable tob in the ssp585 experiment id on all the server. More details on the method here:
+   https://esgf.github.io/esgf-user-support/user_guide.html#facet-queries.
 2. get your wget script
-  Replace in the http, 'search?' by 'wget?'
+   Replace in the http, 'search?' by 'wget?'
 3. run the script with the -s option
 
 For more advanced method, look at the documentation.
