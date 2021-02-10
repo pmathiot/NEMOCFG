@@ -78,7 +78,11 @@ Tools:
 Path:
   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc
 
+.. _fig_eORCA025_geometry:
+.. figure:: _static/eORCA025_bathy_b0.2_b0.1.png
+   :scale: 60
 
+   Top: Bathymetry (a) and ice shelf draft (b) in :ref:`eORCA025_bathymetry_b0.2`. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).
 
 Domaincfg
 =========
@@ -324,6 +328,12 @@ Path:
    - directory:
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_ttv_b0.2_v0.0.nc
 
+.. _fig_eORCA025_ttv:
+.. figure:: _static/eORCA025_ttv.png
+   :scale: 40
+
+   Top tidal velocity from :ref:eORCA025_ttv_b0.2_v0.0
+
 Internal wave mixing
 ====================
 
@@ -428,6 +438,12 @@ History:
 Path:
     - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bfr2d_v0.0.nc
 
+.. _fig_eORCA025_bfr2d:
+.. figure:: _static/eORCA025_bfr2d.png
+   :scale: 60
+
+   map of where the bfr boost is activated (Y = Y x full boost). Full boost value is defined in the NEMO namelist.
+
 Indonesian Through Flow
 =======================
 
@@ -455,6 +471,12 @@ Tools:
    - github.com:pmathiot/CDFTOOLS_4.0_ISF.git (master @ 14ab158..67ee63f)
 Comments:
    - To switch off restoring along the the restoring near the coastal boundaries, in order to let the dynamics build the coherent water masses.
-     We removed all the islands bigger than 50 cells.
+     We removed all the islands bigger than 50 cells (:numref:`fig_distcoast`).
 Path:
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_distcoast_b0.2_v0.0.nc
+
+.. _fig_distcoast:
+.. figure:: _static/eORCA025_Tcoast.png
+  :scale: 40
+
+  distance to coast in eORCA025_distcoast_b0.2_v0.0.nc (ie islands smaller than 50 points remove prior to computation).

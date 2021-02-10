@@ -24,7 +24,7 @@ Sub bassins
 
 eORCA025_subbassin_b0.2_v0.0.nc
 -------------------------------
-In order to post process output file, a subbassin file has been built. It contains an atlantic, indian, pacific and southern ocean mask.
+In order to post process output file, a subbassin file has been built. It contains an atlantic, indian, pacific and southern ocean mask (:numref:`fig_eORCA025_subbasin`).
 
 * core tool:
    - cdfmkmask
@@ -36,6 +36,12 @@ In order to post process output file, a subbassin file has been built. It contai
 * path:
    - building directory: TOADD
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-MSH/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-MSH/eORCA025_subbassin_b0.2_v0.0.nc
+
+.. _fig_eORCA025_subbasin:
+.. figure:: _static/eORCA025_subbasins.png
+  :scale: 40
+
+  subbasin mask for :ref:eORCA025_subbassin_b0.2_v0.0
 
 isf mask
 ========
