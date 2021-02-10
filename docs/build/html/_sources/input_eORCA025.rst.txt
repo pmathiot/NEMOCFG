@@ -384,13 +384,32 @@ Purpose:
     - no slip condition along West greenland (generation of EKE close to cape desolation)
     - no slip condition in Med. sea (Bernard Barnier and Balear university experts)
     - no slip condition in Bering strait to decrease the transport.
-
 Source:
     - DRAKKAR ORCA025 GRD100 simulation (file has simply been extended south)
 Comments:
     - from GRD100 report, it seems the fix for greenland has only a marginal impact.
 Path:
     - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_shlat2d_v0.0.nc
+
+.. _eORCA025_shlat2d_v0.1:
+
+eORCA025_shlat2d_v0.1.nc
+------------------------
+Purpose:
+    - as for :ref:`eORCA025_shlat2d_v0.0`
+    - partial slip south of -50N in order to speed up the ACC (discussion with UKMO)
+Source:
+    - DRAKKAR ORCA025 GRD100 simulation (file has simply been extended south)
+Comments:
+    - from GRD100 report, it seems the fix for greenland has only a marginal impact.
+Path:
+    - file: TOADD
+
+.. _fig_shlat:
+.. figure:: _static/eORCA025_shlat2d.png
+   :scale: 40
+
+   Map of shlat value for eORCA025_shlat2d_v0.0.nc (a) and eORCA025_shlat2d_v0.1.nc (b).
 
 2d bottom friction
 ==================
