@@ -303,6 +303,11 @@ Path:
    - data file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/ghflux_v2.0.nc
    - weight file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_ghflux_v2.0_c3.0_weights_bilin.nc
 
+.. _fig_geothermal:
+.. figure:: _static/eORCA025_geothermalhf.png
+  :scale: 40
+
+
 Top tidal velocity
 ==================
 
