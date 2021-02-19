@@ -2126,10 +2126,15 @@ Previous action fixed the repeated issue on wall time issue.
 
 Known issues
 ============
-- Yearly U and V wrongly weighted: Instead of doing averaged of ``@uoce_e3t/@e3t`` every year (``freq_op=1y``),
-  this is done every month (``freq_op=1m``) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data):
-    * budget will not be perfectly closed because the averaging of the 12 months
-      does not take into account the thickness weighting properly
+- Output:
+    * Yearly U and V wrongly weighted: Instead of doing averaged of ``@uoce_e3t/@e3t`` every year (``freq_op=1y``),
+      this is done every month (``freq_op=1m``) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
+      So, budget will not be perfectly closed because the averaging of the 12 months
+      does not take into account the thickness weighting properly => fix in eORCA025.L121-OPM014
+- Input file:
+    * temperature unit of WOA2018 was suppose to be potential temperature, it is not. WOA2018 data are in situ. 
+- Code:
+    * bug in iceupdate (see ticket 2626 in NEMO distri). Clement mentioned this bug as 'critical'. => fix in eORCA025.L121-OPM014
 
 Monitoring
 ==========

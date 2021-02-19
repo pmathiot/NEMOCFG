@@ -95,6 +95,14 @@ WOA2018_v19812010.1
 * monthly sss file:
    - for surface data monthly data were used.
    - data drowned with with SOSIE3 with the gaussian filter (need change in makefile to activate it)
+* units:
+    From WOA2018 FAQ (https://www.nodc.noaa.gov/OC5/WOD/wod-woa-faqs.html): In situ temperatures used for WOA18 are not converted from their original scale, so there is a mix of IPTS-48, IPTS-68, and ITS-90 (and pre IPTS-48 temperatures). 
+    The differences between scales are small (on the order of 0.01°C) and should not have much effect on the climatological means, except, possibly at very deep depths.
+    Values for salinity are on the Practical salinity scale (PSS-78). Pre-1978 salinity values converted from conductivity may have used a different salinity scale.
+    Pre-conductivity salinities use the Knudsen metnod.
+    A description of PSS-78 and its predecessors can be found here:
+    Millero, F.J. 2010. History of the equation of state of seawater. Oceanography, 23(3):1833, doi:10.5670/oceanog.2010.21. Lewis, E. L., 1980,
+    The Practical Salinity Scale and its Antecedents, IEEE Journal of Oceanic Engineering, vol. OE-5, No. 1.
 * paths:
    - directory: TOADD
    - files: TOADD

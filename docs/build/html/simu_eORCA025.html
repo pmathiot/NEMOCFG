@@ -2614,15 +2614,30 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 </div>
 <div class="section" id="known-issues">
 <h3>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h3>
-<ul>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Output:</dt><dd><ul>
 <li><p>Yearly U and V wrongly weighted: Instead of doing averaged of <code class="docutils literal notranslate"><span class="pre">&#64;uoce_e3t/&#64;e3t</span></code> every year (<code class="docutils literal notranslate"><span class="pre">freq_op=1y</span></code>),
-this is done every month (<code class="docutils literal notranslate"><span class="pre">freq_op=1m</span></code>) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data):</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>budget will not be perfectly closed because the averaging of the 12 months
-does not take into account the thickness weighting properly</p></li>
+this is done every month (<code class="docutils literal notranslate"><span class="pre">freq_op=1m</span></code>) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
+So, budget will not be perfectly closed because the averaging of the 12 months
+does not take into account the thickness weighting properly =&gt; fix in eORCA025.L121-OPM014</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Input file:</dt><dd><ul>
+<li><p>temperature unit of WOA2018 was suppose to be potential temperature, it is not. WOA2018 data are in situ.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Code:</dt><dd><ul>
+<li><p>bug in iceupdate (see ticket 2626 in NEMO distri). Clement mentioned this bug as ‘critical’. =&gt; fix in eORCA025.L121-OPM014</p></li>
+</ul>
+</dd>
+</dl>
 </li>
 </ul>
 </div>

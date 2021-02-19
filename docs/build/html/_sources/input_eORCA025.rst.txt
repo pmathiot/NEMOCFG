@@ -187,6 +187,8 @@ Compatibility:
 Path:
    - directory: TOADD
    - file: TOADD
+Comments:
+    - 11/02/2021: do not use this file for temperature was assumed to be potential and in fact it is in-situ. So need to be rebuilt.
 
 .. _eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5:
 
@@ -204,6 +206,8 @@ Compatibility:
 Path:
    - directory: TOADD
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc
+Comments:
+   - 11/02/2021: do not use this file for temperature was assumed to be potential and in fact it is in-situ. So need to be rebuilt.
 
 Ice Initial condition
 =====================
