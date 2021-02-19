@@ -2146,7 +2146,7 @@ The simulation NO BUG is as eORCA025.L121-OPM012 but with the fix suggested by C
    Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in northern hemisphere at year 2
 
 .. _bug_SH2626:
-.. figure:: _static/NH_2626.png
+.. figure:: _static/SH_2626.png
 
     Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in southern hemisphere at year 2
 
