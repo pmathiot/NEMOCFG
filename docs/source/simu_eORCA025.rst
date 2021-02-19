@@ -2132,9 +2132,30 @@ Known issues
       So, budget will not be perfectly closed because the averaging of the 12 months
       does not take into account the thickness weighting properly => fix in eORCA025.L121-OPM014
 - Input file:
-    * temperature unit of WOA2018 was suppose to be potential temperature, it is not. WOA2018 data are in situ. 
+    * temperature unit of WOA2018 was suppose to be potential temperature, it is not. WOA2018 data are in situ.
 - Code:
     * bug in iceupdate (see ticket 2626 in NEMO distri). Clement mentioned this bug as 'critical'. => fix in eORCA025.L121-OPM014
+- Impact at short term:
+
+In the plots below, BUG simulation is eORCA025.L121-OPM012, similar to eORCA025.L121-OPM006 except for diffusion parameters aht and eiv set to respectively 300 and 300 instead of 150 and 0.
+The simulation NO BUG is as eORCA025.L121-OPM012 but with the fix suggested by Clemet (named eORCA025.L121-OPM014)
+
+.. _bug_NH2626:
+.. figure:: _static/NH_2626.png
+
+   Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in northern hemisphere at year 2
+
+.. _bug_SH2626:
+.. figure:: _static/NH_2626.png
+
+    Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in southern hemisphere at year 2
+
+.. _bug_SH2626_VALSO:
+.. figure:: _static/SIB_VALSO.png
+
+.. _bug_SH2626_VALGLO:
+.. figure:: _static/SIB_VALGLO.png
+
 
 Monitoring
 ==========
