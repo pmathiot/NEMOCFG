@@ -129,6 +129,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#conda">CONDA</a></li>
 </ul>
 
             
@@ -473,6 +474,44 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 <p><strong>Checkout remote branch from a team member:</strong></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch</span>
 <span class="go">git checkout &lt;branch-name&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conda">
+<h1>CONDA<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Create an environment:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda create -n &lt;env name&gt; python=X.Y.Z</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>add a new package in an environement:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install &lt;package name&gt;</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install -c conda-forge &lt;package name&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>export an environment:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda env export &gt; &lt;env file name&gt;.yml</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>create an environment from a yml file:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda env create -f &lt;env file name&gt;.yml</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Activate or deactivate an environment:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate &lt;env name&gt;</span>
+<span class="go">conda deactivate</span>
 </pre></div>
 </div>
 </div>

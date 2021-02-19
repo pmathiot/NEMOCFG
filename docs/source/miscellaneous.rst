@@ -302,3 +302,44 @@ Git
 
     git fetch
     git checkout <branch-name>
+
+*****
+CONDA
+*****
+
+- Create an environment:
+
+.. code-block:: console
+
+    conda create -n <env name> python=X.Y.Z
+
+- add a new package in an environement:
+
+.. code-block:: console
+
+    conda install <package name>
+
+or
+
+.. code-block:: console
+
+    conda install -c conda-forge <package name>
+
+- export an environment:
+
+.. code-block:: console
+
+    conda env export > <env file name>.yml
+
+- create an environment from a yml file:
+
+.. code-block:: console
+
+    conda env create -f <env file name>.yml
+
+- Activate or deactivate an environment:
+
+.. code-block:: console
+
+    conda activate <env name>
+    conda deactivate
