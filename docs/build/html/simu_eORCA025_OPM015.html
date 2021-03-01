@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025.L121-OPM015 &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM006" href="simu_eORCA025_OPM006.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM015</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtsd">namtsd</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#namsbc-ssr">namsbc_ssr</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-ldf">namtra_ldf</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namzdf-tke">namzdf_tke</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initial-condition">initial condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sea-surface-salinity">sea surface salinity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compilation">Compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sea-ice-changes">sea ice changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-indicators">Local indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amundsen-sea">Amundsen sea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ice-shelves">Ice shelves</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#amery">Amery</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ross">Ross</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getz">Getz</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pine-island">Pine island</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#george-vi">George VI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filschner-ronne">Filschner Ronne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#riiser">Riiser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fimbul">Fimbul</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#maps">Maps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM015</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/simu_eORCA025_OPM015.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-l121-opm015">
+<h1>eORCA025.L121-OPM015<a class="headerlink" href="#eorca025-l121-opm015" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM006) a mentioned here:</p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="namtsd">
+<h4>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Because of the issue (<a class="reference internal" href="simu_eORCA025_OPM006.html#bug-input-eo025-opm006"><span class="std std-ref">Input file</span></a>) in reference simulation (<a class="reference internal" href="simu_eORCA025_OPM006.html#eorca025-l121-opm006"><span class="std std-ref">eORCA025.L121-OPM006</span></a>), input file hase been updated.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtsd_drk    !    Temperature &amp; Salinity Data  (init/dmp)             (default: OFF)</span>
+<span class="go">!              !   if key_drakkar, **only**  namtsd_drk is read</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_tsd_init   = .true.   !  Initialisation of ocean T &amp; S with T &amp;S input data (T) or not (F)</span>
+<span class="go">   ln_tsd_dmp = .false.     !  damping of ocean T &amp; S toward T &amp;S input data (T) or not (F)</span>
+
+<span class="go">   cn_dir        = &#39;./&#39;     !  root directory for the location of the temperature and salinity file</span>
+<span class="go">   !___________!_____________________________________!___________________!___________!_____________!________!___________!_____________!__________!_______________!</span>
+<span class="go">   !           !  file name                          ! frequency (hours) ! variable  ! time interp.!  clim  ! &#39;yearly&#39;/ ! weights     ! rotation ! land/sea mask !</span>
+<span class="go">   !           !                                     !  (if &lt;0  months)  !   name    !   (logical) !  (T/F) ! &#39;monthly&#39; !   filename  ! pairing  !    filename   !</span>
+<span class="go">   ! data used for initial condition (istate)</span>
+<span class="go">   sn_tem_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   ! data used for damping ( tradmp)</span>
+<span class="go">   sn_tem_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   !</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+<div class="section" id="namsbc-ssr">
+<h5>namsbc_ssr<a class="headerlink" href="#namsbc-ssr" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Because of the issue (<a class="reference internal" href="simu_eORCA025_OPM006.html#bug-input-eo025-opm006"><span class="std std-ref">Input file</span></a>) in reference simulation (<a class="reference internal" href="simu_eORCA025_OPM006.html#eorca025-l121-opm006"><span class="std std-ref">eORCA025.L121-OPM006</span></a>), input file has been updated.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namsbc_ssr    !   surface boundary condition : sea surface restoring   (ln_ssr =T)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   nn_sstr     =     0     !  add a retroaction term to the surface heat flux (=1) or not (=0)</span>
+<span class="go">      rn_dqdt     = -40.      !  magnitude of the retroaction on temperature   [W/m2/K]</span>
+<span class="go">   nn_sssr     =     2     !  add a damping term to the surface freshwater flux (=2)</span>
+<span class="go">      !                    !  or to SSS only (=1) or no damping term (=0)</span>
+<span class="go">      rn_deds     =  -166.67  !  magnitude of the damping on salinity   [mm/day]</span>
+<span class="go">      ln_sssr_bnd =  .true.   !  flag to bound erp term (associated with nn_sssr=2)</span>
+<span class="go">      rn_sssr_bnd =   4.e0    !  ABS(Max/Min) value of the damping erp term [mm/day]</span>
+
+<span class="go">      nn_sssr_ice =   1       ! control of sea surface restoring under sea-ice</span>
+<span class="go">                              ! 0 = no restoration under ice : * (1-icefrac)</span>
+<span class="go">                              ! 1 = restoration everywhere</span>
+<span class="go">                              ! &gt;1 = enhanced restoration under ice : 1+(nn_icedmp-1)*icefrac</span>
+<span class="go">   cn_dir      = &#39;./&#39;      !  root directory for the SST/SSS data location</span>
+<span class="go">   !___________!_________________________!___________________!___________!_____________!________!___________!___________!__________!_______________!</span>
+<span class="go">   !           !  file name              ! frequency (hours) ! variable  ! time interp.!  clim  ! &#39;yearly&#39;/ ! weights e ! rotation ! land/sea mask !</span>
+<span class="go">   !           !                         !  (if &lt;0  months)  !   name    !   (logical) !  (T/F) ! &#39;monthly&#39; !  filename ! pairing  !    filename   !</span>
+<span class="go">   sn_sst      = &#39;NOT_USED.nc&#39;           ,        24.        ,  &#39;sst&#39;    ,    .false.  , .false., &#39;yearly&#39;  ,    &#39;&#39;     ,    &#39;&#39;    ,     &#39;&#39;</span>
+<span class="go">   sn_sss      = &#39;eORCA025_sss_WOA2018_c3.0_v19812010.5.1&#39; , -1. , &#39;sosaline&#39; , .true. , .true. , &#39;yearly&#39; ,  &#39;&#39;     ,    &#39;&#39;    ,     &#39;&#39;</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namtra-ldf">
+<h5>namtra_ldf<a class="headerlink" href="#namtra-ldf" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>We also revert UKMO change on diffusion to get back to historical values (300m2/s)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_ldf    !   lateral diffusion scheme for tracers                 (default: NO selection)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   !                       !  Operator type:</span>
+<span class="go">   ln_traldf_OFF   = .false.   !  No explicit diffusion</span>
+<span class="go">   ln_traldf_lap   = .true.    !    laplacian operator</span>
+<span class="go">   ln_traldf_blp   = .false.   !  bilaplacian operator</span>
+<span class="go">   !</span>
+<span class="go">   !                       !  Direction of action:</span>
+<span class="go">   ln_traldf_lev   = .false.   !  iso-level</span>
+<span class="go">   ln_traldf_hor   = .false.   !  horizontal  (geopotential)</span>
+<span class="go">   ln_traldf_iso   = .true.    !  iso-neutral (standard operator)</span>
+<span class="go">   ln_traldf_triad = .false.   !  iso-neutral (triad    operator)</span>
+<span class="go">   !</span>
+<span class="go">   !                             !  iso-neutral options:</span>
+<span class="go">   ln_traldf_msc   = .false.   !  Method of Stabilizing Correction      (both operators)</span>
+<span class="go">   rn_slpmax       =  0.01     !  slope limit                           (both operators)</span>
+<span class="go">   ln_triad_iso    = .false.   !  pure horizontal mixing in ML              (triad only)</span>
+<span class="go">   rn_sw_triad     = 1         !  =1 switching triad ; =0 all 4 triads used (triad only)</span>
+<span class="go">   ln_botmix_triad = .false.   !  lateral mixing on bottom                  (triad only)</span>
+<span class="go">   !</span>
+<span class="go">   !                       !  Coefficients:</span>
+<span class="go">   nn_aht_ijk_t    = 20        !  space/time variation of eddy coefficient:</span>
+<span class="go">      !                             !   =-20 (=-30)    read in eddy_diffusivity_2D.nc (..._3D.nc) file</span>
+<span class="go">      !                             !   =  0           constant</span>
+<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
+<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
+<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
+<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
+<span class="go">      !                             !   = 31 F(i,j,k,t)=F(local velocity and grid-spacing)</span>
+<span class="go">      !                        !  time invariant coefficients:  aht0 = 1/2  Ud*Ld   (lap case)</span>
+<span class="go">      !                             !                           or   = 1/12 Ud*Ld^3 (blp case)</span>
+<span class="go">      rn_Ud        = 0.022          !  lateral diffusive velocity [m/s] (nn_aht_ijk_t= 0, 10, 20, 30)</span>
+<span class="go">      rn_Ld        = 200.e+3        !  lateral diffusive length   [m]   (nn_aht_ijk_t= 0, 10)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namtra-eiv">
+<h5>namtra_eiv<a class="headerlink" href="#namtra-eiv" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Based on UKMO test and Julie D. discussion we switch one GM (300m2/s)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_eiv    !   eddy induced velocity param.                         (default: OFF)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_ldfeiv   = .true.    ! use eddy induced velocity parameterization</span>
+<span class="go">      !</span>
+<span class="go">      !                        !  Coefficients:</span>
+<span class="go">      nn_aei_ijk_t    = 21          !  space/time variation of eddy coefficient:</span>
+<span class="go">      !                             !   =-20 (=-30)    read in eddy_induced_velocity_2D.nc (..._3D.nc) file</span>
+<span class="go">      !                             !   =  0           constant</span>
+<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
+<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
+<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
+<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
+<span class="go">      !                        !  time invariant coefficients:  aei0 = 1/2  Ue*Le</span>
+<span class="go">      rn_Ue        = 0.06           !  lateral diffusive velocity [m/s] (nn_aei_ijk_t= 0, 10, 20, 30)</span>
+<span class="go">      rn_Le        = 10.e+3         !  lateral diffusive length   [m]   (nn_aei_ijk_t= 0, 10)</span>
+<span class="go">      !</span>
+<span class="go">      ln_ldfeiv_dia =.false.   ! diagnose eiv stream function and velocities</span>
+<span class="go">      nn_ldfeiv_shape = 2           !  shape of bounding coefficient    (nn_aei_ijk_t= 21 only)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namzdf-tke">
+<h5>namzdf_tke<a class="headerlink" href="#namzdf-tke" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Based on Justine’s experiment and Rodgers et al. (<a class="reference external" href="https://bg.copernicus.org/articles/11/4077/2014/bg-11-4077-2014.pdf">https://bg.copernicus.org/articles/11/4077/2014/bg-11-4077-2014.pdf</a>)
+we increase the exponential decay under the ML (nn_htau = 60 instead of 30 in the SH at high latitude)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namzdf_tke    !   turbulent eddy kinetic dependent vertical diffusion  (ln_zdftke =T)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">rn_ediff    =   0.1     !  coef. for vertical eddy coef. (avt=rn_ediff*mxl*sqrt(e) )</span>
+<span class="go">rn_ediss    =   0.7     !  coef. of the Kolmogoroff dissipation</span>
+<span class="go">rn_ebb      =  67.83    !  coef. of the surface input of tke (=67.83 suggested when ln_mxl0=T)</span>
+<span class="go">rn_emin     =   1.e-10  !  minimum value of tke [m2/s2] (1.e-10 is because of iwm)</span>
+<span class="go">rn_emin0    =   1.e-4   !  surface minimum value of tke [m2/s2]</span>
+<span class="go">rn_bshear   =   1.e-20  ! background shear (&gt;0) currently a numerical threshold (do not change it)</span>
+<span class="go">nn_pdl      =   1       !  Prandtl number function of richarson number (=1, avt=pdl(Ri)*avm) or not (=0, avt=avm)</span>
+<span class="go">nn_mxl      =   3       !  mixing length: = 0 bounded by the distance to surface and bottom</span>
+<span class="go">!                       !                 = 1 bounded by the local vertical scale factor</span>
+<span class="go">!                       !                 = 2 first vertical derivative of mixing length bounded by 1</span>
+<span class="go">!                       !                 = 3 as =2 with distinct dissipative an mixing length scale</span>
+<span class="go">ln_mxl0     = .true.    !  surface mixing length scale = F(wind stress) (T) or not (F)</span>
+<span class="go">  nn_mxlice    = 2        ! type of scaling under sea-ice</span>
+<span class="go">                          !    = 0 no scaling under sea-ice</span>
+<span class="go">                          !    = 1 scaling with constant sea-ice thickness</span>
+<span class="go">                          !    = 2 scaling with mean sea-ice thickness ( only with SI3 sea-ice model )</span>
+<span class="go">                          !    = 3 scaling with maximum sea-ice thickness</span>
+<span class="go">  rn_mxlice   = 10.       ! max constant ice thickness value when scaling under sea-ice ( nn_mxlice=1)</span>
+<span class="go">rn_mxl0     =   0.04    !  surface  buoyancy lenght scale minimum value</span>
+<span class="go">ln_drg      = .true.    !  top/bottom friction added as boundary condition of TKE</span>
+<span class="go">ln_lc       = .true.    !  Langmuir cell parameterisation (Axell 2002)</span>
+<span class="go">  rn_lc       =   0.15    !  coef. associated to Langmuir cells</span>
+<span class="go">nn_etau     =   1       !  penetration of tke below the mixed layer (ML) due to NIWs</span>
+<span class="go">                          !        = 0 none ; = 1 add a tke source below the ML</span>
+<span class="go">                          !        = 2 add a tke source just at the base of the ML</span>
+<span class="go">                          !        = 3 as = 1 applied on HF part of the stress           (ln_cpl=T)</span>
+<span class="go">  rn_efr      =   0.05    !  fraction of surface tke value which penetrates below the ML (nn_etau=1 or 2)</span>
+<span class="go">  nn_htau     =   2       !  type of exponential decrease of tke penetration below the ML</span>
+<span class="go">                          !        = 0  constant 10 m length scale</span>
+<span class="go">                          !        = 1  0.5m at the equator to 30m poleward of 40 degrees</span>
+<span class="go">  nn_eice     =   3       !  below sea ice: =0 ON ; =4 OFF when ice fraction &gt; 1/4</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="input-files">
+<h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
+<p>Only the file changed between the reference (<a class="reference internal" href="simu_eORCA025_OPM006.html#bug-input-eo025-opm006"><span class="std std-ref">Input file</span></a>) and this simulation are described.</p>
+<div class="section" id="initial-condition">
+<h3>initial condition<a class="headerlink" href="#initial-condition" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>filename: <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></p></li>
+<li><p>variables: votemper, vosaline</p></li>
+<li><p>frequency: monthly</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="sea-surface-salinity">
+<h3>sea surface salinity<a class="headerlink" href="#sea-surface-salinity" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>filename: eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc</p></li>
+<li><p>variable: sosaline</p></li>
+<li><p>frequency: monthly</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>Only changes compare to reference are presented here.</p>
+<div class="section" id="compilation">
+<h3>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>XIOS:
+- XIOS/2.5_r1903_intelmpi-5.1.3.258</p></li>
+<li><p>Module loaded:
+- gcc/8.3.0
+- intel/19.4
+- intelmpi/5.1.3.258
+- netcdf-fortran/4.4.4-intel-19.0.4-intelmpi-2019.4.243
+- netcdf/4.6.3-intel-19.0.4-intelmpi-2019.4.243
+- hdf5/1.10.5-intel-19.0.4-intelmpi-2019.4.243</p></li>
+<li><p>comments on this choice:
+- Netcdf is now available on Occigen with the latest intel compiler (2019.4.243)
+- we recompile NEMO and XIOS with the latest available compiler</p></li>
+</ul>
+</div>
+<div class="section" id="sea-ice-changes">
+<h3>sea ice changes<a class="headerlink" href="#sea-ice-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>see nemo ticket #2626 (<a class="reference internal" href="simu_eORCA025_OPM006.html#bug-code-eo025-opm006"><span class="std std-ref">Code</span></a>)</p></li>
+<li><p>update of eiv code to be able to have GM only where we do not resolve the Rossby Radius (2dx)
+and with a ramp to avoid sharp change in diffusion (nn_ldfeiv_shape=2 in namelist)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>issue <a class="reference internal" href="simu_eORCA025_OPM006.html#bug-output-eo025-opm006"><span class="std std-ref">Output</span></a> fixed</p></li>
+</ul>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-indicators">
+<span id="eorca025-l121-opm015-monitoring"></span><h3>Global indicators<a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot you can find a time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>AMOC at rapid array</p></li>
+<li><p>AMHT at rapid array</p></li>
+<li><p>Net global heat fluxes</p></li>
+<li><p>mean sst in the southern ocean (see box in the map)</p></li>
+<li><p>mean sst in the North West Corner (see box in the map)</p></li>
+<li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
+</ul>
+<img alt="_images/VALGLO_OPM015.png" src="_images/VALGLO_OPM015.png" />
+</div>
+<div class="section" id="regional-indicators">
+<h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot, you can find time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)</p></li>
+<li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
+<li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
+</ul>
+<img alt="_images/VALSO_OPM015.png" src="_images/VALSO_OPM015.png" />
+</div>
+<div class="section" id="local-indicators">
+<h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
+<p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
+<img alt="_images/VALSI_OPM015.png" src="_images/VALSI_OPM015.png" />
+</div>
+<div class="section" id="amundsen-sea">
+<h3>Amundsen sea<a class="headerlink" href="#amundsen-sea" title="Permalink to this headline">¶</a></h3>
+<p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
+<img alt="_images/VALAMU_OPM015.png" src="_images/VALAMU_OPM015.png" />
+</div>
+<div class="section" id="ice-shelves">
+<span id="eorca025-l121-opm015-isf-monitoring"></span><h3>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="amery">
+<h4>Amery<a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/AMER_eORCA025.L121-OPM015.png" src="_images/AMER_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="ross">
+<h4>Ross<a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/ROSS_eORCA025.L121-OPM015.png" src="_images/ROSS_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="getz">
+<h4>Getz<a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/GETZ_eORCA025.L121-OPM015.png" src="_images/GETZ_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="pine-island">
+<h4>Pine island<a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/PINE_eORCA025.L121-OPM015.png" src="_images/PINE_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="george-vi">
+<h4>George VI<a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/GEVI_eORCA025.L121-OPM015.png" src="_images/GEVI_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="filschner-ronne">
+<h4>Filschner Ronne<a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/FRIS_eORCA025.L121-OPM015.png" src="_images/FRIS_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="riiser">
+<h4>Riiser<a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/RIIS_eORCA025.L121-OPM015.png" src="_images/RIIS_eORCA025.L121-OPM015.png" />
+</div>
+<div class="section" id="fimbul">
+<h4>Fimbul<a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/FIMB_eORCA025.L121-OPM015.png" src="_images/FIMB_eORCA025.L121-OPM015.png" />
+</div>
+</div>
+<div class="section" id="maps">
+<h3>Maps<a class="headerlink" href="#maps" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/SIC_OPM015.png" src="_images/SIC_OPM015.png" />
+<img alt="_images/BSF_OPM015.png" src="_images/BSF_OPM015.png" />
+<img alt="_images/BOTS_OPM015_comb.png" src="_images/BOTS_OPM015_comb.png" />
+<img alt="_images/BOTT_OPM015_comb.png" src="_images/BOTT_OPM015_comb.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simu_eORCA025_OPM006.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM006" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

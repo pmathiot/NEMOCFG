@@ -209,6 +209,25 @@ Path:
 Comments:
    - 11/02/2021: do not use this file for temperature was assumed to be potential and in fact it is in-situ. So need to be rebuilt.
 
+eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
+------------------------------------------------
+Source:
+   - Open ocean: converted to TEOS10
+   - Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005) converted to TEOS10
+Methode:
+    - merge and mask data set:
+        + WOA2018 in open Ocean offshore (70+ km away from the coast)
+        + bt705 under the ice shelves and up to 10 km away for the ice shelves
+        + transition
+    - smoothing of the data
+    ADD CODE
+    - check for static instability and mix if needed
+    - drown files
+    - check boundary conditions
+Compatibility:
+    - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned
+path:
+
 Ice Initial condition
 =====================
 
@@ -248,8 +267,8 @@ Weights:
     - eORCA025_sss_WOA2018r04_v19812010_c3.0_weights_bilin.nc
       (compatible with :ref:`eORCA025_coord_c3.0` or :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`)
 
-sss_WOA2018r04_v19812010.5.nc
------------------------------
+eORCA025_sss_WOA2018r04_v19812010.5.nc
+--------------------------------------
 Source:
    - WOA2018 on period 1981-2010 (see :ref:`eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5` for details)
 Methode:
@@ -260,6 +279,18 @@ Frequency:
    - monthly
 Path:
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.nc
+
+eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
+------------------------------------------
+Source:
+   - WOA2018 on period 1981-2010 (see :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1` for details)
+Methode:
+   - extract surface value of :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5` file
+Variable:
+   - s_an in absolute salinity
+Frequency:
+   - monthly
+Path:
 
 Iceberg calving
 ===============

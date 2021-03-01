@@ -108,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#ts-initial-condition">TS Initial condition</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ice-initial-condition">Ice Initial condition</a><ul>
@@ -116,7 +117,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#restoring">Restoring</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sss-woa2018r04-v19812010-2-nc">sss_WOA2018r04_v19812010.2.nc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sss-woa2018r04-v19812010-5-nc">sss_WOA2018r04_v19812010.5.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-sss-woa2018r04-v19812010-5-nc">eORCA025_sss_WOA2018r04_v19812010.5.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-sss-woa2018-c3-0-v19812010-5-1-nc">eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#iceberg-calving">Iceberg calving</a><ul>
@@ -187,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
 </ul>
 
             
@@ -538,6 +541,38 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </dd>
 </dl>
 </div>
+<div class="section" id="eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc">
+<h3>eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc<a class="headerlink" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Source:</dt><dd><ul class="simple">
+<li><p>Open ocean: converted to TEOS10</p></li>
+<li><p>Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005) converted to TEOS10</p></li>
+</ul>
+</dd>
+<dt>Methode:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>merge and mask data set:</dt><dd><ul>
+<li><p>WOA2018 in open Ocean offshore (70+ km away from the coast)</p></li>
+<li><p>bt705 under the ice shelves and up to 10 km away for the ice shelves</p></li>
+<li><p>transition</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>smoothing of the data</p></li>
+</ul>
+<p>ADD CODE
+- check for static instability and mix if needed
+- drown files
+- check boundary conditions</p>
+</dd>
+<dt>Compatibility:</dt><dd><ul class="simple">
+<li><p>eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned</p></li>
+</ul>
+</dd>
+</dl>
+<p>path:</p>
+</div>
 </div>
 <div class="section" id="ice-initial-condition">
 <h2>Ice Initial condition<a class="headerlink" href="#ice-initial-condition" title="Permalink to this headline">¶</a></h2>
@@ -597,8 +632,8 @@ then average over the whole period.</p></li>
 </dd>
 </dl>
 </div>
-<div class="section" id="sss-woa2018r04-v19812010-5-nc">
-<h3>sss_WOA2018r04_v19812010.5.nc<a class="headerlink" href="#sss-woa2018r04-v19812010-5-nc" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="eorca025-sss-woa2018r04-v19812010-5-nc">
+<h3>eORCA025_sss_WOA2018r04_v19812010.5.nc<a class="headerlink" href="#eorca025-sss-woa2018r04-v19812010-5-nc" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>Source:</dt><dd><ul class="simple">
 <li><p>WOA2018 on period 1981-2010 (see <a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5"><span class="std std-ref">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</span></a> for details)</p></li>
@@ -621,6 +656,28 @@ then average over the whole period.</p></li>
 </ul>
 </dd>
 </dl>
+</div>
+<div class="section" id="eorca025-sss-woa2018-c3-0-v19812010-5-1-nc">
+<h3>eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc<a class="headerlink" href="#eorca025-sss-woa2018-c3-0-v19812010-5-1-nc" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Source:</dt><dd><ul class="simple">
+<li><p>WOA2018 on period 1981-2010 (see <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1</span> for details)</p></li>
+</ul>
+</dd>
+<dt>Methode:</dt><dd><ul class="simple">
+<li><p>extract surface value of <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5</span> file</p></li>
+</ul>
+</dd>
+<dt>Variable:</dt><dd><ul class="simple">
+<li><p>s_an in absolute salinity</p></li>
+</ul>
+</dd>
+<dt>Frequency:</dt><dd><ul class="simple">
+<li><p>monthly</p></li>
+</ul>
+</dd>
+</dl>
+<p>Path:</p>
 </div>
 </div>
 <div class="section" id="iceberg-calving">
