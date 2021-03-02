@@ -542,36 +542,63 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </dl>
 </div>
 <div class="section" id="eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc">
-<h3>eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc<a class="headerlink" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc" title="Permalink to this headline">¶</a></h3>
+<span id="eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"></span><h3>eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc<a class="headerlink" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc" title="Permalink to this headline">¶</a></h3>
 <dl>
 <dt>Source:</dt><dd><ul class="simple">
-<li><p>Open ocean: converted to TEOS10</p></li>
+<li><p>Open ocean: WOA2018 over period 1980-2010 at 1 degree resolution converted to TEOS10</p></li>
 <li><p>Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005) converted to TEOS10</p></li>
 </ul>
 </dd>
-<dt>Methode:</dt><dd><ul class="simple">
-<li><dl class="simple">
-<dt>merge and mask data set:</dt><dd><ul>
+<dt>Methode:</dt><dd><ul>
+<li><p>merge and mask data set:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>WOA2018 in open Ocean offshore (70+ km away from the coast)</p></li>
 <li><p>bt705 under the ice shelves and up to 10 km away for the ice shelves</p></li>
 <li><p>transition</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 </li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python combine_WOA2018_bt705.py</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p>smoothing of the data</p></li>
 </ul>
-<p>ADD CODE
-- check for static instability and mix if needed
-- drown files
-- check boundary conditions</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cdfsmooth -f eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_tmp.nc -c 3 -t S -anis 1 -nc4</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>check for static instability and mix if needed</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cdfcheckic -t eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_tmp.ncS003 -o eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -nc4</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>drown files</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./mask_drown_field.x -D -i eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -v votemper -x nav_lon -y nav_lat -z deptht -t time_counter -p 1 -g 200 -o votemper_eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown -m mask.nc -q tmask</span>
+
+<span class="go">./mask_drown_field.x -D -i eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -v vosaline -x nav_lon -y nav_lat -z deptht -t time_counter -p 1 -g 200 -o vosaline_eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown -m mask.nc -q tmask</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>check boundary conditions</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python ./check_lbclnk_v3.py -v vosaline votemper -p T -f eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown</span>
+</pre></div>
+</div>
 </dd>
 <dt>Compatibility:</dt><dd><ul class="simple">
 <li><p>eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned</p></li>
 </ul>
 </dd>
+<dt>path:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc">https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</a></p></li>
+</ul>
+</dd>
 </dl>
-<p>path:</p>
 </div>
 </div>
 <div class="section" id="ice-initial-condition">
@@ -659,14 +686,19 @@ then average over the whole period.</p></li>
 </div>
 <div class="section" id="eorca025-sss-woa2018-c3-0-v19812010-5-1-nc">
 <h3>eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc<a class="headerlink" href="#eorca025-sss-woa2018-c3-0-v19812010-5-1-nc" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
+<dl>
 <dt>Source:</dt><dd><ul class="simple">
-<li><p>WOA2018 on period 1981-2010 (see <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1</span> for details)</p></li>
+<li><p>WOA2018 on period 1981-2010 (see <a class="reference internal" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"><span class="std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></a> for details)</p></li>
 </ul>
 </dd>
 <dt>Methode:</dt><dd><ul class="simple">
-<li><p>extract surface value of <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5</span> file</p></li>
+<li><p>extract surface value of <a class="reference internal" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"><span class="std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></a> file</p></li>
 </ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ncks -x -v votemper -d z,0,0 eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc -o eORCA025_sss_WOA2018_c3.0_v19812010.5.1_tmp.nc</span>
+<span class="go">ncwa -a z eORCA025_sss_WOA2018_c3.0_v19812010.5.1_tmp.nc eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc</span>
+<span class="go">ncrename -v vosaline,sosaline eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc</span>
+</pre></div>
+</div>
 </dd>
 <dt>Variable:</dt><dd><ul class="simple">
 <li><p>s_an in absolute salinity</p></li>
@@ -676,8 +708,11 @@ then average over the whole period.</p></li>
 <li><p>monthly</p></li>
 </ul>
 </dd>
+<dt>Path:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc">https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc</a></p></li>
+</ul>
+</dd>
 </dl>
-<p>Path:</p>
 </div>
 </div>
 <div class="section" id="iceberg-calving">

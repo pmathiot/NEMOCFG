@@ -209,24 +209,57 @@ Path:
 Comments:
    - 11/02/2021: do not use this file for temperature was assumed to be potential and in fact it is in-situ. So need to be rebuilt.
 
+.. _eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1:
+
 eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
 ------------------------------------------------
+
 Source:
-   - Open ocean: converted to TEOS10
+   - Open ocean: WOA2018 over period 1980-2010 at 1 degree resolution converted to TEOS10
    - Under isf: UKMO eORCA025 JRA simulation bt705 over period (1995-2005) converted to TEOS10
+
 Methode:
     - merge and mask data set:
+
         + WOA2018 in open Ocean offshore (70+ km away from the coast)
         + bt705 under the ice shelves and up to 10 km away for the ice shelves
         + transition
+
+    .. code-block:: console
+
+        python combine_WOA2018_bt705.py
+
     - smoothing of the data
-    ADD CODE
+
+    .. code-block:: console
+
+        cdfsmooth -f eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_tmp.nc -c 3 -t S -anis 1 -nc4
+
     - check for static instability and mix if needed
+
+    .. code-block:: console
+
+        cdfcheckic -t eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_tmp.ncS003 -o eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -nc4
+
     - drown files
+
+    .. code-block:: console
+
+        ./mask_drown_field.x -D -i eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -v votemper -x nav_lon -y nav_lat -z deptht -t time_counter -p 1 -g 200 -o votemper_eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown -m mask.nc -q tmask
+
+        ./mask_drown_field.x -D -i eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003 -v vosaline -x nav_lon -y nav_lat -z deptht -t time_counter -p 1 -g 200 -o vosaline_eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown -m mask.nc -q tmask
+
     - check boundary conditions
+
+    .. code-block:: console
+
+        python ./check_lbclnk_v3.py -v vosaline votemper -p T -f eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown
+
 Compatibility:
     - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned
+
 path:
+    - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
 
 Ice Initial condition
 =====================
@@ -283,14 +316,22 @@ Path:
 eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
 ------------------------------------------
 Source:
-   - WOA2018 on period 1981-2010 (see :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1` for details)
+    - WOA2018 on period 1981-2010 (see :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1` for details)
 Methode:
-   - extract surface value of :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5` file
+    - extract surface value of :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1` file
+
+    .. code-block:: console
+
+        ncks -x -v votemper -d z,0,0 eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc -o eORCA025_sss_WOA2018_c3.0_v19812010.5.1_tmp.nc
+        ncwa -a z eORCA025_sss_WOA2018_c3.0_v19812010.5.1_tmp.nc eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
+        ncrename -v vosaline,sosaline eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
+
 Variable:
    - s_an in absolute salinity
 Frequency:
    - monthly
 Path:
+    - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
 
 Iceberg calving
 ===============
