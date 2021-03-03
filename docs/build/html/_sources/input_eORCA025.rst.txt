@@ -359,7 +359,7 @@ Variable:
 Frequency:
    - annual
 Path:
-   - directory:
+   - directory: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/ICB/eORCA025_calving_b0.2_v2.3/catalog.html
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_calving_b0.2_v2.3.nc
 
 Geothermal heating
