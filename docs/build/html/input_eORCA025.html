@@ -94,10 +94,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-0-nc">eORCA025_bathymetry_b0.0.nc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-1-nc">eORCA025_bathymetry_b0.1.nc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-2-nc">eORCA025_bathymetry_b0.2.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-bathymetry-b0-3-nc">eORCA025_bathymetry_b0.3.nc</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#domaincfg">Domaincfg</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0-nc">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0-nc">eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#runoff">Runoff</a><ul>
@@ -105,12 +107,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-runoff-b0-2-v0-0-nc">eORCA025_runoff_b0.2_v0.0.nc</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#ts-initial-condition">TS Initial condition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ts-climatology">TS Climatology</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-5-nc">eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.5.nc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1-nc">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#eorca025-l121-gouretski2004-c3-0-d1-0-v0-0-nc">eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0.nc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ice-initial-condition">Ice Initial condition</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-seaice-c3-0-v19802004-0-nc">eORCA025_seaice_c3.0_v19802004.0.nc</a></li>
 </ul>
@@ -156,6 +159,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#distance-to-coast">Distance to coast</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#eorca025-distcoast-b0-2-v0-0-nc">eORCA025_distcoast_b0.2_v0.0.nc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#aabw-damping">AABW damping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eorca025-l121-dmpmask-b0-2-c0-3-d1-0-v0-0-nc">eORCA025.L121_dmpmask_b0.2_c0.3_d1.0_v0.0.nc</a></li>
 </ul>
 </li>
 </ul>
@@ -367,9 +374,45 @@
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id4">
 <span id="fig-eorca025-geometry"></span><a class="reference internal image-reference" href="_images/eORCA025_bathy_b0.2_b0.1.png"><img alt="_images/eORCA025_bathy_b0.2_b0.1.png" src="_images/eORCA025_bathy_b0.2_b0.1.png" style="width: 1051.8px; height: 1051.2px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Top: Bathymetry (a) and ice shelf draft (b) in <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a>. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Top: Bathymetry (a) and ice shelf draft (b) in <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a>. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="eorca025-bathymetry-b0-3-nc">
+<span id="eorca025-bathymetry-b0-3"></span><h3>eORCA025_bathymetry_b0.3.nc<a class="headerlink" href="#eorca025-bathymetry-b0-3-nc" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Heritage:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<p>Change:</p>
+<dl class="simple">
+<dt>Reference:</dt><dd><ul class="simple">
+<li><p>Bett paper</p></li>
+</ul>
+</dd>
+<dt>Method:</dt><dd><ul class="simple">
+<li><p>step 1: create the lat/lon variable associated to the netcdf file (BedMachine2NEMOBAT.py)</p></li>
+<li><p>step 2: run interpolation for bathymetry, isfdraft, mask</p></li>
+<li><p>step 3: smooth as eORCA025 bathymetry</p></li>
+<li><p>step 4: enforce compatibility and build mask before combining data set</p></li>
+<li><p>step 5: combine with reference eORCA025 bathymetry (b0.0) files</p></li>
+</ul>
+</dd>
+<dt>Tools:</dt><dd><ul class="simple">
+<li><p>BMGTOOLS: link to add</p></li>
+</ul>
+</dd>
+<dt>Path:</dt><dd><ul class="simple">
+<li><p>file: <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc">https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc</a></p></li>
+</ul>
+</dd>
+</dl>
+<div class="figure align-default" id="id5">
+<span id="fig-eorca025b03-geometry"></span><a class="reference internal image-reference" href="_static/eORCA025_bathy_change_b0.3_b0.2.png"><img alt="_static/eORCA025_bathy_change_b0.3_b0.2.png" src="_static/eORCA025_bathy_change_b0.3_b0.2.png" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Top: Bathymetry (a) and ice shelf draft (b) in <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a>. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -385,10 +428,10 @@
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id6">
 <img alt="_images/L121_zgrid.png" src="_images/L121_zgrid.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Vertical levels discretization (depth in x-axis and e3 in y-axis).
-Lines are the reference 75L in black, the first 121L guess in purple and the final discretisation in red dots.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Vertical levels discretization (depth in x-axis and e3 in y-axis).
+Lines are the reference 75L in black, the first 121L guess in purple and the final discretisation in red dots.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>The key namelist parameters are:</p></li>
@@ -429,6 +472,23 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </dd>
 </dl>
 </div>
+<div class="section" id="eorca025-l121-domain-cfg-b0-3-c3-0-d1-0-nc">
+<span id="eorca025-l121-domain-cfg-b0-3-c3-0-d1-0"></span><h3>eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc<a class="headerlink" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0-nc" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Heritage:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+</ul>
+</dd>
+<dt>Change:</dt><dd><ul class="simple">
+<li><p>source file is <a class="reference internal" href="#eorca025-bathymetry-b0-3"><span class="std std-ref">eORCA025_bathymetry_b0.3.nc</span></a> instead of <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a>.</p></li>
+</ul>
+</dd>
+<dt>Paths:</dt><dd><ul class="simple">
+<li><p>TOADD</p></li>
+</ul>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="runoff">
 <h2>Runoff<a class="headerlink" href="#runoff" title="Permalink to this headline">¶</a></h2>
@@ -457,7 +517,7 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </ul>
 </dd>
 <dt>Compatibility:</dt><dd><ul class="simple">
-<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a> and <a class="reference internal" href="#eorca025-bathymetry-b0-3"><span class="std std-ref">eORCA025_bathymetry_b0.3.nc</span></a> as coastline (where rnf are) does not change.</p></li>
 </ul>
 </dd>
 <dt>Comments:</dt><dd><ul class="simple">
@@ -475,8 +535,8 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </dl>
 </div>
 </div>
-<div class="section" id="ts-initial-condition">
-<h2>TS Initial condition<a class="headerlink" href="#ts-initial-condition" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ts-climatology">
+<h2>TS Climatology<a class="headerlink" href="#ts-climatology" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc">
 <span id="eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4"></span><h3>eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4.nc<a class="headerlink" href="#eorca025-l121-woa2018-b0-2-c3-0-d1-0-v19812010-4-nc" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
@@ -591,7 +651,7 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </div>
 </dd>
 <dt>Compatibility:</dt><dd><ul class="simple">
-<li><p>eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned</p></li>
+<li><p>eORCA025.L121_domain_cfg_b?.?_c3.0_d1.0.nc as file is drowned</p></li>
 </ul>
 </dd>
 <dt>path:</dt><dd><ul class="simple">
@@ -600,6 +660,37 @@ the DOMAIN_cfg tools (<a class="reference external" href="https://forge.ipsl.jus
 </dd>
 </dl>
 </div>
+</div>
+<div class="section" id="eorca025-l121-gouretski2004-c3-0-d1-0-v0-0-nc">
+<span id="eorca025-l121-gouretski2004-c3-0-d1-0-v0-0"></span><h2>eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0.nc<a class="headerlink" href="#eorca025-l121-gouretski2004-c3-0-d1-0-v0-0-nc" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Source:</dt><dd><ul class="simple">
+<li><p>Gouretski, V., and K. Koltermann, 2004: WOCE global hydro- graphic climatology, a technical report. Berichte des BSH Tech. Rep. 35, 52 pp.</p></li>
+<li><p><a class="reference external" href="https://icdc.cen.uni-hamburg.de/thredds/catalog/ftpthredds/woce/catalog.html?dataset=ftpthreddsscan/woce/wghc_params.nc">https://icdc.cen.uni-hamburg.de/thredds/catalog/ftpthredds/woce/catalog.html?dataset=ftpthreddsscan/woce/wghc_params.nc</a></p></li>
+</ul>
+</dd>
+<dt>Method:</dt><dd><p>All the details are in the README into the building directory.
+In summary, here are the step.</p>
+<ul class="simple">
+<li><p>interpolate with sosie3 onto the output grid (NEMO grid)</p></li>
+<li><p>drown file (mask_drown_field.x) needed are input file grid do not extend to -90, so data are missing in the very far south (under Ross ice shelf and FRIS)</p></li>
+<li><p>convert to teos10</p></li>
+</ul>
+</dd>
+<dt>Compatibility:</dt><dd><ul class="simple">
+<li><p>eORCA025.L121_dmpmask_b0.2_c3.0_d1.0_v0.0.nc</p></li>
+<li><p>eORCA025.L121_domain_cfg_b??_c3.0_d1.0.nc file is drowned</p></li>
+</ul>
+</dd>
+<dt>Comments:</dt><dd><ul class="simple">
+<li><p>this is an annual climatology</p></li>
+</ul>
+</dd>
+<dt>Path:</dt><dd><ul class="simple">
+<li></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="ice-initial-condition">
 <h2>Ice Initial condition<a class="headerlink" href="#ice-initial-condition" title="Permalink to this headline">¶</a></h2>
@@ -734,7 +825,7 @@ then average over the whole period.</p></li>
 </ul>
 </dd>
 <dt>Compatibility:</dt><dd><ul class="simple">
-<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a></p></li>
+<li><p>bathymetry: <a class="reference internal" href="#eorca025-bathymetry-b0-2"><span class="std std-ref">eORCA025_bathymetry_b0.2.nc</span></a> and <a class="reference internal" href="#eorca025-bathymetry-b0-3"><span class="std std-ref">eORCA025_bathymetry_b0.3.nc</span></a> as isf front along Antarctic are not changed.</p></li>
 </ul>
 </dd>
 <dt>Comments:</dt><dd><ul class="simple">
@@ -798,12 +889,12 @@ then average over the whole period.</p></li>
 </ul>
 </dd>
 <dt>Compatibility:</dt><dd><ul class="simple">
-<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a></p></li>
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a> and <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc</span></a> as isf front and grounding line the same.</p></li>
 </ul>
 </dd>
 <dt>Comments:</dt><dd><ul class="simple">
 <li><p>discontinuity are visible close to the calving front on E FRIS.
-This is because the claving front in CATS2008 and NEMO is not located at the same location.
+This is because the calving front in CATS2008 and NEMO is not located at the same location.
 As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file, I had to use the open ocean CATS velocity to file this points.</p></li>
 </ul>
 </dd>
@@ -813,9 +904,9 @@ As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id7">
 <span id="fig-eorca025-ttv"></span><a class="reference internal image-reference" href="_images/eORCA025_ttv.png"><img alt="_images/eORCA025_ttv.png" src="_images/eORCA025_ttv.png" style="width: 701.2px; height: 701.2px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Top tidal velocity from :ref:eORCA025_ttv_b0.2_v0.0</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Top tidal velocity from :ref:eORCA025_ttv_b0.2_v0.0</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -839,11 +930,15 @@ As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file
 </dd>
 <dt>Methode:</dt><dd><ul class="simple">
 <li><p>Interpolation from the regular 0.5 degree resolution dataset to eORCA025 grid.</p></li>
-<li><p>from email discussion with Casimir, I decided to fill land and isf cavities to the backgrou    nd value instead of drowning data.</p></li>
+<li><p>from email discussion with Casimir, I decided to fill land and isf cavities to the background value instead of drowning data.</p></li>
 </ul>
 </dd>
 <dt>Reference:</dt><dd><ul class="simple">
 <li><p>de Lavergne, C., G. Madec, J. L. Sommer, A. J. G. Nurser, and A. C. N. Garabato, 2016: The impact of a variable mixing efficiency on the abyssal overturning. Journal of Physical Oceanography, 46, <a class="reference external" href="mailto:663?~&#37;&#52;&#48;~S681">663?~<span>&#64;</span>~S681</a></p></li>
+</ul>
+</dd>
+<dt>Compatibility:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a> and <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc</span></a> as we only added land point (icb tongue) and no change in coastline (except icb tongue) the same.</p></li>
 </ul>
 </dd>
 <dt>Path:</dt><dd><ul class="simple">
@@ -932,9 +1027,9 @@ As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id8">
 <span id="fig-shlat"></span><a class="reference internal image-reference" href="_images/eORCA025_shlat2d.png"><img alt="_images/eORCA025_shlat2d.png" src="_images/eORCA025_shlat2d.png" style="width: 701.2px; height: 701.2px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Map of shlat value for eORCA025_shlat2d_v0.0.nc (a) and eORCA025_shlat2d_v0.1.nc (b).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Map of shlat value for eORCA025_shlat2d_v0.0.nc (a) and eORCA025_shlat2d_v0.1.nc (b).</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -958,9 +1053,9 @@ As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id6">
+<div class="figure align-default" id="id9">
 <span id="fig-eorca025-bfr2d"></span><a class="reference internal image-reference" href="_images/eORCA025_bfr2d.png"><img alt="_images/eORCA025_bfr2d.png" src="_images/eORCA025_bfr2d.png" style="width: 1051.8px; height: 525.6px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">map of where the bfr boost is activated (Y = Y x full boost). Full boost value is defined in the NEMO namelist.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">map of where the bfr boost is activated (Y = Y x full boost). Full boost value is defined in the NEMO namelist.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -997,7 +1092,11 @@ As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file
 </dd>
 <dt>Comments:</dt><dd><ul class="simple">
 <li><p>To switch off restoring along the the restoring near the coastal boundaries, in order to let the dynamics build the coherent water masses.
-We removed all the islands bigger than 50 cells (<a class="reference internal" href="#fig-distcoast"><span class="std std-numref">Fig. 7</span></a>).</p></li>
+We removed all the islands bigger than 50 cells (<a class="reference internal" href="#fig-distcoast"><span class="std std-numref">Fig. 8</span></a>).</p></li>
+</ul>
+</dd>
+<dt>Compatibility:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a> and <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc</span></a> as coastline (without icb tongue) and grounding line the same.</p></li>
 </ul>
 </dd>
 <dt>Path:</dt><dd><ul class="simple">
@@ -1005,10 +1104,36 @@ We removed all the islands bigger than 50 cells (<a class="reference internal" h
 </ul>
 </dd>
 </dl>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id10">
 <span id="fig-distcoast"></span><a class="reference internal image-reference" href="_images/eORCA025_Tcoast.png"><img alt="_images/eORCA025_Tcoast.png" src="_images/eORCA025_Tcoast.png" style="width: 701.2px; height: 350.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">distance to coast in eORCA025_distcoast_b0.2_v0.0.nc (ie islands smaller than 50 points remove prior to computation).</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">distance to coast in eORCA025_distcoast_b0.2_v0.0.nc (ie islands smaller than 50 points remove prior to computation).</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+</div>
+<div class="section" id="aabw-damping">
+<h2>AABW damping<a class="headerlink" href="#aabw-damping" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eorca025-l121-dmpmask-b0-2-c0-3-d1-0-v0-0-nc">
+<span id="eorca025-l121-dmpmask-b0-2-c0-3-d1-0-v0-0"></span><h3>eORCA025.L121_dmpmask_b0.2_c0.3_d1.0_v0.0.nc<a class="headerlink" href="#eorca025-l121-dmpmask-b0-2-c0-3-d1-0-v0-0-nc" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>Method:</dt><dd><ul class="simple">
+<li><p>start for eos80 Gourestki file (intermediaite file in the building of :ref:<a href="#id2"><span class="problematic" id="id3">``</span></a>)</p></li>
+<li><p>build open ocean mask excluding (deep shelf) with cdfmkmask</p></li>
+<li><p>build dmp file (./cdfmaskdmp with mask.nc pointing to mask previously build)</p></li>
+</ul>
+</dd>
+<dt>Ref:</dt><dd><ul class="simple">
+<li><p>Dufour, C. O., et al. “Standing and Transient Eddies in the Response of the Southern Ocean Meridional Overturning to the Southern Annular Mode.”</p></li>
+</ul>
+<blockquote>
+<div><p>Journal of Climate, vol. 25, no. 20, 2012, pp. 6958–6974. JSTOR, www.jstor.org/stable/26191648. Accessed 10 Mar. 2021.</p>
+</div></blockquote>
+</dd>
+<dt>Compatibility:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#eorca025-l121-domain-cfg-b0-2-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc</span></a> and <a class="reference internal" href="#eorca025-l121-domain-cfg-b0-3-c3-0-d1-0"><span class="std std-ref">eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc</span></a> as domain in the deep ocean is the same.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Path:</p>
 </div>
 </div>
 </div>

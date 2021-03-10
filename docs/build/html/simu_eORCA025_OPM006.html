@@ -1740,7 +1740,7 @@ tprecip, prsn (total precip and snow), psl (surface pressure)</p></li>
 <h3>geothermal heat flux<a class="headerlink" href="#geothermal-heat-flux" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><p>filename: <a class="reference internal" href="input_eORCA12.html#ghflux-v2-0"><span class="std std-ref">ghflux_v2.0.nc</span></a></p></li>
+<li><p>filename: <a class="reference internal" href="input_eORCA025.html#ghflux-v2-0"><span class="std std-ref">ghflux_v2.0.nc</span></a></p></li>
 <li><p>variable: gh_flux</p></li>
 <li><p>frequency: annual</p></li>
 <li><p>weights: eORCA025_ghflux_v2.0_c3.0_weights_bilin.nc</p></li>
@@ -2572,22 +2572,26 @@ Namelist is modify to enforce a cfl of 0.45 for icb.</p></li>
 <h2>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="output">
 <span id="bug-output-eo025-opm006"></span><h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
-<p>description:
-- Yearly U and V wrongly weighted: Instead of doing averaged of <code class="docutils literal notranslate"><span class="pre">&#64;uoce_e3t/&#64;e3t</span></code> every year (<code class="docutils literal notranslate"><span class="pre">freq_op=1y</span></code>),</p>
-<blockquote>
-<div><p>this is done every month (<code class="docutils literal notranslate"><span class="pre">freq_op=1m</span></code>) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
+<dl class="simple">
+<dt>Issue 1:</dt><dd><p>description:
+- Yearly U and V wrongly weighted: Instead of doing averaged of <code class="docutils literal notranslate"><span class="pre">&#64;uoce_e3t/&#64;e3t</span></code> every year (<code class="docutils literal notranslate"><span class="pre">freq_op=1y</span></code>),
+this is done every month (<code class="docutils literal notranslate"><span class="pre">freq_op=1m</span></code>) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
 So, budget will not be perfectly closed because the averaging of the 12 months
-does not take into account the thickness weighting properly =&gt; fix in eORCA025.L121-OPM014</p>
-</div></blockquote>
-<p>fix:
+does not take into account the thickness weighting properly =&gt; fix in eORCA025.L121-OPM014
+fix:
 - replace <code class="docutils literal notranslate"><span class="pre">freq_op=1m</span></code> instance in the yearly output by <code class="docutils literal notranslate"><span class="pre">freq_op=1y</span></code></p>
+</dd>
+<dt>Issue 2:</dt><dd><p>description: wrong sign in output for ice-ocean sensible flux
+fix: see <a class="reference external" href="https://forge.ipsl.jussieu.fr/nemo/ticket/2635">https://forge.ipsl.jussieu.fr/nemo/ticket/2635</a></p>
+</dd>
+</dl>
 </div>
 <div class="section" id="input-file">
 <span id="bug-input-eo025-opm006"></span><h3>Input file<a class="headerlink" href="#input-file" title="Permalink to this headline">¶</a></h3>
 <p>description:
 - temperature unit of WOA2018 was suppose to be potential temperature, it is not. WOA2018 data are in situ.</p>
 <p>fix:
-- a new input file has been made (<span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1</span>)</p>
+- a new input file has been made (<a class="reference internal" href="input_eORCA025.html#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"><span class="std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></a>)</p>
 </div>
 <div class="section" id="bug-code-eo025-opm006">
 <span id="id10"></span><h3>Code<a class="headerlink" href="#bug-code-eo025-opm006" title="Permalink to this headline">¶</a></h3>
@@ -2598,11 +2602,11 @@ does not take into account the thickness weighting properly =&gt; fix in eORCA02
 The simulation NO BUG is as eORCA025.L121-OPM012 but with the fix suggested by Clemet (named eORCA025.L121-OPM014)</p>
 <div class="figure align-default" id="id11">
 <span id="bug-nh2626"></span><img alt="_images/NH_2626.png" src="_images/NH_2626.png" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in northern hemisphere at year 2</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in northern hemisphere at year 2</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="id12">
 <span id="bug-sh2626"></span><img alt="_images/SH_2626.png" src="_images/SH_2626.png" />
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in southern hemisphere at year 2</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Impact of the #2626 nemo ticket on eORCA025.L121-OPM006 in southern hemisphere at year 2</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="bug-sh2626-valso">
 <img alt="_images/SIB_VALSO.png" src="_images/SIB_VALSO.png" />
@@ -2693,11 +2697,11 @@ The simulation NO BUG is as eORCA025.L121-OPM012 but with the fix suggested by C
 <h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id13">
 <span id="bsf-opm006"></span><img alt="_images/bsf_OPM006.png" src="_images/bsf_OPM006.png" />
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Barotropic stream function in the last 4 decades of the eORCA025.L121-OPM006</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Barotropic stream function in the last 4 decades of the eORCA025.L121-OPM006</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="id14">
 <span id="isfmlt-2009-10y-opm006"></span><a class="reference internal image-reference" href="_images/melt_sector_eORCA025.L121-OPM006_2009-2018.png"><img alt="_images/melt_sector_eORCA025.L121-OPM006_2009-2018.png" src="_images/melt_sector_eORCA025.L121-OPM006_2009-2018.png" style="width: 708.6px; height: 1062.8999999999999px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Melt rate and bottom temperature for the last decade of the eORCA025.L121-OPM006 simulations</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Melt rate and bottom temperature for the last decade of the eORCA025.L121-OPM006 simulations</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="possible-improvement-in-nemo">

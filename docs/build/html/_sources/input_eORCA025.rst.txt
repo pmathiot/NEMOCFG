@@ -84,6 +84,33 @@ Path:
 
    Top: Bathymetry (a) and ice shelf draft (b) in :ref:`eORCA025_bathymetry_b0.2`. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).
 
+.. _eORCA025_bathymetry_b0.3:
+
+eORCA025_bathymetry_b0.3.nc
+---------------------------
+Heritage:
+  - :ref:`eORCA025_bathymetry_b0.2`
+Change:
+
+Reference:
+  - Bett paper
+Method:
+  - step 1: create the lat/lon variable associated to the netcdf file (BedMachine2NEMOBAT.py)
+  - step 2: run interpolation for bathymetry, isfdraft, mask
+  - step 3: smooth as eORCA025 bathymetry
+  - step 4: enforce compatibility and build mask before combining data set
+  - step 5: combine with reference eORCA025 bathymetry (b0.0) files
+Tools:
+  - BMGTOOLS: link to add
+Path:
+ - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc
+
+.. _fig_eORCA025b03_geometry:
+.. figure:: _static/eORCA025_bathy_change_b0.3_b0.2.png
+  :scale: 60
+
+  Top: Bathymetry (a) and ice shelf draft (b) in :ref:`eORCA025_bathymetry_b0.2`. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).
+
 Domaincfg
 =========
 
@@ -132,6 +159,19 @@ Paths:
    - building directory: TOADD
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc
 
+.. _eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0:
+
+eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc
+------------------------------------------
+Heritage:
+  - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`
+
+Change:
+  - source file is :ref:`eORCA025_bathymetry_b0.3` instead of :ref:`eORCA025_bathymetry_b0.2`.
+
+Paths:
+  - TOADD
+
 Runoff
 ======
 
@@ -152,7 +192,7 @@ Sources:
 Original name:
    - ORCA025_rnficbisf_rignot2013_noberg.nc
 Compatibility:
-   - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
+   - bathymetry: :ref:`eORCA025_bathymetry_b0.2` and :ref:`eORCA025_bathymetry_b0.3` as coastline (where rnf are) does not change.
 Comments:
    - original file from the Met Office. As the coastline north of Antactica did not change, the GO6 runoff is adapted to the bathymetry 0.3.
    - Antarctic runoff has been removed in Mathiot et al. (2017).
@@ -162,8 +202,8 @@ Comments:
 Paths:
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_runoff_b0.2_v0.0.nc
 
-TS Initial condition
-====================
+TS Climatology
+==============
 
 .. _eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010.4:
 
@@ -256,10 +296,38 @@ Methode:
         python ./check_lbclnk_v3.py -v vosaline votemper -p T -f eORCA025.L121_WOA2018_b0.2_c3.0_d1.0_v19812010_checkic.ncS003_drown
 
 Compatibility:
-    - eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0.nc as file is on 121L. Do not depend on exact bathymetry as file is drowned
+    - eORCA025.L121_domain_cfg_b?.?_c3.0_d1.0.nc as file is drowned
 
 path:
     - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
+
+
+.. _eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0:
+
+eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0.nc
+=============================================
+
+Source:
+    - Gouretski, V., and K. Koltermann, 2004: WOCE global hydro- graphic climatology, a technical report. Berichte des BSH Tech. Rep. 35, 52 pp.
+    - https://icdc.cen.uni-hamburg.de/thredds/catalog/ftpthredds/woce/catalog.html?dataset=ftpthreddsscan/woce/wghc_params.nc
+
+Method:
+    All the details are in the README into the building directory.
+    In summary, here are the step.
+
+    - interpolate with sosie3 onto the output grid (NEMO grid)
+    - drown file (mask_drown_field.x) needed are input file grid do not extend to -90, so data are missing in the very far south (under Ross ice shelf and FRIS)
+    - convert to teos10
+
+Compatibility:
+    - eORCA025.L121_dmpmask_b0.2_c3.0_d1.0_v0.0.nc
+    - eORCA025.L121_domain_cfg_b??_c3.0_d1.0.nc file is drowned
+
+Comments:
+    - this is an annual climatology
+
+Path:
+    -
 
 Ice Initial condition
 =====================
@@ -351,7 +419,7 @@ Useful tools:
    - path on dahu: /home/mathiotp/TOOLS/CDFTOOLS/20200823_40595ba/src
    - script: cdfisf_fill, cdficb_clv
 Compatibility:
-   - bathymetry: :ref:`eORCA025_bathymetry_b0.2`
+   - bathymetry: :ref:`eORCA025_bathymetry_b0.2` and :ref:`eORCA025_bathymetry_b0.3` as isf front along Antarctic are not changed.
 Comments:
    - in this version only 1 time frame is provided, we can easily extend the logic to interannual calving or monthly calving by drawing X different state.
 Variable:
@@ -400,10 +468,10 @@ Source:
 Method:
    - see Jourdain et al. (2018) on how to compute the mean tidal velocity for detailed. Here we used the first 6 component : m2 s2 n2 k1 q1 o1 (the one provided by CATS). The average is done over 190d with a sampling of 15 minutes. The mean velocity is computed from the tidal transport using the CATS water column thickness. The data a drown then interpolated on NEMO grid then drowned again. At the end, we masked it for visualisation and for the simulation. In case other bathymetry/grounding line used, you can simply redo the step 2 to 4 described below as ttv.nc is a drowned file.
 Compatibility:
-   - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0`
+   - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0` and :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0` as isf front and grounding line the same.
 Comments:
    - discontinuity are visible close to the calving front on E FRIS.
-     This is because the claving front in CATS2008 and NEMO is not located at the same location.
+     This is because the calving front in CATS2008 and NEMO is not located at the same location.
      As CATS2008 do not provide its isf mask to properly mask and drown CATS2008 file, I had to use the open ocean CATS velocity to file this points.
 Path:
    - directory:
@@ -434,9 +502,11 @@ Source:
    - see De Lavergne et al. (2016) and details in :ref:`De_Lavergne_et_al_2016`.
 Methode:
    - Interpolation from the regular 0.5 degree resolution dataset to eORCA025 grid.
-   - from email discussion with Casimir, I decided to fill land and isf cavities to the backgrou    nd value instead of drowning data.
+   - from email discussion with Casimir, I decided to fill land and isf cavities to the background value instead of drowning data.
 Reference:
    - de Lavergne, C., G. Madec, J. L. Sommer, A. J. G. Nurser, and A. C. N. Garabato, 2016: The impact of a variable mixing efficiency on the abyssal overturning. Journal of Physical Oceanography, 46, 663?~@~S681
+Compatibility:
+   - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0` and :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0` as we only added land point (icb tongue) and no change in coastline (except icb tongue) the same.
 Path:
    - building directory: TOADD
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_iwm_b0.2_v0.0.nc
@@ -553,11 +623,32 @@ Tools:
 Comments:
    - To switch off restoring along the the restoring near the coastal boundaries, in order to let the dynamics build the coherent water masses.
      We removed all the islands bigger than 50 cells (:numref:`fig_distcoast`).
+Compatibility:
+    - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0` and :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0` as coastline (without icb tongue) and grounding line the same.
 Path:
-   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_distcoast_b0.2_v0.0.nc
+    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_distcoast_b0.2_v0.0.nc
 
 .. _fig_distcoast:
 .. figure:: _static/eORCA025_Tcoast.png
   :scale: 40
 
   distance to coast in eORCA025_distcoast_b0.2_v0.0.nc (ie islands smaller than 50 points remove prior to computation).
+
+AABW damping
+============
+
+.. _eORCA025.L121_dmpmask_b0.2_c0.3_d1.0_v0.0:
+
+eORCA025.L121_dmpmask_b0.2_c0.3_d1.0_v0.0.nc
+--------------------------------------------
+
+Method:
+    - start for eos80 Gourestki file (intermediaite file in the building of :ref:``)
+    - build open ocean mask excluding (deep shelf) with cdfmkmask
+    - build dmp file (./cdfmaskdmp with mask.nc pointing to mask previously build)
+Ref:
+    - Dufour, C. O., et al. “Standing and Transient Eddies in the Response of the Southern Ocean Meridional Overturning to the Southern Annular Mode.”
+     Journal of Climate, vol. 25, no. 20, 2012, pp. 6958–6974. JSTOR, www.jstor.org/stable/26191648. Accessed 10 Mar. 2021.
+Compatibility:
+    - :ref:`eORCA025.L121_domain_cfg_b0.2_c3.0_d1.0` and :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0` as domain in the deep ocean is the same.
+Path:

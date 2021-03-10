@@ -2122,13 +2122,18 @@ Known issues
 
 Output
 ------
-description:
-- Yearly U and V wrongly weighted: Instead of doing averaged of ``@uoce_e3t/@e3t`` every year (``freq_op=1y``),
-  this is done every month (``freq_op=1m``) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
-  So, budget will not be perfectly closed because the averaging of the 12 months
-  does not take into account the thickness weighting properly => fix in eORCA025.L121-OPM014
-fix:
-- replace ``freq_op=1m`` instance in the yearly output by ``freq_op=1y``
+Issue 1:
+    description:
+    - Yearly U and V wrongly weighted: Instead of doing averaged of ``@uoce_e3t/@e3t`` every year (``freq_op=1y``),
+    this is done every month (``freq_op=1m``) and then averaged over a year (ie the yearly file is build by doing averaged of monthly data).
+    So, budget will not be perfectly closed because the averaging of the 12 months
+    does not take into account the thickness weighting properly => fix in eORCA025.L121-OPM014
+    fix:
+    - replace ``freq_op=1m`` instance in the yearly output by ``freq_op=1y``
+
+Issue 2:
+    description: wrong sign in output for ice-ocean sensible flux
+    fix: see https://forge.ipsl.jussieu.fr/nemo/ticket/2635
 
 .. _bug_input_eO025-OPM006:
 
