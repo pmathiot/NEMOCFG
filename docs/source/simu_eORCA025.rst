@@ -8,4 +8,4 @@ eORCA025 simulations
    :maxdepth: 6
 
    simu_eORCA025_OPM006
-   simu_eORCA025_OPM015
+   simu_eORCA025_OPM016

@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM006" href="simu_eORCA025_OPM006.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,8 +92,62 @@
 <li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
 </ul>
 <p class="caption"><span class="caption-text">NEMO simulations</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM016</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtsd">namtsd</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#namsbc-ssr">namsbc_ssr</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-ldf">namtra_ldf</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namzdf-tke">namzdf_tke</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#namtra-dmp-drk">namtra_dmp_drk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initial-condition">initial condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sea-surface-salinity">sea surface salinity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#damping-mask">damping mask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#damping-data">damping data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compilation">Compilation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sea-ice-changes">sea ice changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-indicators">Local indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amundsen-sea">Amundsen sea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ice-shelves">Ice shelves</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#amery">Amery</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ross">Ross</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getz">Getz</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pine-island">Pine island</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#george-vi">George VI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filschner-ronne">Filschner Ronne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#riiser">Riiser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fimbul">Fimbul</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#all-ice-shelves">All ice shelves</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#maps">Maps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
@@ -158,6 +214,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
         
       <li>eORCA025.L121-OPM016</li>
     
@@ -496,7 +554,7 @@ and with a ramp to avoid sharp change in diffusion (nn_ldfeiv_shape=2 in namelis
 <li><p>mean sst in the North West Corner (see box in the map)</p></li>
 <li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
 </ul>
-<img alt="_static/VALGLO_OPM016.png" src="_static/VALGLO_OPM016.png" />
+<img alt="_images/VALGLO_OPM.png" src="_images/VALGLO_OPM.png" />
 </div>
 <div class="section" id="regional-indicators">
 <h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
@@ -507,51 +565,58 @@ and with a ramp to avoid sharp change in diffusion (nn_ldfeiv_shape=2 in namelis
 <li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
 <li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
 </ul>
-<img alt="_static/VALSO_OPM016.png" src="_static/VALSO_OPM016.png" />
+<img alt="_images/VALSO_OPM.png" src="_images/VALSO_OPM.png" />
 </div>
 <div class="section" id="local-indicators">
 <h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
 <p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
-<img alt="_static/VALSI_OPM016.png" src="_static/VALSI_OPM016.png" />
+<img alt="_images/VALSI_OPM.png" src="_images/VALSI_OPM.png" />
 </div>
 <div class="section" id="amundsen-sea">
 <h3>Amundsen sea<a class="headerlink" href="#amundsen-sea" title="Permalink to this headline">¶</a></h3>
 <p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
-<img alt="_static/VALAMU_OPM016.png" src="_static/VALAMU_OPM016.png" />
+<img alt="_images/VALAMU_OPM.png" src="_images/VALAMU_OPM.png" />
 </div>
 <div class="section" id="ice-shelves">
 <span id="eorca025-l121-opm016-isf-monitoring"></span><h3>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="amery">
 <h4>Amery<a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/AMER_eORCA025.L121-OPM016.png" src="_static/AMER_eORCA025.L121-OPM016.png" />
+<img alt="_images/AMER_eORCA025.L121-OPM016.png" src="_images/AMER_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="ross">
 <h4>Ross<a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/ROSS_eORCA025.L121-OPM016.png" src="_static/ROSS_eORCA025.L121-OPM016.png" />
+<img alt="_images/ROSS_eORCA025.L121-OPM016.png" src="_images/ROSS_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="getz">
 <h4>Getz<a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/GETZ_eORCA025.L121-OPM016.png" src="_static/GETZ_eORCA025.L121-OPM016.png" />
+<img alt="_images/GETZ_eORCA025.L121-OPM016.png" src="_images/GETZ_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="pine-island">
 <h4>Pine island<a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/PINE_eORCA025.L121-OPM016.png" src="_static/PINE_eORCA025.L121-OPM016.png" />
+<img alt="_images/PINE_eORCA025.L121-OPM016.png" src="_images/PINE_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="george-vi">
 <h4>George VI<a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/GEVI_eORCA025.L121-OPM016.png" src="_static/GEVI_eORCA025.L121-OPM016.png" />
+<img alt="_images/GEVI_eORCA025.L121-OPM016.png" src="_images/GEVI_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="filschner-ronne">
 <h4>Filschner Ronne<a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/FRIS_eORCA025.L121-OPM016.png" src="_static/FRIS_eORCA025.L121-OPM016.png" />
+<img alt="_images/FRIS_eORCA025.L121-OPM016.png" src="_images/FRIS_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="riiser">
 <h4>Riiser<a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/RIIS_eORCA025.L121-OPM016.png" src="_static/RIIS_eORCA025.L121-OPM016.png" />
+<img alt="_images/RIIS_eORCA025.L121-OPM016.png" src="_images/RIIS_eORCA025.L121-OPM016.png" />
 </div>
 <div class="section" id="fimbul">
 <h4>Fimbul<a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h4>
-<img alt="_static/FIMB_eORCA025.L121-OPM016.png" src="_static/FIMB_eORCA025.L121-OPM016.png" />
+<img alt="_images/FIMB_eORCA025.L121-OPM016.png" src="_images/FIMB_eORCA025.L121-OPM016.png" />
+</div>
+<div class="section" id="all-ice-shelves">
+<h4>All ice shelves<a class="headerlink" href="#all-ice-shelves" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-default" id="id1">
+<img alt="_images/melt_per_isf_eORCA025.L121_1979.png" src="_images/melt_per_isf_eORCA025.L121_1979.png" />
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">ice shelf melt for each ice shelf (decade 1979-1988).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="maps">
@@ -569,6 +634,15 @@ and with a ramp to avoid sharp change in diffusion (nn_ldfeiv_shape=2 in namelis
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simu_eORCA025_OPM006.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM006" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

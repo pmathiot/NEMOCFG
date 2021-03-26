@@ -305,7 +305,7 @@ On these plot you can find a time series of:
 - mean sst in the North West Corner (see box in the map)
 - sea ice extent (arctic/ant in summer/winter)
 
-.. image:: _static/VALGLO_OPM016.png
+.. image:: _static/VALGLO_OPM.png
 
 Regional indicators
 -------------------
@@ -316,19 +316,19 @@ On these plot, you can find time series of:
 - Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)
 - Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion
 
-.. image:: _static/VALSO_OPM016.png
+.. image:: _static/VALSO_OPM.png
 
 Local indicators
 ----------------
 These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)
 
-.. image:: _static/VALSI_OPM016.png
+.. image:: _static/VALSI_OPM.png
 
 Amundsen sea
 ------------
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
 
-.. image:: _static/VALAMU_OPM016.png
+.. image:: _static/VALAMU_OPM.png
 
 .. _eORCA025.L121-OPM016_isf_monitoring:
 
@@ -366,6 +366,13 @@ Riiser
 Fimbul
 ~~~~~~
 .. image:: _static/FIMB_eORCA025.L121-OPM016.png
+
+All ice shelves
+~~~~~~~~~~~~~~~
+
+.. figure:: _static/melt_per_isf_eORCA025.L121_1979.png
+
+  ice shelf melt for each ice shelf (decade 1979-1988).
 
 Maps
 ----

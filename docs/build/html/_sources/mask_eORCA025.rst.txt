@@ -41,7 +41,7 @@ In order to post process output file, a subbassin file has been built. It contai
 .. figure:: _static/eORCA025_subbasins.png
   :scale: 40
 
-  subbasin mask for :ref:eORCA025_subbassin_b0.2_v0.0
+  subbasin mask for :ref:`eORCA025_subbassin_b0.2_v0.0`
 
 isf mask
 ========
@@ -60,3 +60,22 @@ In addition to this, total melt for each ice shelf from Rignot is also added in 
 * path:
    - building directory: TOADD
    - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-MSH/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-MSH/eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc
+
+eORCA025_mskisf_b0.3_c3.0_d1.0_v0.0.nc
+--------------------------------------
+as eORCA025_mskisf_b0.2_c3.0_d1.0_v0.0.nc
+
+* tools:
+    - cdfisf_fill (./cdfisf_fill -f eORCA025.L121_mesh_mask_b0.3_c3.0_d1.0.nc -v isfdraft -l eORCA025_mskisf_c3.0_v0.0.txt -nc4 -o eORCA025_mskisf_b0.3_c3.0_d1.0.nc -ew -bf eORCA025_isfbnd_c3.0_v0.0.txt)
+    - github.com:pmathiot/CDFTOOLS_4.0_ISF.git @ 5b6938c
+* compatibility:
+    - :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0` (each time the bathy or the isf discretisation change, this file need to be rebuild)
+* path:
+    - building directory: TOADD
+    - file:
+
+.. _fig_eORCA025_maskisf:
+.. figure:: _static/isfmask.png
+ :scale: 40
+
+ isf mask for :ref:`eORCA025_mskisf_b0.3_c3.0_d1.0_v0.0.nc`
