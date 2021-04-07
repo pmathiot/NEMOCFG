@@ -91,6 +91,7 @@ eORCA025_bathymetry_b0.3.nc
 Heritage:
   - :ref:`eORCA025_bathymetry_b0.2`
 Change:
+  - add iceberg tongue in Amundsen sea and adjust Getz ice shelf draft to match NEMO termocline.
 
 Reference:
   - Bett paper
@@ -103,13 +104,13 @@ Method:
 Tools:
   - BMGTOOLS: link to add
 Path:
- - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.2.nc
+ - file:
 
 .. _fig_eORCA025b03_geometry:
 .. figure:: _static/eORCA025_bathy_change_b0.3_b0.2.png
   :scale: 60
 
-  Top: Bathymetry (a) and ice shelf draft (b) in :ref:`eORCA025_bathymetry_b0.2`. Bot: differences between b0.2 and b0.1 bathymetry (a) and isf draft (b).
+  Top: Bathymetry in eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (top) and ice shelf draft differences between eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (bottom).
 
 Domaincfg
 =========
