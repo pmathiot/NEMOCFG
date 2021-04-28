@@ -337,6 +337,12 @@ or
 
     conda env create -f <env file name>.yml
 
+- add a new conda env to your jupyter notebook
+
+.. code-block:: console
+
+    python -m ipykernel install --user --name=firstEnv
+
 - Activate or deactivate an environment:
 
 .. code-block:: console
