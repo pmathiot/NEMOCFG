@@ -476,6 +476,56 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 <span class="go">git checkout &lt;branch-name&gt;</span>
 </pre></div>
 </div>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Change from https to ssh</p>
+<ul class="simple">
+<li><p>First check you are in https:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git remote -v
+<span class="go">origin      https://github.com/username/TOTO.git (fetch)</span>
+<span class="go">origin      https://github.com/username/TOTO.git (push)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>switch to ssh:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git remote set-url origin git@github.com:username/TOTO.git
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>check if it works:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git remote -v
+<span class="go">origin      git@github.com:username/TOTO.git (fetch)</span>
+<span class="go">origin      git@github.com:username/TOTO.git (push)</span>
+</pre></div>
+</div>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>Create a new git directory from an existing directtory</p>
+<ul class="simple">
+<li><p>first create your git directory locally :</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> MY_PROJECT
+<span class="gp">$ </span>git init
+<span class="gp">$ </span>git add file1
+<span class="gp">$ </span>git commit
+</pre></div>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Then connect it to github</dt><dd><ul>
+<li><p>Go to github.</p></li>
+<li><p>Log in to your account.</p></li>
+<li><p>Click the new repository button in the top-right. You’ll have an option there to initialize the repository with a README file, but I don’t.</p></li>
+<li><p>Click the “Create repository” button.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Finally push to the remote dir</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git remote add origin git@github.com:username/new_repo
+<span class="gp">$ </span>git push -u origin master
+</pre></div>
+</div>
 </div>
 <div class="section" id="conda">
 <h1>CONDA<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h1>

@@ -303,6 +303,55 @@ Git
     git fetch
     git checkout <branch-name>
 
+**Change from https to ssh
+
+- First check you are in https:
+
+.. code-block:: console
+
+    $ git remote -v
+    origin	https://github.com/username/TOTO.git (fetch)
+    origin	https://github.com/username/TOTO.git (push)
+
+- switch to ssh:
+
+.. code-block:: console
+
+    $ git remote set-url origin git@github.com:username/TOTO.git
+
+- check if it works:
+
+.. code-block:: console
+
+    $ git remote -v
+    origin	git@github.com:username/TOTO.git (fetch)
+    origin	git@github.com:username/TOTO.git (push)
+
+**Create a new git directory from an existing directtory
+
+- first create your git directory locally :
+
+.. code-block:: console
+
+    $ cd MY_PROJECT
+    $ git init
+    $ git add file1
+    $ git commit
+
+- Then connect it to github
+    - Go to github.
+    - Log in to your account.
+    - Click the new repository button in the top-right. You’ll have an option there to initialize the repository with a README file, but I don’t.
+    - Click the “Create repository” button.
+
+- Finally push to the remote dir
+
+.. code-block:: console
+
+    $ git remote add origin git@github.com:username/new_repo
+    $ git push -u origin master
+
+
 *****
 CONDA
 *****
