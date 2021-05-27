@@ -41,6 +41,19 @@ Now you can connect with only the occigen password to enter:
 
     ssh occigen
 
+Modules
+-------
+
+Compile XIOS
+------------
+
+Compile and run NEMO
+--------------------
+
+ulimit -s unlimited
+
+
+
 Python
 ======
 To use python on Occigen, the easiest is to use conda.
