@@ -303,6 +303,14 @@ path:
     - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
 
 
+eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
+------------------------------------------------
+
+Source:
+    - Open ocean: WOA2018 over period 1980-2010 at 1 degree resolution converted to TEOS10
+
+
+
 .. _eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0:
 
 eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0.nc

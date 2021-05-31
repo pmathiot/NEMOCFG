@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>eORCA025 simulations &mdash; NEMO@IGE  documentation</title>
+  <title>eORCA025.L121-OPM019 &mdash; NEMO@IGE  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="eORCA025.L121-OPM006" href="simu_eORCA025_OPM006.html" />
-    <link rel="prev" title="eORCA025 mask files" href="mask_eORCA025.html" /> 
+    <link rel="next" title="eORCA025.L121-OPM020" href="simu_eORCA025_OPM020.html" />
+    <link rel="prev" title="eORCA025.L121-OPM018" href="simu_eORCA025_OPM018.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,27 @@
 </ul>
 <p class="caption"><span class="caption-text">NEMO simulations</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">eORCA025 simulations</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM019</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtsd">namtsd</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initial-condition">initial condition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
 </ul>
 </li>
@@ -169,13 +184,15 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>eORCA025 simulations</li>
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM019</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/simu_eORCA025.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/simu_eORCA025_OPM019.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,9 +205,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="eorca025-simulations">
-<h1>eORCA025 simulations<a class="headerlink" href="#eorca025-simulations" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="section" id="eorca025-l121-opm019">
+<h1>eORCA025.L121-OPM019<a class="headerlink" href="#eorca025-l121-opm019" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM017, only the initial condition changed. Instead of filling the cavity by JRA UKMO output we fill it with extrapolation of WOA2018.</p>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM017) a mentioned here:</p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="namtsd">
+<h4>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>tradmp input file changed to be equal to initial condition as in OPM017 because AABW restoring turned off.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtsd_drk    !    Temperature &amp; Salinity Data  (init/dmp)             (default: OFF)</span>
+<span class="go">!              !   if key_drakkar, **only**  namtsd_drk is read</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_tsd_init   = .true.   !  Initialisation of ocean T &amp; S with T &amp;S input data (T) or not (F)</span>
+<span class="go">   ln_tsd_dmp = .false.     !  damping of ocean T &amp; S toward T &amp;S input data (T) or not (F)</span>
+
+<span class="go">   cn_dir        = &#39;./&#39;     !  root directory for the location of the temperature and salinity file</span>
+<span class="go">   !___________!_____________________________________!___________________!___________!_____________!________!___________!_____________!__________!_______________!</span>
+<span class="go">   !           !  file name                          ! frequency (hours) ! variable  ! time interp.!  clim  ! &#39;yearly&#39;/ ! weights     ! rotation ! land/sea mask !</span>
+<span class="go">   !           !                                     !  (if &lt;0  months)  !   name    !   (logical) !  (T/F) ! &#39;monthly&#39; !   filename  ! pairing  !    filename   !</span>
+<span class="go">   ! data used for initial condition (istate)</span>
+<span class="go">   sn_tem_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2&#39;, -1. , &#39;t_an&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2&#39;, -1. , &#39;s_an&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   ! data used for damping ( tradmp)</span>
+<span class="go">   sn_tem_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2&#39;, -1. , &#39;t_an&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2&#39;, -1. , &#39;s_an&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   !</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="input-files">
+<h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Only the file changed between the reference (<span class="xref std std-ref">bug_input_eO025-OPM017</span>) and this simulation are described.</p>
+</div></blockquote>
+<div class="section" id="initial-condition">
+<h3>initial condition<a class="headerlink" href="#initial-condition" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>filename: <span class="xref std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2.nc</span></p></li>
+<li><p>variables: t_an, s_an</p></li>
+<li><p>frequency: monthly</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
 </div>
 </div>
 
@@ -202,10 +275,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="simu_eORCA025_OPM006.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM006" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="simu_eORCA025_OPM020.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM020" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mask_eORCA025.html" class="btn btn-neutral float-left" title="eORCA025 mask files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="simu_eORCA025_OPM018.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM018" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

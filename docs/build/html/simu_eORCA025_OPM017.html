@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025.L121-OPM017 &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eORCA025.L121-OPM018" href="simu_eORCA025_OPM018.html" />
+    <link rel="prev" title="eORCA025.L121-OPM016" href="simu_eORCA025_OPM016.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM017</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtsd">namtsd</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-ldf">namtra_ldf</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#namtra-dmp-drk">namtra_dmp_drk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#damping-data">damping data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM017</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/simu_eORCA025_OPM017.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-l121-opm017">
+<h1>eORCA025.L121-OPM017<a class="headerlink" href="#eorca025-l121-opm017" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM016, we switched off the AABW restoring, decreased the diffusion as well as the GM coefficient (get back to UKMO value)</p>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM016) a mentioned here:</p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="namtsd">
+<h4>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>tradmp input file changed to be equal to initial condition as in OPM006 because AABW restoring turned off.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtsd_drk    !    Temperature &amp; Salinity Data  (init/dmp)             (default: OFF)</span>
+<span class="go">!              !   if key_drakkar, **only**  namtsd_drk is read</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_tsd_init   = .true.   !  Initialisation of ocean T &amp; S with T &amp;S input data (T) or not (F)</span>
+<span class="go">   ln_tsd_dmp = .false.     !  damping of ocean T &amp; S toward T &amp;S input data (T) or not (F)</span>
+
+<span class="go">   cn_dir        = &#39;./&#39;     !  root directory for the location of the temperature and salinity file</span>
+<span class="go">   !___________!_____________________________________!___________________!___________!_____________!________!___________!_____________!__________!_______________!</span>
+<span class="go">   !           !  file name                          ! frequency (hours) ! variable  ! time interp.!  clim  ! &#39;yearly&#39;/ ! weights     ! rotation ! land/sea mask !</span>
+<span class="go">   !           !                                     !  (if &lt;0  months)  !   name    !   (logical) !  (T/F) ! &#39;monthly&#39; !   filename  ! pairing  !    filename   !</span>
+<span class="go">   ! data used for initial condition (istate)</span>
+<span class="go">   sn_tem_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   ! data used for damping ( tradmp)</span>
+<span class="go">   sn_tem_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   !</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+<div class="section" id="namtra-ldf">
+<h5>namtra_ldf<a class="headerlink" href="#namtra-ldf" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>We get back to UKMO values (150m2/s)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_ldf    !   lateral diffusion scheme for tracers                 (default: NO selection)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   !                       !  Operator type:</span>
+<span class="go">   ln_traldf_OFF   = .false.   !  No explicit diffusion</span>
+<span class="go">   ln_traldf_lap   = .true.    !    laplacian operator</span>
+<span class="go">   ln_traldf_blp   = .false.   !  bilaplacian operator</span>
+<span class="go">   !</span>
+<span class="go">   !                       !  Direction of action:</span>
+<span class="go">   ln_traldf_lev   = .false.   !  iso-level</span>
+<span class="go">   ln_traldf_hor   = .false.   !  horizontal  (geopotential)</span>
+<span class="go">   ln_traldf_iso   = .true.    !  iso-neutral (standard operator)</span>
+<span class="go">   ln_traldf_triad = .false.   !  iso-neutral (triad    operator)</span>
+<span class="go">   !</span>
+<span class="go">   !                             !  iso-neutral options:</span>
+<span class="go">   ln_traldf_msc   = .false.   !  Method of Stabilizing Correction      (both operators)</span>
+<span class="go">   rn_slpmax       =  0.01     !  slope limit                           (both operators)</span>
+<span class="go">   ln_triad_iso    = .false.   !  pure horizontal mixing in ML              (triad only)</span>
+<span class="go">   rn_sw_triad     = 1         !  =1 switching triad ; =0 all 4 triads used (triad only)</span>
+<span class="go">   ln_botmix_triad = .false.   !  lateral mixing on bottom                  (triad only)</span>
+<span class="go">   !</span>
+<span class="go">   !                       !  Coefficients:</span>
+<span class="go">   nn_aht_ijk_t    = 20        !  space/time variation of eddy coefficient:</span>
+<span class="go">      !                             !   =-20 (=-30)    read in eddy_diffusivity_2D.nc (..._3D.nc) file</span>
+<span class="go">      !                             !   =  0           constant</span>
+<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
+<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
+<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
+<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
+<span class="go">      !                             !   = 31 F(i,j,k,t)=F(local velocity and grid-spacing)</span>
+<span class="go">      !                        !  time invariant coefficients:  aht0 = 1/2  Ud*Ld   (lap case)</span>
+<span class="go">      !                             !                           or   = 1/12 Ud*Ld^3 (blp case)</span>
+<span class="go">      rn_Ud        = 0.011          !  lateral diffusive velocity [m/s] (nn_aht_ijk_t= 0, 10, 20, 30)</span>
+<span class="go">      rn_Ld        = 200.e+3        !  lateral diffusive length   [m]   (nn_aht_ijk_t= 0, 10)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="namtra-eiv">
+<h5>namtra_eiv<a class="headerlink" href="#namtra-eiv" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Based on UKMO test and Julie D. discussion we switch one GM (150m2/s) (300m2/s2 in OPM016)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_eiv    !   eddy induced velocity param.                         (default: OFF)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_ldfeiv   = .true.    ! use eddy induced velocity parameterization</span>
+<span class="go">      !</span>
+<span class="go">      !                        !  Coefficients:</span>
+<span class="go">      nn_aei_ijk_t    = 21          !  space/time variation of eddy coefficient:</span>
+<span class="go">      !                             !   =-20 (=-30)    read in eddy_induced_velocity_2D.nc (..._3D.nc) file</span>
+<span class="go">      !                             !   =  0           constant</span>
+<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
+<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
+<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
+<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
+<span class="go">      !                        !  time invariant coefficients:  aei0 = 1/2  Ue*Le</span>
+<span class="go">      rn_Ue        = 0.03           !  lateral diffusive velocity [m/s] (nn_aei_ijk_t= 0, 10, 20, 30)</span>
+<span class="go">      rn_Le        = 10.e+3         !  lateral diffusive length   [m]   (nn_aei_ijk_t= 0, 10)</span>
+<span class="go">      !</span>
+<span class="go">      ln_ldfeiv_dia =.false.   ! diagnose eiv stream function and velocities</span>
+<span class="go">      nn_ldfeiv_shape = 2           !  shape of bounding coefficient    (nn_aei_ijk_t= 21 only)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="namtra-dmp-drk">
+<h3>namtra_dmp_drk<a class="headerlink" href="#namtra-dmp-drk" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>we switch off AABW restoring.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_dmp_drk !   tracer: T &amp; S newtonian damping                      (default: OFF)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   nn_hdmp     =   -2      !  -2 = Drakkar customisation ( use dtacof in tradmp.F90 )</span>
+<span class="go">                           !  any other value : Nemo standard code</span>
+<span class="go">   nn_file     =    1      !  create a damping.coeff NetCDF file (=1) or not (=0)</span>
+<span class="go">                           !  The output file can then be used as input resto file (cn_resto)</span>
+<span class="go">   ln_dmpmask  = .false.    !  Read dmp_mask.nc file  when T (between 0 and 1 )</span>
+<span class="go">      rn_timsk    =  730.     !  Time scale used for dmp_mask</span>
+<span class="go">      cn_dir      =  &#39;./&#39;     ! directtory wher to find damping mask</span>
+<span class="go">   !___________!____________!___________________!___________!_____________!________!___________!___________!__________!_______________!</span>
+<span class="go">   !           !  file name ! frequency (hours) ! variable  ! time interp.!  clim  ! &#39;yearly&#39;/ ! weights e ! rotation ! land/sea mask !</span>
+<span class="go">   !           !            !  (if &lt;0  months)  !   name    !   (logical) !  (T/F) ! &#39;monthly&#39; !  filename ! pairing  !    filename   !</span>
+<span class="go">   sn_dmp      = &#39;eORCA025.L121_dmpmask_b0.2_c0.3_d1.0_v0.0&#39; ,  -12. ,  &#39;wdmp&#39; , .false.  , .true. , &#39;yearly&#39;  ,   &#39;&#39;      ,   &#39;&#39;     ,   &#39;&#39;</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="input-files">
+<h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
+<p>Only the file changed between the reference (<span class="xref std std-ref">bug_input_eO025-OPM016</span>) and this simulation are described.</p>
+<div class="section" id="damping-data">
+<h3>damping data<a class="headerlink" href="#damping-data" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"><span class="std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_eORCA025_OPM018.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM018" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simu_eORCA025_OPM016.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM016" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -35,8 +35,8 @@ namtsd
      sn_tem_ini  = 'eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1', -1., 'votemper',  .true.   , .true. , 'yearly'  ,  ''         , ' '      , ' '
      sn_sal_ini  = 'eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1', -1., 'vosaline',  .true.   , .true. , 'yearly'  ,  ''         , ' '      , ' '
      ! data used for damping ( tradmp)
-     sn_tem_dmp  = 'eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1', -1., 'votemper',  .true.      , .true., 'yearly'   ,  ''         , ' '      , ' '
-     sn_sal_dmp  = 'eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1', -1., 'vosaline',  .true.      , .true., 'yearly'   ,  ''         , ' '      , ' '
+     sn_tem_dmp  = 'eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0', -1., 'votemper',  .true.      , .true., 'yearly'   ,  ''         , ' '      , ' '
+     sn_sal_dmp  = 'eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0', -1., 'vosaline',  .true.      , .true., 'yearly'   ,  ''         , ' '      , ' '
      !
   /
 
@@ -142,51 +142,6 @@ namtra_eiv
           nn_ldfeiv_shape = 2           !  shape of bounding coefficient    (nn_aei_ijk_t= 21 only)
     /
 
-
-namzdf_tke
-^^^^^^^^^^
-
-* Based on Justine's experiment and Rodgers et al. (https://bg.copernicus.org/articles/11/4077/2014/bg-11-4077-2014.pdf)
-  we increase the exponential decay under the ML (nn_htau = 60 instead of 30 in the SH at high latitude)
-
-.. code-block:: console
-
-    !-----------------------------------------------------------------------
-    &namzdf_tke    !   turbulent eddy kinetic dependent vertical diffusion  (ln_zdftke =T)
-    !-----------------------------------------------------------------------
-    rn_ediff    =   0.1     !  coef. for vertical eddy coef. (avt=rn_ediff*mxl*sqrt(e) )
-    rn_ediss    =   0.7     !  coef. of the Kolmogoroff dissipation
-    rn_ebb      =  67.83    !  coef. of the surface input of tke (=67.83 suggested when ln_mxl0=T)
-    rn_emin     =   1.e-10  !  minimum value of tke [m2/s2] (1.e-10 is because of iwm)
-    rn_emin0    =   1.e-4   !  surface minimum value of tke [m2/s2]
-    rn_bshear   =   1.e-20  ! background shear (>0) currently a numerical threshold (do not change it)
-    nn_pdl      =   1       !  Prandtl number function of richarson number (=1, avt=pdl(Ri)*avm) or not (=0, avt=avm)
-    nn_mxl      =   3       !  mixing length: = 0 bounded by the distance to surface and bottom
-    !                       !                 = 1 bounded by the local vertical scale factor
-    !                       !                 = 2 first vertical derivative of mixing length bounded by 1
-    !                       !                 = 3 as =2 with distinct dissipative an mixing length scale
-    ln_mxl0     = .true.    !  surface mixing length scale = F(wind stress) (T) or not (F)
-      nn_mxlice    = 2        ! type of scaling under sea-ice
-                              !    = 0 no scaling under sea-ice
-                              !    = 1 scaling with constant sea-ice thickness
-                              !    = 2 scaling with mean sea-ice thickness ( only with SI3 sea-ice model )
-                              !    = 3 scaling with maximum sea-ice thickness
-      rn_mxlice   = 10.       ! max constant ice thickness value when scaling under sea-ice ( nn_mxlice=1)
-    rn_mxl0     =   0.04    !  surface  buoyancy lenght scale minimum value
-    ln_drg      = .true.    !  top/bottom friction added as boundary condition of TKE
-    ln_lc       = .true.    !  Langmuir cell parameterisation (Axell 2002)
-      rn_lc       =   0.15    !  coef. associated to Langmuir cells
-    nn_etau     =   1       !  penetration of tke below the mixed layer (ML) due to NIWs
-                              !        = 0 none ; = 1 add a tke source below the ML
-                              !        = 2 add a tke source just at the base of the ML
-                              !        = 3 as = 1 applied on HF part of the stress           (ln_cpl=T)
-      rn_efr      =   0.05    !  fraction of surface tke value which penetrates below the ML (nn_etau=1 or 2)
-      nn_htau     =   2       !  type of exponential decrease of tke penetration below the ML
-                              !        = 0  constant 10 m length scale
-                              !        = 1  0.5m at the equator to 30m poleward of 40 degrees
-      nn_eice     =   3       !  below sea ice: =0 ON ; =4 OFF when ice fraction > 1/4
-    /
-
 namtra_dmp_drk
 --------------
 
@@ -239,7 +194,7 @@ Input files
 Only the file changed between the reference (:ref:`bug_input_eO025-OPM006`) and this simulation are described.
 
 initial condition
-----------------
+-----------------
     - filename: :ref:`eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc <eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1>`
     - variables: votemper, vosaline
     - frequency: monthly

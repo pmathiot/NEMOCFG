@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025.L121-OPM020 &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM019" href="simu_eORCA025_OPM019.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM020</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtsd">namtsd</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM020</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/simu_eORCA025_OPM020.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-l121-opm020">
+<h1>eORCA025.L121-OPM020<a class="headerlink" href="#eorca025-l121-opm020" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM019, only the start date changed. The simulation start in 1979 instead of 1959.</p>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM017) a mentioned here:</p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="namtsd">
+<h4>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the simulation start in 1979 instead of 1959.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namrun        !   parameters of the run</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">  nn_no         =   &lt;NN_NO&gt;         !  job number</span>
+<span class="go">  cn_exp        =   eORCA025.L121-OPM020      !  experience name</span>
+<span class="go">  nn_it000      =    &lt;NIT000&gt;       !  first time step</span>
+<span class="go">  nn_itend      =    &lt;NITEND&gt;       !  last  time step</span>
+<span class="go">  nn_date0      =  19790101         !  initial calendar date yymmdd (used if nrstdt=1)</span>
+<span class="go">  nn_time0    =       0             !  initial time of day in hhmm</span>
+<span class="go">  nn_leapy    =       0             !  Leap year calendar (1) or not (0)</span>
+<span class="go">  ln_rstart   = &lt;RESTART&gt;           !  start from rest (F) or from a restart file (T)</span>
+<span class="go">     nn_euler    =       1   !  = 0 : start with forward time step if ln_rstart=T</span>
+<span class="go">     nn_rstctl   =       2   !  restart control =&gt; activated only if ln_rstart = T</span>
+<span class="go">                             !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist</span>
+<span class="go">                             !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart</span>
+<span class="go">                             !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart</span>
+<span class="go">     cn_ocerst_in  = &quot;restart&quot; !  suffix of ocean restart name (input)</span>
+<span class="go">     cn_ocerst_indir = &quot;&lt;CN_DIRRST&gt;&quot;       !  directory from which to read input ocean restarts</span>
+<span class="go">     cn_ocerst_out = &quot;restart&quot; !  suffix of ocean restart name (output)</span>
+<span class="go">     cn_ocerst_outdir = &quot;&lt;CN_DIRRST&gt;&quot;      !  directory in which to write output ocean restarts</span>
+<span class="go">  nn_istate   =       0   !  output the initial state (1) or not (0)</span>
+<span class="go">  ln_rst_list = .false.   !  output restarts at list of times using nn_stocklist (T) or at set frequency with nn_stock (F)</span>
+<span class="go">  nn_stock    =       0   !  used only if ln_rst_list = F: output restart freqeuncy (modulo referenced to 1)</span>
+<span class="go">     !                          !    =  0 force to write restart files only at the end of the run</span>
+<span class="go">     !                          !    = -1 do not do any restart</span>
+<span class="go">  nn_stocklist = 0,0,0,0,0,0,0,0,0,0 ! List of timesteps when a restart file is to be written</span>
+<span class="go">  nn_write    =       0   !  used only if key_iomput is not defined: output frequency (modulo referenced to nn_it000)</span>
+<span class="go">     !                          !    =  0 force to write output files only at the end of the run</span>
+<span class="go">     !                          !    = -1 do not do any output file</span>
+<span class="go">  ln_mskland  = .false.   !  mask land points in NetCDF outputs</span>
+<span class="go">  ln_cfmeta   = .false.   !  output additional data to netCDF files required for compliance with the CF metadata standard</span>
+<span class="go">  ln_clobber  = .true.    !  clobber (overwrite) an existing file</span>
+<span class="go">  nn_chunksz  =       0   !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)</span>
+<span class="go">  ln_xios_read = .FALSE.  !  use XIOS to read restart file (only for a single file restart)</span>
+<span class="go">  nn_wxios = 0      !  use XIOS to write restart file 0 - no, 1 - single file output, 2 - multiple file output</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simu_eORCA025_OPM019.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM019" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

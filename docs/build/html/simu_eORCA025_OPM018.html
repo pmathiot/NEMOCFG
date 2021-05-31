@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>eORCA025 simulations &mdash; NEMO@IGE  documentation</title>
+  <title>eORCA025.L121-OPM018 &mdash; NEMO@IGE  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="eORCA025.L121-OPM006" href="simu_eORCA025_OPM006.html" />
-    <link rel="prev" title="eORCA025 mask files" href="mask_eORCA025.html" /> 
+    <link rel="next" title="eORCA025.L121-OPM019" href="simu_eORCA025_OPM019.html" />
+    <link rel="prev" title="eORCA025.L121-OPM017" href="simu_eORCA025_OPM017.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,11 +93,22 @@
 </ul>
 <p class="caption"><span class="caption-text">NEMO simulations</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">eORCA025 simulations</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM018</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
 </ul>
@@ -169,13 +180,15 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>eORCA025 simulations</li>
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM018</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/simu_eORCA025.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/simu_eORCA025_OPM018.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,9 +201,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="eorca025-simulations">
-<h1>eORCA025 simulations<a class="headerlink" href="#eorca025-simulations" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="section" id="eorca025-l121-opm018">
+<h1>eORCA025.L121-OPM018<a class="headerlink" href="#eorca025-l121-opm018" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM017, the only changed is that we switched off GM.</p>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM017) a mentioned here:</p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="namtra-eiv">
+<h4>namtra_eiv<a class="headerlink" href="#namtra-eiv" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>GM is switch off</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namtra_eiv    !   eddy induced velocity param.                         (default: OFF)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   ln_ldfeiv   = .false.    ! use eddy induced velocity parameterization</span>
+<span class="go">      !</span>
+<span class="go">      !                        !  Coefficients:</span>
+<span class="go">      nn_aei_ijk_t    = 0           !  space/time variation of eddy coefficient:</span>
+<span class="go">      !                             !   =-20 (=-30)    read in eddy_induced_velocity_2D.nc (..._3D.nc) file</span>
+<span class="go">      !                             !   =  0           constant</span>
+<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
+<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
+<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
+<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
+<span class="go">      !                        !  time invariant coefficients:  aei0 = 1/2  Ue*Le</span>
+<span class="go">      rn_Ue        = 0.02           !  lateral diffusive velocity [m/s] (nn_aei_ijk_t= 0, 10, 20, 30)</span>
+<span class="go">      rn_Le        = 200.e+3        !  lateral diffusive length   [m]   (nn_aei_ijk_t= 0, 10)</span>
+<span class="go">      !</span>
+<span class="go">      ln_ldfeiv_dia =.false.   ! diagnose eiv stream function and velocities</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
 </div>
 </div>
 
@@ -202,10 +255,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="simu_eORCA025_OPM006.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM006" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="simu_eORCA025_OPM019.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM019" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mask_eORCA025.html" class="btn btn-neutral float-left" title="eORCA025 mask files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="simu_eORCA025_OPM017.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM017" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

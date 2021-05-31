@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="next" title="eORCA025.L121-OPM017" href="simu_eORCA025_OPM017.html" />
     <link rel="prev" title="eORCA025.L121-OPM006" href="simu_eORCA025_OPM006.html" /> 
 </head>
 
@@ -103,7 +103,6 @@
 <li class="toctree-l6"><a class="reference internal" href="#namsbc-ssr">namsbc_ssr</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#namtra-ldf">namtra_ldf</a></li>
 <li class="toctree-l6"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#namzdf-tke">namzdf_tke</a></li>
 </ul>
 </li>
 </ul>
@@ -146,6 +145,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
@@ -266,8 +269,8 @@
 <span class="go">   sn_tem_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
 <span class="go">   sn_sal_ini  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.   , .true. , &#39;yearly&#39;  ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
 <span class="go">   ! data used for damping ( tradmp)</span>
-<span class="go">   sn_tem_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;votemper&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
-<span class="go">   sn_sal_dmp  = &#39;eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1&#39;, -1., &#39;vosaline&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_tem_dmp  = &#39;eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0&#39;, -1., &#39;votemper&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
+<span class="go">   sn_sal_dmp  = &#39;eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0&#39;, -1., &#39;vosaline&#39;,  .true.      , .true., &#39;yearly&#39;   ,  &#39;&#39;         , &#39; &#39;      , &#39; &#39;</span>
 <span class="go">   !</span>
 <span class="go">/</span>
 </pre></div>
@@ -369,50 +372,6 @@
 <span class="go">      !</span>
 <span class="go">      ln_ldfeiv_dia =.false.   ! diagnose eiv stream function and velocities</span>
 <span class="go">      nn_ldfeiv_shape = 2           !  shape of bounding coefficient    (nn_aei_ijk_t= 21 only)</span>
-<span class="go">/</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="namzdf-tke">
-<h5>namzdf_tke<a class="headerlink" href="#namzdf-tke" title="Permalink to this headline">¶</a></h5>
-<ul class="simple">
-<li><p>Based on Justine’s experiment and Rodgers et al. (<a class="reference external" href="https://bg.copernicus.org/articles/11/4077/2014/bg-11-4077-2014.pdf">https://bg.copernicus.org/articles/11/4077/2014/bg-11-4077-2014.pdf</a>)
-we increase the exponential decay under the ML (nn_htau = 60 instead of 30 in the SH at high latitude)</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
-<span class="go">&amp;namzdf_tke    !   turbulent eddy kinetic dependent vertical diffusion  (ln_zdftke =T)</span>
-<span class="go">!-----------------------------------------------------------------------</span>
-<span class="go">rn_ediff    =   0.1     !  coef. for vertical eddy coef. (avt=rn_ediff*mxl*sqrt(e) )</span>
-<span class="go">rn_ediss    =   0.7     !  coef. of the Kolmogoroff dissipation</span>
-<span class="go">rn_ebb      =  67.83    !  coef. of the surface input of tke (=67.83 suggested when ln_mxl0=T)</span>
-<span class="go">rn_emin     =   1.e-10  !  minimum value of tke [m2/s2] (1.e-10 is because of iwm)</span>
-<span class="go">rn_emin0    =   1.e-4   !  surface minimum value of tke [m2/s2]</span>
-<span class="go">rn_bshear   =   1.e-20  ! background shear (&gt;0) currently a numerical threshold (do not change it)</span>
-<span class="go">nn_pdl      =   1       !  Prandtl number function of richarson number (=1, avt=pdl(Ri)*avm) or not (=0, avt=avm)</span>
-<span class="go">nn_mxl      =   3       !  mixing length: = 0 bounded by the distance to surface and bottom</span>
-<span class="go">!                       !                 = 1 bounded by the local vertical scale factor</span>
-<span class="go">!                       !                 = 2 first vertical derivative of mixing length bounded by 1</span>
-<span class="go">!                       !                 = 3 as =2 with distinct dissipative an mixing length scale</span>
-<span class="go">ln_mxl0     = .true.    !  surface mixing length scale = F(wind stress) (T) or not (F)</span>
-<span class="go">  nn_mxlice    = 2        ! type of scaling under sea-ice</span>
-<span class="go">                          !    = 0 no scaling under sea-ice</span>
-<span class="go">                          !    = 1 scaling with constant sea-ice thickness</span>
-<span class="go">                          !    = 2 scaling with mean sea-ice thickness ( only with SI3 sea-ice model )</span>
-<span class="go">                          !    = 3 scaling with maximum sea-ice thickness</span>
-<span class="go">  rn_mxlice   = 10.       ! max constant ice thickness value when scaling under sea-ice ( nn_mxlice=1)</span>
-<span class="go">rn_mxl0     =   0.04    !  surface  buoyancy lenght scale minimum value</span>
-<span class="go">ln_drg      = .true.    !  top/bottom friction added as boundary condition of TKE</span>
-<span class="go">ln_lc       = .true.    !  Langmuir cell parameterisation (Axell 2002)</span>
-<span class="go">  rn_lc       =   0.15    !  coef. associated to Langmuir cells</span>
-<span class="go">nn_etau     =   1       !  penetration of tke below the mixed layer (ML) due to NIWs</span>
-<span class="go">                          !        = 0 none ; = 1 add a tke source below the ML</span>
-<span class="go">                          !        = 2 add a tke source just at the base of the ML</span>
-<span class="go">                          !        = 3 as = 1 applied on HF part of the stress           (ln_cpl=T)</span>
-<span class="go">  rn_efr      =   0.05    !  fraction of surface tke value which penetrates below the ML (nn_etau=1 or 2)</span>
-<span class="go">  nn_htau     =   2       !  type of exponential decrease of tke penetration below the ML</span>
-<span class="go">                          !        = 0  constant 10 m length scale</span>
-<span class="go">                          !        = 1  0.5m at the equator to 30m poleward of 40 degrees</span>
-<span class="go">  nn_eice     =   3       !  below sea ice: =0 ON ; =4 OFF when ice fraction &gt; 1/4</span>
 <span class="go">/</span>
 </pre></div>
 </div>
@@ -637,7 +596,7 @@ and with a ramp to avoid sharp change in diffusion (nn_ldfeiv_shape=2 in namelis
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="simu_eORCA025_OPM017.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM017" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="simu_eORCA025_OPM006.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM006" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
