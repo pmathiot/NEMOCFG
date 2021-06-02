@@ -303,13 +303,19 @@ path:
     - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
 
 
-eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc
+.. _eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2:
+
+eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2.nc
 ------------------------------------------------
 
 Source:
     - Open ocean: WOA2018 over period 1980-2010 at 1 degree resolution converted to TEOS10
-
-
+Methode:
+    - gather monthly top 1550m with deep seasonal data (linear interpolation for seasonal data and linear transition between 1200m and 1550m)
+    - convert to TEOS10
+    - drown in taking care of where the water comes from (branch drown_with_constrain)
+Compatibility:
+    - eORCA025.L121_domain_cfg_b?.?_c3.0_d1.0.nc as file is drowned
 
 .. _eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0:
 
