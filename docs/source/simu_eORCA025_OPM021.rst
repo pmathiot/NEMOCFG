@@ -157,32 +157,32 @@ Ice shelves
 
 Amery
 ~~~~~
-.. image:: _static/AMER_OPM021.png
+.. image:: _static/AMER_eORCA025.L121-OPM021.png
 
 Ross
 ~~~~
-.. image:: _static/ROSS_OPM021.png
+.. image:: _static/ROSS_eORCA025.L121-OPM021.png
 
 Getz
 ~~~~
-.. image:: _static/GETZ_OPM021.png
+.. image:: _static/GETZ_eORCA025.L121-OPM021.png
 
 Pine island
 ~~~~~~~~~~~
-.. image:: _static/PINE_OPM021.png
+.. image:: _static/PINE_eORCA025.L121-OPM021.png
 
 George VI
 ~~~~~~~~~
-.. image:: _static/GEVI_OPM021.png
+.. image:: _static/GEVI_eORCA025.L121-OPM021.png
 
 Filschner Ronne
 ~~~~~~~~~~~~~~~
-.. image:: _static/FRIS_OPM021.png
+.. image:: _static/FRIS_eORCA025.L121-OPM021.png
 
 Riiser
 ~~~~~~
-.. image:: _static/RIIS_OPM021.png
+.. image:: _static/RIIS_eORCA025.L121-OPM021.png
 
 Fimbul
 ~~~~~~
-.. image:: _static/FIMB_OPM021.png
+.. image:: _static/FIMB_eORCA025.L121-OPM021.png
