@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>eORCA025.L121-OPM017 &mdash; NEMO@IGE  documentation</title>
@@ -81,17 +82,17 @@
               
             
             
-              <p class="caption"><span class="caption-text">Input files</span></p>
+              <p><span class="caption-text">Input files</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Mask files</span></p>
+<p><span class="caption-text">Mask files</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<p><span class="caption-text">NEMO simulations</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
@@ -120,24 +121,25 @@
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM021.html">eORCA025.L121-OPM021</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p><span class="caption-text">Tools</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
 </ul>
-<p class="caption"><span class="caption-text">HPC</span></p>
+<p><span class="caption-text">HPC</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<p><span class="caption-text">Miscellaneous</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
@@ -210,18 +212,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="eorca025-l121-opm017">
+  <section id="eorca025-l121-opm017">
 <h1>eORCA025.L121-OPM017<a class="headerlink" href="#eorca025-l121-opm017" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="summary">
+<section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Compare to eORCA025.L121-OPM016, we switched off the AABW restoring, decreased the diffusion as well as the GM coefficient (get back to UKMO value)</p>
-</div>
-<div class="section" id="namelist">
+</section>
+<section id="namelist">
 <h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
 <p>Only the change compare to the reference (eORCA025.L121-OPM016) a mentioned here:</p>
-<div class="section" id="namelist-oce">
+<section id="namelist-oce">
 <h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="namtsd">
+<section id="namtsd">
 <h4>namtsd<a class="headerlink" href="#namtsd" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>tradmp input file changed to be equal to initial condition as in OPM006 because AABW restoring turned off.</p></li>
@@ -247,7 +249,7 @@
 <span class="go">/</span>
 </pre></div>
 </div>
-<div class="section" id="namtra-ldf">
+<section id="namtra-ldf">
 <h5>namtra_ldf<a class="headerlink" href="#namtra-ldf" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>We get back to UKMO values (150m2/s)</p></li>
@@ -289,8 +291,8 @@
 <span class="go">/</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="namtra-eiv">
+</section>
+<section id="namtra-eiv">
 <h5>namtra_eiv<a class="headerlink" href="#namtra-eiv" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>Based on UKMO test and Julie D. discussion we switch one GM (150m2/s) (300m2/s2 in OPM016)</p></li>
@@ -317,10 +319,10 @@
 <span class="go">/</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="namtra-dmp-drk">
+</section>
+</section>
+</section>
+<section id="namtra-dmp-drk">
 <h3>namtra_dmp_drk<a class="headerlink" href="#namtra-dmp-drk" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>we switch off AABW restoring.</p></li>
@@ -342,25 +344,25 @@
 <span class="go">/</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="input-files">
+</section>
+</section>
+<section id="input-files">
 <h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
 <p>Only the file changed between the reference (<span class="xref std std-ref">bug_input_eO025-OPM016</span>) and this simulation are described.</p>
-<div class="section" id="damping-data">
+<section id="damping-data">
 <h3>damping data<a class="headerlink" href="#damping-data" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>filename: <a class="reference internal" href="input_eORCA025.html#eorca025-l121-woa2018-c3-0-d1-0-v19812010-5-1"><span class="std std-ref">eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.1.nc</span></a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="monitoring">
+</section>
+</section>
+<section id="monitoring">
 <h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
 <p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

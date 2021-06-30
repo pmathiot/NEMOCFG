@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eORCA025.L121-OPM021 &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM020" href="simu_eORCA025_OPM020.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p><span class="caption-text">NEMO simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM021</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-ice">namelist_ice</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#namdyn-rhg">namdyn_rhg</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#namsbc">namsbc</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#namthd-zdf">namthd_zdf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#namthd-do">namthd_do</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-indicators">Local indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amundsen-belingshausen-seas">Amundsen/Belingshausen seas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ice-shelves">Ice shelves</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#amery">Amery</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ross">Ross</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getz">Getz</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pine-island">Pine island</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#george-vi">George VI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filschner-ronne">Filschner Ronne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#riiser">Riiser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fimbul">Fimbul</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
+</ul>
+<p><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
+</ul>
+<p><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+<p><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM021</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/simu_eORCA025_OPM021.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="eorca025-l121-opm021">
+<h1>eORCA025.L121-OPM021<a class="headerlink" href="#eorca025-l121-opm021" title="Permalink to this headline">¶</a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM020, we change the icb distribution (stern et al. 2016) and some sea ice parameters (drag and snow conductivity)
+based on Katherine simulation</p>
+</section>
+<section id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Only the change compare to the reference (eORCA025.L121-OPM020) a mentioned here:</p>
+<section id="namelist-ice">
+<h3>namelist_ice<a class="headerlink" href="#namelist-ice" title="Permalink to this headline">¶</a></h3>
+<section id="namdyn-rhg">
+<h4>namdyn_rhg<a class="headerlink" href="#namdyn-rhg" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the simulation do not use the aevp rheology, and only iterate 100 times instead of 120 times.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">&amp;namdyn_rhg     !   Ice rheology</span>
+<span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">   ln_rhg_EVP       = .true.          !  EVP rheology</span>
+<span class="go">      ln_aEVP       = .false.          !     adaptive rheology (Kimmritz et al. 2016 &amp; 2017)</span>
+<span class="go">      rn_creepl     =   2.0e-9        !     creep limit [1/s]</span>
+<span class="go">      rn_ecc        =   2.0           !     eccentricity of the elliptical yield curve</span>
+<span class="go">      nn_nevp       = 120             !     number of EVP subcycles</span>
+<span class="go">      rn_relast     =   0.333         !     ratio of elastic timescale to ice time step: Telast = dt_ice * rn_relast</span>
+<span class="go">                                      !        advised value: 1/3 (nn_nevp=100) or 1/9 (nn_nevp=300)</span>
+<span class="go">   nn_rhg_chkcvg    =   0             !  check convergence of rheology</span>
+<span class="go">                                      !     = 0  no check</span>
+<span class="go">                                      !     = 1  check at the main time step (output xml: uice_cvg)</span>
+<span class="go">                                      !     = 2  check at both main and rheology time steps (additional output: ice_cvg.nc)</span>
+<span class="go">                                      !          this option 2 asks a lot of communications between cpu</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</section>
+<section id="namsbc">
+<h4>namsbc<a class="headerlink" href="#namsbc" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the ice-ocean drag is set to 5e-3 instead of 12e-3</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">&amp;namsbc         !   Ice surface boundary conditions</span>
+<span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">   rn_cio           =   5.0e-03       !  ice-ocean drag coefficient (-)</span>
+<span class="go">   nn_snwfra        =   2             !  calculate the fraction of ice covered by snow (for zdf and albedo)</span>
+<span class="go">                                      !     = 0  fraction = 1 (if snow) or 0 (if no snow)</span>
+<span class="go">                                      !     = 1  fraction = 1-exp(-0.2*rhos*hsnw) [MetO formulation]</span>
+<span class="go">                                      !     = 2  fraction = hsnw / (hsnw+0.02)    [CICE formulation]</span>
+<span class="go">   rn_snwblow       =   0.66          !  mesure of snow blowing into the leads</span>
+<span class="go">                                      !     = 1 =&gt; no snow blowing, &lt; 1 =&gt; some snow blowing</span>
+<span class="go">   nn_flxdist       =  -1             !  Redistribute heat flux over ice categories</span>
+<span class="go">                                      !     =-1  Do nothing (needs N(cat) fluxes)</span>
+<span class="go">                                      !     = 0  Average N(cat) fluxes then apply the average over the N(cat) ice</span>
+<span class="go">                                      !     = 1  Average N(cat) fluxes then redistribute over the N(cat) ice using T-ice and albedo sensitivity</span>
+<span class="go">                                      !     = 2  Redistribute a single flux over categories</span>
+<span class="go">   ln_cndflx        = .false.         !  Use conduction flux as surface boundary conditions (i.e. for Jules coupling)</span>
+<span class="go">      ln_cndemulate = .false.         !     emulate conduction flux (if not provided in the inputs)</span>
+<span class="go">   nn_qtrice        =   1             !  Solar flux transmitted thru the surface scattering layer:</span>
+<span class="go">                                      !     = 0  Grenfell and Maykut 1977 (depends on cloudiness and is 0 when there is snow)</span>
+<span class="go">                                      !     = 1  Lebrun 2019 (equals 0.3 anytime with different melting/dry snw conductivities)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</section>
+<section id="namthd-zdf">
+<h4>namthd_zdf<a class="headerlink" href="#namthd-zdf" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the snow conductivity is increased from 0.31 to 0.35</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">&amp;namthd_zdf     !   Ice heat diffusion</span>
+<span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">   ln_zdf_BL99      = .true.          !  Heat diffusion follows Bitz and Lipscomb 1999</span>
+<span class="go">   ln_cndi_U64      = .false.         !  sea ice thermal conductivity: k = k0 + beta.S/T            (Untersteiner, 1964)</span>
+<span class="go">   ln_cndi_P07      = .true.          !  sea ice thermal conductivity: k = k0 + beta1.S/T - beta2.T (Pringle et al., 2007)</span>
+<span class="go">   rn_cnd_s         =   0.35          !  thermal conductivity of the snow (0.31 W/m/K, Maykut and Untersteiner, 1971)</span>
+<span class="go">                                      !     Obs: 0.1-0.5 (Lecomte et al, JAMES 2013)</span>
+<span class="go">   rn_kappa_i       =   1.0           !  radiation attenuation coefficient in sea ice                     [1/m]</span>
+<span class="go">   rn_kappa_s       =  10.0           !  nn_qtrice = 0: radiation attenuation coefficient in snow         [1/m]</span>
+<span class="go">   rn_kappa_smlt    =   7.0           !  nn_qtrice = 1: radiation attenuation coefficient in melting snow [1/m]</span>
+<span class="go">   rn_kappa_sdry    =  10.0           !                 radiation attenuation coefficient in dry snow     [1/m]</span>
+<span class="go">   ln_zdf_chkcvg    = .false.         !  check convergence of heat diffusion scheme (outputs: tice_cvgerr, tice_cvgstp)</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</section>
+<section id="namthd-do">
+<h4>namthd_do<a class="headerlink" href="#namthd-do" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>the frazil ice parametrization is turned off</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">&amp;namthd_do      !   Ice growth in open water</span>
+<span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">   rn_hinew         =   0.1           !  thickness for new ice formation in open water (m), must be larger than rn_himin</span>
+<span class="go">   ln_frazil        = .false.          !  Frazil ice parameterization (ice collection as a function of wind)</span>
+<span class="go">      rn_maxfraz    =   1.0           !     maximum fraction of frazil ice collecting at the ice base</span>
+<span class="go">      rn_vfraz      =   0.417         !     thresold drift speed for frazil ice collecting at the ice bottom (m/s)</span>
+<span class="go">      rn_Cfraz      =   5.0           !     squeezing coefficient for frazil ice collecting at the ice bottom</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<section id="global-indicators">
+<span id="eorca025-l121-opm021-monitoring"></span><h3>Global indicators<a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot you can find a time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>AMOC at rapid array</p></li>
+<li><p>AMHT at rapid array</p></li>
+<li><p>Net global heat fluxes</p></li>
+<li><p>mean sst in the southern ocean (see box in the map)</p></li>
+<li><p>mean sst in the North West Corner (see box in the map)</p></li>
+<li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
+</ul>
+<img alt="_images/VALGLO_OPM021.png" src="_images/VALGLO_OPM021.png" />
+</section>
+<section id="regional-indicators">
+<h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot, you can find time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)</p></li>
+<li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
+<li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
+</ul>
+<img alt="_images/VALSO_OPM021.png" src="_images/VALSO_OPM021.png" />
+</section>
+<section id="local-indicators">
+<h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
+<p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
+<img alt="_images/VALSI_OPM021.png" src="_images/VALSI_OPM021.png" />
+</section>
+<section id="amundsen-belingshausen-seas">
+<h3>Amundsen/Belingshausen seas<a class="headerlink" href="#amundsen-belingshausen-seas" title="Permalink to this headline">¶</a></h3>
+<p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
+<img alt="_images/VALAMU_OPM021.png" src="_images/VALAMU_OPM021.png" />
+</section>
+<section id="ice-shelves">
+<h3>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h3>
+<section id="amery">
+<h4>Amery<a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/AMER_OPM021.png" src="_static/AMER_OPM021.png" />
+</section>
+<section id="ross">
+<h4>Ross<a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/ROSS_OPM021.png" src="_static/ROSS_OPM021.png" />
+</section>
+<section id="getz">
+<h4>Getz<a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/GETZ_OPM021.png" src="_static/GETZ_OPM021.png" />
+</section>
+<section id="pine-island">
+<h4>Pine island<a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/PINE_OPM021.png" src="_static/PINE_OPM021.png" />
+</section>
+<section id="george-vi">
+<h4>George VI<a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/GEVI_OPM021.png" src="_static/GEVI_OPM021.png" />
+</section>
+<section id="filschner-ronne">
+<h4>Filschner Ronne<a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/FRIS_OPM021.png" src="_static/FRIS_OPM021.png" />
+</section>
+<section id="riiser">
+<h4>Riiser<a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/RIIS_OPM021.png" src="_static/RIIS_OPM021.png" />
+</section>
+<section id="fimbul">
+<h4>Fimbul<a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h4>
+<img alt="_static/FIMB_OPM021.png" src="_static/FIMB_OPM021.png" />
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="simu_eORCA025_OPM020.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM020" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, DRAKKAR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

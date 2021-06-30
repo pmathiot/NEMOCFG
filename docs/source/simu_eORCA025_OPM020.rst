@@ -10,7 +10,7 @@ Compare to eORCA025.L121-OPM019, only the start date changed. The simulation sta
 Namelist
 ========
 
-Only the change compare to the reference (eORCA025.L121-OPM017) a mentioned here:
+Only the change compare to the reference (eORCA025.L121-OPM019) a mentioned here:
 
 namelist_oce
 ------------
