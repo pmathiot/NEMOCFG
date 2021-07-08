@@ -186,3 +186,29 @@ Riiser
 Fimbul
 ~~~~~~
 .. image:: _static/FIMB_eORCA025.L121-OPM021.png
+
+Evaluation
+==========
+
+Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM020 and OPM021 simulations over the last decade of the simulations (2029-2038) by sectors.
+
+.. image:: _static/WAIS_eORCA025.L121-OPM021_OPM020_y2029_10y.png
+   :scale: 27%
+
+.. image:: _static/EAIS_eORCA025.L121-OPM021_OPM020_y2029_10y.png
+   :scale: 27%
+
+.. image:: _static/WEDD_eORCA025.L121-OPM021_OPM020_y2029_10y.png
+   :scale: 27%
+
+Map of ice shelf melt for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038) with bottom temperature.
+
+.. image:: _static/melt_sector_OPM020_2029-2038.png
+   :scale: 20%
+
+.. image:: _static/melt_sector_OPM021_2029-2038.png
+   :scale: 20%
+
+Map of barotropic stream function for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038)
+
+.. image:: _static/BSF_y2029_OPM020_OPM021.png
