@@ -407,7 +407,7 @@ namisf
 namlbc
 ~~~~~~
 
-* no slip condition is used.
+* slip condition is used.
 * Local change has been made to:
 
     - decrease slightly transport across Bering, we used no slip along this strait.

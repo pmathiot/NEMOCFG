@@ -1,40 +1,45 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>NetCDF &mdash; NEMO@IGE  documentation</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="HPC centres" href="HPC_centres.html" /> 
@@ -74,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -81,35 +87,35 @@
               
             
             
-              <p><span class="caption-text">Input files</span></p>
+              <p class="caption"><span class="caption-text">Input files</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
 </ul>
-<p><span class="caption-text">Mask files</span></p>
+<p class="caption"><span class="caption-text">Mask files</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
 </ul>
-<p><span class="caption-text">NEMO simulations</span></p>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
 </ul>
-<p><span class="caption-text">Tools</span></p>
+<p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
 </ul>
-<p><span class="caption-text">HPC</span></p>
+<p class="caption"><span class="caption-text">HPC</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
 </ul>
-<p><span class="caption-text">Miscellaneous</span></p>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">NetCDF</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#chunking">Chunking</a></li>
@@ -136,6 +142,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -170,18 +177,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>NetCDF</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/miscellaneous.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -195,9 +204,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="netcdf">
+  <div class="section" id="netcdf">
 <h1>NetCDF<a class="headerlink" href="#netcdf" title="Permalink to this headline">¶</a></h1>
-<section id="chunking">
+<div class="section" id="chunking">
 <h2>Chunking<a class="headerlink" href="#chunking" title="Permalink to this headline">¶</a></h2>
 <p>The definition of chunking is well described here: <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/workshops/most-recent/nc4chunking/WhatIsChunking.html">https://www.unidata.ucar.edu/software/netcdf/workshops/most-recent/nc4chunking/WhatIsChunking.html</a>.</p>
 <ul class="simple">
@@ -241,8 +250,8 @@ If you plan to extract only vertical profile from your output file, the chunck w
 <ul class="simple">
 <li><p>If you found on of your processing is very very slow, have a look to your chunksize and see if it is adapted to your reading pattern.</p></li>
 </ul>
-</section>
-<section id="deflation">
+</div>
+<div class="section" id="deflation">
 <h2>Deflation<a class="headerlink" href="#deflation" title="Permalink to this headline">¶</a></h2>
 <p>Netcdf since the version 4 support deflation (ie compression),
 depending on your netcdf it can save a lot of storage (the more 0 you have, the more efficient it is).</p>
@@ -290,11 +299,11 @@ d1 is thus a good compromise. You spare 1.7 Gb (ie 44 %) of storage while minimi
 <span class="go">2068371276 Jan 20 10:33 toce_nico.nc_4.4.4-intel-19.0.4-intelmpi-2019.4.243_d9</span>
 </pre></div>
 </div>
-</section>
-<section id="nco">
+</div>
+<div class="section" id="nco">
 <h2>nco<a class="headerlink" href="#nco" title="Permalink to this headline">¶</a></h2>
 <p>NCO is netcdf tools box to manipulate netcdf. It is very useful to extract date, concatenate file, make some operation, average files …</p>
-<section id="ncks">
+<div class="section" id="ncks">
 <h3>ncks<a class="headerlink" href="#ncks" title="Permalink to this headline">¶</a></h3>
 <p>ncks is a tools to extract data out of a netcdf file. I allow to extract/exclude variable or cut file along dimension.</p>
 <p>For exemple, the following command will extract only the first deptht level (-d option) from toce variable (-v option) in out.nc.
@@ -302,12 +311,12 @@ out.nc will be written with a deflation level of 1 (-L option) and a chunksize o
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ncks -L 1 --cnk_dmn x,200 --cnk_dmn y,200 --cnk_dmn time_counter,1 --cnk_dmn deptht,1 -d deptht,0,0 -v toce toce_nico.nc out.nc</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-<section id="restructuredtext">
+</div>
+</div>
+</div>
+<div class="section" id="restructuredtext">
 <h1>reStructuredText<a class="headerlink" href="#restructuredtext" title="Permalink to this headline">¶</a></h1>
-<section id="creation-of-the-html-from-rst-file">
+<div class="section" id="creation-of-the-html-from-rst-file">
 <h2>Creation of the html from rst file<a class="headerlink" href="#creation-of-the-html-from-rst-file" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt>1: installation of sphinx:</dt><dd><p>conda is your best friends:</p>
@@ -423,18 +432,18 @@ For something similar to this, refer to the conf.py in the source directory of t
 <li><p>step 6: commit and push the changes to gh-pages branch (you can check in your github interface if the web site is well published).
 The site will be in ‘<a class="reference external" href="https://username.github.io/REPO/docs/build/html/index.html">https://username.github.io/REPO/docs/build/html/index.html</a>’. For a quick access, you can add the link to your README.</p></li>
 </ul>
-</section>
-<section id="syntax-of-rst-file">
+</div>
+<div class="section" id="syntax-of-rst-file">
 <h2>Syntax of rst file<a class="headerlink" href="#syntax-of-rst-file" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>a quick and detailed guide is available here: <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickref.html">https://docutils.sourceforge.io/docs/user/rst/quickref.html</a></p></li>
 <li><p>All this site is written in rst, so for any option you see in these pages, you can refer to the source code.</p></li>
 </ul>
-</section>
-</section>
-<section id="cmip6-data">
+</div>
+</div>
+<div class="section" id="cmip6-data">
 <h1>CMIP6 data<a class="headerlink" href="#cmip6-data" title="Permalink to this headline">¶</a></h1>
-<section id="wget">
+<div class="section" id="wget">
 <h2>Wget<a class="headerlink" href="#wget" title="Permalink to this headline">¶</a></h2>
 <p>You can find all the available name, variable … here: <a class="reference external" href="https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/">https://esgf-index1.ceda.ac.uk/search/cmip6-ceda/</a>
 A listing of all the facet available for the query is described here: <a class="reference external" href="https://esgf-node.llnl.gov/esg-search/search?project=CMIP6&amp;facets=*&amp;limit=0">https://esgf-node.llnl.gov/esg-search/search?project=CMIP6&amp;facets=*&amp;limit=0</a></p>
@@ -451,9 +460,9 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 <li><p>run the script with the -s option</p></li>
 </ol>
 <p>For more advanced method, look at the documentation.</p>
-</section>
-</section>
-<section id="git">
+</div>
+</div>
+<div class="section" id="git">
 <h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
 <p><strong>Create a remote branch:</strong></p>
 <ul class="simple">
@@ -527,8 +536,8 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 <span class="gp">$ </span>git push -u origin master
 </pre></div>
 </div>
-</section>
-<section id="conda">
+</div>
+<div class="section" id="conda">
 <h1>CONDA<a class="headerlink" href="#conda" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>Create an environment:</p></li>
@@ -571,34 +580,35 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 <span class="go">conda deactivate</span>
 </pre></div>
 </div>
-</section>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="HPC_centres.html" class="btn btn-neutral float-left" title="HPC centres" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="HPC_centres.html" class="btn btn-neutral float-left" title="HPC centres" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, DRAKKAR
+        &#169; Copyright 2020, DRAKKAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -606,7 +616,6 @@ Replace in the http, ‘search?’ by ‘wget?’</p></li>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
