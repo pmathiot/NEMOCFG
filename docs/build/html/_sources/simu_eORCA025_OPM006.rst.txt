@@ -407,8 +407,8 @@ namisf
 namlbc
 ~~~~~~
 
-* slip condition is used.
-* Local change has been made to:
+  * slip condition is used.
+  * Local change has been made to:
 
     - decrease slightly transport across Bering, we used no slip along this strait.
     - increase EKE in Lab sea, we set no slip along west coast of Greenland

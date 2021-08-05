@@ -6,12 +6,18 @@ Summary
 =======
 
 Compare to eORCA025.L121-OPM020, we change the icb distribution (stern et al. 2016) and some sea ice parameters (drag and snow conductivity)
-based on Katherine simulation
+based on Katherine simulation.
+
+Path to control files (namelist and xios files):
+ - :download:`namelist_oce.eORCA025.L121-OPM021 <eORCA025/eORCA025-OPM021/namelist_oce.eORCA025.L121-OPM021>`.
+ - :download:`namelist_ice.eORCA025.L121-OPM021 <eORCA025/eORCA025-OPM021/namelist_ice.eORCA025.L121-OPM021>`.
+ - :download:`file_def_nemo-oce.xml <eORCA025/eORCA025-OPM021/file_def_nemo-oce.xml>`
+ - :download:`file_def_nemo-ice.xml <eORCA025/eORCA025-OPM021/file_def_nemo-ice.xml>`
 
 Namelist
 ========
 
-Only the change compare to the reference (eORCA025.L121-OPM020) a mentioned here:
+Only the change compare to the reference (eORCA025.L121-OPM020) a mentioned in the next sections.
 
 namelist_ice
 ------------
