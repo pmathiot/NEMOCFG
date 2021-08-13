@@ -1,0 +1,10 @@
+!----------------------------------------------------------------------
+!       namsao Stand Alone Observation operator namelist
+!----------------------------------------------------------------------
+!   sao_files     specifies the files containing the model counterpart
+!   nn_sao_idx    specifies the index within the model file
+!   nn_sao_freq   specifies the number of timesteps between file reads
+&namsao
+   sao_files = 'fcst.0.nc'
+   nn_sao_idx = 1
+/
