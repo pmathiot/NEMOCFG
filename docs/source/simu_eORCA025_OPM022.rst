@@ -1,0 +1,59 @@
+********************
+eORCA025.L121-OPM022
+********************
+
+Summary
+=======
+
+Compare to eORCA025.L121-OPM021, we perturb the JRA forcing by adding the A1B HadCM3 2160-2199 wrt 1979-2018 anomaly.
+
+Namelist
+========
+
+Only the change compare to the reference (eORCA025.L121-OPM021) a mentioned in the next sections.
+
+namelist_oce
+------------
+
+
+Monitoring
+==========
+
+.. _eORCA025.L121-OPM022_monitoring:
+
+Global indicators
+-----------------
+On these plot you can find a time series of:
+
+- ACC transport
+- AMOC at rapid array
+- AMHT at rapid array
+- Net global heat fluxes
+- mean sst in the southern ocean (see box in the map)
+- mean sst in the North West Corner (see box in the map)
+- sea ice extent (arctic/ant in summer/winter)
+
+.. image:: _static/VALGLO_OPM022.png
+
+Regional indicators
+-------------------
+On these plot, you can find time series of:
+
+- ACC transport
+- Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)
+- Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)
+- Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion
+
+.. image:: _static/VALSO_OPM022.png
+
+Local indicators
+----------------
+These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)
+
+.. image:: _static/VALSI_OPM022.png
+
+Amundsen/Belingshausen seas
+---------------------------
+These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
+
+.. image:: _static/VALAMU_OPM022.png

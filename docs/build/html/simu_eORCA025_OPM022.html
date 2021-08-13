@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>eORCA025.L121-OPM018 &mdash; NEMO@IGE  documentation</title>
+  <title>eORCA025.L121-OPM022 &mdash; NEMO@IGE  documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="eORCA025.L121-OPM019" href="simu_eORCA025_OPM019.html" />
-    <link rel="prev" title="eORCA025.L121-OPM017" href="simu_eORCA025_OPM017.html" /> 
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM021" href="simu_eORCA025_OPM021.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,21 +104,25 @@
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM018</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#namtra-eiv">namtra_eiv</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM021.html">eORCA025.L121-OPM021</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM022</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-indicators">Local indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amundsen-belingshausen-seas">Amundsen/Belingshausen seas</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
@@ -143,7 +147,6 @@
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#plotly">Plotly</a></li>
 </ul>
 
             
@@ -194,13 +197,13 @@
         
           <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
         
-      <li>eORCA025.L121-OPM018</li>
+      <li>eORCA025.L121-OPM022</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/simu_eORCA025_OPM018.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/simu_eORCA025_OPM022.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -213,49 +216,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="eorca025-l121-opm018">
-<h1>eORCA025.L121-OPM018<a class="headerlink" href="#eorca025-l121-opm018" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="eorca025-l121-opm022">
+<h1>eORCA025.L121-OPM022<a class="headerlink" href="#eorca025-l121-opm022" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>Compare to eORCA025.L121-OPM017, the only changed is that we switched off GM.</p>
+<p>Compare to eORCA025.L121-OPM021, we perturb the JRA forcing by adding the A1B HadCM3 2160-2199 wrt 1979-2018 anomaly.</p>
 </div>
 <div class="section" id="namelist">
 <h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
-<p>Only the change compare to the reference (eORCA025.L121-OPM017) a mentioned here:</p>
+<p>Only the change compare to the reference (eORCA025.L121-OPM021) a mentioned in the next sections.</p>
 <div class="section" id="namelist-oce">
 <h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="namtra-eiv">
-<h4>namtra_eiv<a class="headerlink" href="#namtra-eiv" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>GM is switch off</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
-<span class="go">&amp;namtra_eiv    !   eddy induced velocity param.                         (default: OFF)</span>
-<span class="go">!-----------------------------------------------------------------------</span>
-<span class="go">   ln_ldfeiv   = .false.    ! use eddy induced velocity parameterization</span>
-<span class="go">      !</span>
-<span class="go">      !                        !  Coefficients:</span>
-<span class="go">      nn_aei_ijk_t    = 0           !  space/time variation of eddy coefficient:</span>
-<span class="go">      !                             !   =-20 (=-30)    read in eddy_induced_velocity_2D.nc (..._3D.nc) file</span>
-<span class="go">      !                             !   =  0           constant</span>
-<span class="go">      !                             !   = 10 F(k)      =ldf_c1d</span>
-<span class="go">      !                             !   = 20 F(i,j)    =ldf_c2d</span>
-<span class="go">      !                             !   = 21 F(i,j,t)  =Treguier et al. JPO 1997 formulation</span>
-<span class="go">      !                             !   = 30 F(i,j,k)  =ldf_c2d * ldf_c1d</span>
-<span class="go">      !                        !  time invariant coefficients:  aei0 = 1/2  Ue*Le</span>
-<span class="go">      rn_Ue        = 0.02           !  lateral diffusive velocity [m/s] (nn_aei_ijk_t= 0, 10, 20, 30)</span>
-<span class="go">      rn_Le        = 200.e+3        !  lateral diffusive length   [m]   (nn_aei_ijk_t= 0, 10)</span>
-<span class="go">      !</span>
-<span class="go">      ln_ldfeiv_dia =.false.   ! diagnose eiv stream function and velocities</span>
-<span class="go">/</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="monitoring">
 <h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
-<p>see <a class="reference internal" href="simu_eORCA025_OPM016.html#eorca025-l121-monitoring"><span class="std std-ref">Global indicators</span></a></p>
+<div class="section" id="global-indicators">
+<span id="eorca025-l121-opm022-monitoring"></span><h3>Global indicators<a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot you can find a time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>AMOC at rapid array</p></li>
+<li><p>AMHT at rapid array</p></li>
+<li><p>Net global heat fluxes</p></li>
+<li><p>mean sst in the southern ocean (see box in the map)</p></li>
+<li><p>mean sst in the North West Corner (see box in the map)</p></li>
+<li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
+</ul>
+<img alt="_images/VALGLO_OPM022.png" src="_images/VALGLO_OPM022.png" />
+</div>
+<div class="section" id="regional-indicators">
+<h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot, you can find time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)</p></li>
+<li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
+<li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
+</ul>
+<img alt="_images/VALSO_OPM022.png" src="_images/VALSO_OPM022.png" />
+</div>
+<div class="section" id="local-indicators">
+<h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
+<p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
+<img alt="_images/VALSI_OPM022.png" src="_images/VALSI_OPM022.png" />
+</div>
+<div class="section" id="amundsen-belingshausen-seas">
+<h3>Amundsen/Belingshausen seas<a class="headerlink" href="#amundsen-belingshausen-seas" title="Permalink to this headline">¶</a></h3>
+<p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
+<img alt="_images/VALAMU_OPM022.png" src="_images/VALAMU_OPM022.png" />
+</div>
 </div>
 </div>
 
@@ -265,8 +275,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="simu_eORCA025_OPM019.html" class="btn btn-neutral float-right" title="eORCA025.L121-OPM019" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="simu_eORCA025_OPM017.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM017" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="simu_eORCA025_OPM021.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM021" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
