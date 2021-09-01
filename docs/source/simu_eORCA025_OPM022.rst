@@ -57,3 +57,24 @@ Amundsen/Belingshausen seas
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
 
 .. image:: _static/VALAMU_OPM022.png
+
+Evaluation
+==========
+
+Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM021 and OPM022 simulations over the last decade of the simulations (2029-2038) by sectors.
+
+.. image:: _static/WAIS_2019_2028.png
+   :scale: 27%
+
+.. image:: _static/EAIS_2019_2028.png
+   :scale: 27%
+
+.. image:: _static/WEDD_2019_2028.png
+   :scale: 27%
+
+
+Bottom properties:climatologie y2049-2058 (ie cycle 2 2008-2018).
+
+.. image:: _static/BOTS_PERT2160_comb.png
+
+.. image:: _static/BOTT_PERT2160_comb.png
