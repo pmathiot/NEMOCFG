@@ -30,6 +30,16 @@ NEMO
    simu_AMUXL12
    simu_AMUXL36
 
+#####
+ELMER
+#####
+
+.. toctree::
+   :hidden:
+   :caption: ELMER simulations
+
+   simu_ANT50.GL1
+
 .. toctree::
    :hidden:
    :caption: Tools

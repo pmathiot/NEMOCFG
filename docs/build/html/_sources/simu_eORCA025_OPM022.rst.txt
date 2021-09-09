@@ -61,7 +61,7 @@ These plot monitoring the evolution of temperature, salinity and ice shelf melt 
 Evaluation
 ==========
 
-Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM020 and OPM021 simulations over the last decade of the simulations (2029-2038) by sectors.
+Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM021 and OPM022 simulations over the last decade of the simulations (2029-2038) by sectors.
 
 .. image:: _static/WAIS_2019_2028.png
    :scale: 27%
