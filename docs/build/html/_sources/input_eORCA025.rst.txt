@@ -171,7 +171,8 @@ Change:
   - source file is :ref:`eORCA025_bathymetry_b0.3` instead of :ref:`eORCA025_bathymetry_b0.2`.
 
 Paths:
-  - TOADD
+  - Building directory: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/DOMAINcfg/eORCA025/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0/catalog.html
+  - File: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/DOMAINcfg/eORCA025/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc
 
 Runoff
 ======
@@ -314,13 +315,20 @@ Methode:
     - gather monthly top 1550m with deep seasonal data (linear interpolation for seasonal data and linear transition between 1200m and 1550m)
     - convert to TEOS10
     - drown in taking care of where the water comes from (branch drown_with_constrain)
+
 Compatibility:
     - eORCA025.L121_domain_cfg_b?.?_c3.0_d1.0.nc as file is drowned
+
+Path:
+    - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/TS/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2/catalog.html
+
+File:
+    - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/TS/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-BLD/TS/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2/eORCA025.L121_WOA2018_c3.0_d1.0_v19812010.5.2.nc
 
 .. _eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0:
 
 eORCA025.L121_Gouretski2004_c3.0_d1.0_v0.0.nc
-=============================================
+---------------------------------------------
 
 Source:
     - Gouretski, V., and K. Koltermann, 2004: WOCE global hydro- graphic climatology, a technical report. Berichte des BSH Tech. Rep. 35, 52 pp.

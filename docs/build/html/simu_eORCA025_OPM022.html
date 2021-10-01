@@ -130,6 +130,10 @@
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
 </ul>
+<p class="caption"><span class="caption-text">ELMER simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simu_ANT50.GL1.html">ANT50.GL1 simulations</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
@@ -228,6 +232,43 @@
 <p>Only the change compare to the reference (eORCA025.L121-OPM021) a mentioned in the next sections.</p>
 <div class="section" id="namelist-oce">
 <h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namsbc_blk    !   namsbc_blk  generic Bulk formula                     (ln_blk =T)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   !                    !  bulk algorithm :</span>
+<span class="go">   ln_NCAR      = .true.    ! &quot;NCAR&quot;      algorithm   (Large and Yeager 2008)</span>
+<span class="go">   ln_COARE_3p0 = .false.   ! &quot;COARE 3.0&quot; algorithm   (Fairall et al. 2003)</span>
+<span class="go">   ln_COARE_3p5 = .false.   ! &quot;COARE 3.5&quot; algorithm   (Edson et al. 2013)</span>
+<span class="go">   ln_ECMWF     = .false.   ! &quot;ECMWF&quot;     algorithm   (IFS cycle 31)</span>
+<span class="go">      !</span>
+<span class="go">      rn_zqt      =  2.       !  Air temperature &amp; humidity reference height (m)</span>
+<span class="go">      rn_zu       = 10.       !  Wind vector reference height (m)</span>
+<span class="go">      ln_Cd_L12   = .false.   !  air-ice drags = F(ice concentration) (Lupkes et al. 2012)</span>
+<span class="go">      ln_Cd_L15   = .false.   !  air-ice drags = F(ice concentration) (Lupkes et al. 2015)</span>
+<span class="go">      ln_taudif   = .false.   !  HF tau contribution: use &quot;mean of stress module - module of the mean stress&quot; data</span>
+<span class="go">      rn_pfac     = 1.        !  multiplicative factor for precipitation (total &amp; snow)</span>
+<span class="go">      rn_efac     = 1.        !  multiplicative factor for evaporation (0. or 1.)</span>
+<span class="go">      rn_vfac     = 0.        !  multiplicative factor for ocean &amp; ice velocity used to</span>
+<span class="go">      !                       !  calculate the wind stress (0.=absolute or 1.=relative winds)</span>
+<span class="go">   cn_dir = &#39;./&#39;</span>
+<span class="go">   !_______!__________________!___________________!___________!_____________!_________!___________!______________________________!__________!______!</span>
+<span class="go">   !       !  file name       ! frequency (hours) ! variable  ! time interp.!  clim   ! &#39;yearly&#39;/ ! weights filename             ! rotation !  lsm !</span>
+<span class="go">   !       !                  !  (if &lt;0  months)  !   name    !   (logical) !  (T/F)  ! &#39;monthly&#39; !                              !  paring  !      !</span>
+<span class="go">   !_______!__________________!___________________!___________!_____________!_________!___________!______________________________!__________!______!</span>
+<span class="go">   sn_wndi = &#39;drowned_uas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;uas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bicubic.nc&#39; , &#39;U1&#39; ,   &#39;&#39;</span>
+<span class="go">   sn_wndj = &#39;drowned_vas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;vas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bicubic.nc&#39; , &#39;V1&#39; ,   &#39;&#39;</span>
+<span class="go">   sn_qsr  = &#39;drowned_rsds_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;rsds&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_qlw  = &#39;drowned_rlds_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;rlds&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_tair = &#39;drowned_tas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;tas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_humi = &#39;drowned_huss_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;huss&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_prec = &#39;drowned_tprecip_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;,  3.  ,  &#39;tprecip&#39;,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_snow = &#39;drowned_prsn_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;prsn&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_slp  = &#39;drowned_psl_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;psl&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_cc   = &#39;NOT USED&#39;             , 24.         ,  &#39;CC&#39;     ,   .false.   , .false. , &#39;yearly&#39;  , &#39;&#39;                                        , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_tdif = &#39;NOT USED&#39;             , 24.         , &#39;taudif&#39;  ,   .false.   , .true.  , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">/</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="monitoring">
