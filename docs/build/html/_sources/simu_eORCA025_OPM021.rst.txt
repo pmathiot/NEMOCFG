@@ -13,6 +13,8 @@ Namelist
 
 Only the change compare to the reference (eORCA025.L121-OPM020) a mentioned in the next sections.
 
+Full files are available here: https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM021/cfgs/eORCA025.L121-OPM021/EXPREF
+
 namelist_ice
 ------------
 
