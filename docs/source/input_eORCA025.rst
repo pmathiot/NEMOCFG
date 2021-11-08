@@ -110,7 +110,33 @@ Path:
 .. figure:: _static/eORCA025_bathy_change_b0.3_b0.2.png
   :scale: 60
 
-  Top: Bathymetry in eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (top) and ice shelf draft differences between eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (bottom).
+  Top: Bathymetry in eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (top)
+  and ice shelf draft differences between eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (bottom).
+
+  eORCA025_bathymetry_b0.5.nc
+  ---------------------------
+  Heritage:
+    - :ref:`eORCA025_bathymetry_b0.3`
+  Change:
+    - Changes are focused on tip of Antarctica Peninsula
+    (mostly Hesperide Trough and its sills depth).
+    This leads to improvement in the circulation locally and West of the Ant. Peninsula.
+
+  Reference:
+    - Close up in Bedmachine data
+  Method:
+    - Hand edit using BMGtools
+  Tools:
+    - BMGTOOLS: link to add
+  Path:
+   - file:
+
+  .. _fig_eORCA025b03_geometry:
+  .. figure:: _static/eORCA025_bathy_change_b0.5.png
+    :scale: 60
+
+    Top: Bathymetry in Bedmachine (a), eORCA025_bathymetry_b0.3 (b)
+    and eORCA025_bathymetry_b0.5 (c).
 
 Domaincfg
 =========
@@ -173,6 +199,18 @@ Change:
 Paths:
   - Building directory: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/DOMAINcfg/eORCA025/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0/catalog.html
   - File: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopendap/extract/eORCA025.L121/eORCA025.L121-BLD/DOMAINcfg/eORCA025/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0/eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc
+
+eORCA025.L121_domain_cfg_b0.5_c3.0_d1.0.nc
+------------------------------------------
+Heritage:
+- :ref:`eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0`
+
+Change:
+- source file is :ref:`eORCA025_bathymetry_b0.5` instead of :ref:`eORCA025_bathymetry_b0.3`.
+
+Paths:
+- Building directory:
+- File:
 
 Runoff
 ======
@@ -424,6 +462,16 @@ Frequency:
 Path:
     - https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_sss_WOA2018_c3.0_v19812010.5.1.nc
 
+eORCA025.L121-OPM021_y1999.1m.20y_flxT
+--------------------------------------
+data:
+    - intensity of the sss restoring term from previous simulation. Use as a correction (it replace the traditional sss restoring term).
+    Very handy for exact sensitivity experiments.
+source:
+    - eORCA025.L121-OPM021 simulation on period 1999-2018 (monthly climatology)
+Methode:
+    - ncrcat of the montly climatology output.
+
 Iceberg calving
 ===============
 
@@ -595,6 +643,24 @@ Path:
 
    Map of shlat value for eORCA025_shlat2d_v0.0.nc (a) and eORCA025_shlat2d_v0.1.nc (b).
 
+eORCA025_shlat2d_v0.2.nc
+------------------------
+Purpose:
+   - as for :ref:`eORCA025_shlat2d_v0.0`
+   - no slip at the tip of the peninsula (crude approximation of the subgriscale bathymetry). It limits the amount of cold water going Westward onto west Antarctic Peninsula.
+Source:
+   - see :ref:`eORCA025_shlat2d_v0.0` with hand editing
+Comments:
+   - We agreed a more general approach should be done to link lateral boundary to subgridscale bathymetry. Done as a patch to fix a specific issue.
+Path:
+   - file: TOADD
+
+.. _fig_shlat:
+.. figure:: _static/eORCA025_shlat2d_v0.2.png
+  :scale: 40
+
+  Map of shlat value for eORCA025_shlat2d_v0.2.nc (focus one Antarctica, no change elsewhere compare to v0.0).
+
 2d bottom friction
 ==================
 
@@ -617,6 +683,24 @@ Path:
    :scale: 60
 
    map of where the bfr boost is activated (Y = Y x full boost). Full boost value is defined in the NEMO namelist.
+
+eORCA025_bfr2d_v0.2.nc
+----------------------
+As :ref:`eORCA025_bfr2d_v0.0` with increased bottom friction (x2) added at the tip of the peninsula (crude approximation of the subgriscale bathymetry). It limits the amount of cold water going Westward onto west Antarctic Peninsula
+
+History:
+   - As :ref:`eORCA025_bfr2d_v0.0`
+   - hand editing
+Path:
+   - file: TOADD
+
+.. _fig_eORCA025_bfr2d_v2.0:
+.. figure:: _static/eORCA025_bfr2d_v2.0.png
+  :scale: 60
+
+  map of where the bfr boost is activated (Y = Y x full boost).
+  Full boost value is defined in the NEMO namelist (default is 50).
+  Single changes compared to v0.0 is the Antarctica peninsula patch.
 
 Indonesian Through Flow
 =======================
