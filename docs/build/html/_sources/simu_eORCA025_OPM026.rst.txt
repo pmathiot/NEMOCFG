@@ -117,7 +117,7 @@ Ice shelf melt: the pictures below are the climatological melt for all the ice s
 .. image:: _static/WEDD_OPM026.png
    :scale: 27%
 
-Map of ice shelf melt for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038) with bottom temperature.
+Map of ice shelf melt for both simulations OPM021 and OPM026 over the last decade of the simulations (1989-1993) with bottom temperature.
 
 .. image:: _static/melt_sector_OPM021_1989_5y.png
    :scale: 20%
@@ -125,10 +125,12 @@ Map of ice shelf melt for both simulations OPM020 and OPM021 over the last decad
 .. image:: _static/melt_sector_OPM026_1989_5y.png
    :scale: 20%
 
-Map of barotropic stream function for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038)
+Map of barotropic stream function for both simulations OPM021 and OPM026 over climatology 1989-1993
 
 .. image:: _static/BSF_SHLAT.png
 
-.. image:: _BOTS_REF_comb.png
+Map of bottomT and bottomS for both simulations OPM021 and OPM026 over the climatology 1989-1993
 
-.. image:: _BOTT_REF_comb.png
+.. image:: _static/BOTS_REF_comb.png
+
+.. image:: _static/BOTT_REF_comb.png
