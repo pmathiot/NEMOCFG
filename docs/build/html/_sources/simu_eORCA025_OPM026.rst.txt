@@ -78,7 +78,7 @@ On these plot you can find a time series of:
 - mean sst in the North West Corner (see box in the map)
 - sea ice extent (arctic/ant in summer/winter)
 
-.. image:: _static/VALGLO_OPM026.png
+.. image:: _static/VALGLO_PEN.png
 
 Regional indicators
 -------------------
@@ -89,19 +89,46 @@ On these plot, you can find time series of:
 - Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)
 - Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion
 
-.. image:: _static/VALSO_OPM026.png
+.. image:: _static/VALSO_PEN.png
 
 Local indicators
 ----------------
 These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)
 
-.. image:: _static/VALSI_OPM026.png
+.. image:: _static/VALSI_PEN.png
 
 Amundsen/Belingshausen seas
 ---------------------------
 These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.
 
-.. image:: _static/VALAMU_OPM026.png
+.. image:: _static/VALAMU_PEN.png
 
 Evaluation
 ==========
+
+Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM026 and OPM021 simulations over the climatology (1989-1993) by sectors.
+
+.. image:: _static/WAIS_OPM026.png
+   :scale: 27%
+
+.. image:: _static/EAIS_OPM026.png
+   :scale: 27%
+
+.. image:: _static/WEDD_OPM026.png
+   :scale: 27%
+
+Map of ice shelf melt for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038) with bottom temperature.
+
+.. image:: _static/melt_sector_OPM021_1989_5y.png
+   :scale: 20%
+
+.. image:: _static/melt_sector_OPM026_1989_5y.png
+   :scale: 20%
+
+Map of barotropic stream function for both simulations OPM020 and OPM021 over the last decade of the simulations (2029-2038)
+
+.. image:: _static/BSF_SHLAT.png
+
+.. image:: _BOTS_REF_comb.png
+
+.. image:: _BOTT_REF_comb.png
