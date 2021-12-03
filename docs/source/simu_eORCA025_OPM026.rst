@@ -103,33 +103,68 @@ These plot monitoring the evolution of temperature, salinity and ice shelf melt 
 
 .. image:: _static/VALAMU_PEN.png
 
+Ice shelves
+-----------
+
+Amery
+~~~~~
+.. image:: _static/AMER_eORCA025.L121-OPM026.png
+
+Ross
+~~~~
+.. image:: _static/ROSS_eORCA025.L121-OPM026.png
+
+Getz
+~~~~
+.. image:: _static/GETZ_eORCA025.L121-OPM026.png
+
+Pine island
+~~~~~~~~~~~
+.. image:: _static/PINE_eORCA025.L121-OPM026.png
+
+George VI
+~~~~~~~~~
+.. image:: _static/GEVI_eORCA025.L121-OPM026.png
+
+Filschner Ronne
+~~~~~~~~~~~~~~~
+.. image:: _static/FRIS_eORCA025.L121-OPM026.png
+
+Riiser
+~~~~~~
+.. image:: _static/RIIS_eORCA025.L121-OPM026.png
+
+Fimbul
+~~~~~~
+.. image:: _static/FIMB_eORCA025.L121-OPM026.png
+
 Evaluation
 ==========
 
 Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM026 and OPM021 simulations over the climatology (1989-1993) by sectors.
 
-.. image:: _static/WAIS_OPM026.png
+.. image:: _static/WAIS_OPM026_2009.png
    :scale: 27%
 
-.. image:: _static/EAIS_OPM026.png
+.. image:: _static/EAIS_OPM026_2009.png
    :scale: 27%
 
-.. image:: _static/WEDD_OPM026.png
+.. image:: _static/WEDD_OPM026_2009.png
    :scale: 27%
 
-Map of ice shelf melt for both simulations OPM021 and OPM026 over the last decade of the simulations (1989-1993) with bottom temperature.
+Map of ice shelf melt for both simulations OPM021 and OPM026 over the last decade of the simulations (2009-2018) with bottom temperature.
 
-.. image:: _static/melt_sector_OPM021_1989_5y.png
+.. image:: _static/melt_sector_OPM026_2009-2018.png
    :scale: 20%
 
-.. image:: _static/melt_sector_OPM026_1989_5y.png
+.. image:: _static/melt_sector_OPM021_2009-2018.png
    :scale: 20%
 
-Map of barotropic stream function for both simulations OPM021 and OPM026 over climatology 1989-1993
+Map of barotropic stream function for both simulations OPM021 and OPM026 over climatology 2009-2018
 
 .. image:: _static/BSF_SHLAT.png
 
-Map of bottomT and bottomS for both simulations OPM021 and OPM026 over the climatology 1989-1993
+Map of bottomT and bottomS for both simulations OPM021 and OPM026 over the climatology 2009-2018
 
 .. image:: _static/BOTS_REF_comb.png
 
