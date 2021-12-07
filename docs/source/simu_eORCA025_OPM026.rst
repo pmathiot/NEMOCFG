@@ -12,6 +12,8 @@ Namelist
 
 Only the change compare to the reference (eORCA025.L121-OPM021) are mentioned in the next sections.
 
+Full files are available here: https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM026/EXPREF
+
 namelist_oce
 ------------
 
@@ -94,6 +96,7 @@ Code changes
 ============
 - sbcssr.F90 has been changed to include possibilities to prescribed a correction on emp based on previous run sssr output.
 
+Full files are available here: https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/src/
 
 Monitoring
 ==========
