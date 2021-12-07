@@ -15,6 +15,10 @@ Only the change compare to the reference (eORCA025.L121-OPM021) are mentioned in
 namelist_oce
 ------------
 
+- in order to have clean comparison later on,
+ we enforce the restoring term to be a specified corrective term of emp
+ (nn_ssr = 3, need code changes wrt NEMO distri). In this case sssr output from eORCA021.L121-OPM021 is used.
+
 .. code-block:: console
 
     !-----------------------------------------------------------------------
@@ -54,12 +58,42 @@ namelist_oce
        rn_dist    =  150.      ! distance to the coast
     /
 
+namelist_ice
+------------
+- in order to increase the sea ice production,
+we decrease the max sea ice fraction in the SH from 0.997 to 0.95 (same number as in IPCLCM6_LR)
+
+.. code-block:: console
+
+    !------------------------------------------------------------------------------
+    &nampar         !   Generic parameters
+    !------------------------------------------------------------------------------
+       jpl              =   5             !  number of ice  categories
+       nlay_i           =   2             !  number of ice  layers
+       nlay_s           =   1             !  number of snow layers (only 1 is working)
+       ln_virtual_itd   =   .false.       !  virtual ITD mono-category parameterization (jpl=1 only)
+                                          !     i.e. enhanced thermal conductivity & virtual thin ice melting
+       ln_icedyn        = .true.          !  ice dynamics (T) or not (F)
+       ln_icethd        = .true.          !  ice thermo   (T) or not (F)
+       rn_amax_n        =   0.997         !  maximum tolerated ice concentration NH
+       rn_amax_s        =   0.95          !  maximum tolerated ice concentration SH
+       cn_icerst_in     = "restart_ice"   !  suffix of ice restart name (input)
+       cn_icerst_out    = "restart_ice"   !  suffix of ice restart name (output)
+       cn_icerst_indir  = "<CN_DIRRST>"   !  directory to read   input ice restarts
+       cn_icerst_outdir = "<CN_DIRRST>"   !  directory to write output ice restarts
+    /
+
 
 Input files
 ===========
  - Use eORCA025.L121_domain_cfg_b0.5_c3.0_d1.0.nc instead of eORCA025.L121_domain_cfg_b0.3_c3.0_d1.0.nc
  - Use eORCA025_shlat2d_v0.2.nc instead of eORCA025_shlat2d_v0.0.nc
  - Use eORCA025_bfr2d_v0.2.nc instead of eORCA025_bfr2d_v0.0.nc
+
+Code changes
+============
+- sbcssr.F90 has been changed to include possibilities to prescribed a correction on emp based on previous run sssr output.
+
 
 Monitoring
 ==========

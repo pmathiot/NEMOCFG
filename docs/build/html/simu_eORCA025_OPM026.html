@@ -113,9 +113,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-ice">namelist_ice</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-changes">Code changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
@@ -245,6 +247,13 @@
 <p>Only the change compare to the reference (eORCA025.L121-OPM021) are mentioned in the next sections.</p>
 <div class="section" id="namelist-oce">
 <h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>in order to have clean comparison later on,</p></li>
+</ul>
+<blockquote>
+<div><p>we enforce the restoring term to be a specified corrective term of emp
+(nn_ssr = 3, need code changes wrt NEMO distri). In this case sssr output from eORCA021.L121-OPM021 is used.</p>
+</div></blockquote>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
 <span class="go">&amp;namsbc_ssr    !   surface boundary condition : sea surface restoring   (ln_ssr =T)</span>
 <span class="go">!-----------------------------------------------------------------------</span>
@@ -284,6 +293,32 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="namelist-ice">
+<h3>namelist_ice<a class="headerlink" href="#namelist-ice" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>in order to increase the sea ice production,</p></li>
+</ul>
+<p>we decrease the max sea ice fraction in the SH from 0.997 to 0.95 (same number as in IPCLCM6_LR)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">&amp;nampar         !   Generic parameters</span>
+<span class="go">!------------------------------------------------------------------------------</span>
+<span class="go">   jpl              =   5             !  number of ice  categories</span>
+<span class="go">   nlay_i           =   2             !  number of ice  layers</span>
+<span class="go">   nlay_s           =   1             !  number of snow layers (only 1 is working)</span>
+<span class="go">   ln_virtual_itd   =   .false.       !  virtual ITD mono-category parameterization (jpl=1 only)</span>
+<span class="go">                                      !     i.e. enhanced thermal conductivity &amp; virtual thin ice melting</span>
+<span class="go">   ln_icedyn        = .true.          !  ice dynamics (T) or not (F)</span>
+<span class="go">   ln_icethd        = .true.          !  ice thermo   (T) or not (F)</span>
+<span class="go">   rn_amax_n        =   0.997         !  maximum tolerated ice concentration NH</span>
+<span class="go">   rn_amax_s        =   0.95          !  maximum tolerated ice concentration SH</span>
+<span class="go">   cn_icerst_in     = &quot;restart_ice&quot;   !  suffix of ice restart name (input)</span>
+<span class="go">   cn_icerst_out    = &quot;restart_ice&quot;   !  suffix of ice restart name (output)</span>
+<span class="go">   cn_icerst_indir  = &quot;&lt;CN_DIRRST&gt;&quot;   !  directory to read   input ice restarts</span>
+<span class="go">   cn_icerst_outdir = &quot;&lt;CN_DIRRST&gt;&quot;   !  directory to write output ice restarts</span>
+<span class="go">/</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="input-files">
 <h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
@@ -294,6 +329,12 @@
 <li><p>Use eORCA025_bfr2d_v0.2.nc instead of eORCA025_bfr2d_v0.0.nc</p></li>
 </ul>
 </div></blockquote>
+</div>
+<div class="section" id="code-changes">
+<h2>Code changes<a class="headerlink" href="#code-changes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>sbcssr.F90 has been changed to include possibilities to prescribed a correction on emp based on previous run sssr output.</p></li>
+</ul>
 </div>
 <div class="section" id="monitoring">
 <h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
