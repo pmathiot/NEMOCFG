@@ -113,8 +113,9 @@ Path:
   Top: Bathymetry in eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (top)
   and ice shelf draft differences between eORCA025_bathymetry_b0.3 and eORCA025_bathymetry_b0.2 (bottom).
 
-  eORCA025_bathymetry_b0.5.nc
-  ---------------------------
+eORCA025_bathymetry_b0.5.nc
+---------------------------
+
   Heritage:
     - :ref:`eORCA025_bathymetry_b0.3`
   Change:
