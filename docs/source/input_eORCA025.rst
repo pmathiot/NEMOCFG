@@ -129,7 +129,7 @@ Path:
   Tools:
     - BMGTOOLS: link to add
   Path:
-   - file:
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bathymetry_b0.5.nc
 
   .. _fig_eORCA025b03_geometry:
   .. figure:: _static/eORCA025_bathy_change_b0.5.png
@@ -653,7 +653,7 @@ Source:
 Comments:
    - We agreed a more general approach should be done to link lateral boundary to subgridscale bathymetry. Done as a patch to fix a specific issue.
 Path:
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_shlat2d_v0.2.nc
 
 .. _fig_shlat:
 .. figure:: _static/eORCA025_shlat2d_v0.2.png
@@ -692,7 +692,7 @@ History:
    - As :ref:`eORCA025_bfr2d_v0.0`
    - hand editing
 Path:
-   - file: TOADD
+   - file: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-I/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-I/eORCA025_bfr2d_v0.2.nc
 
 .. _fig_eORCA025_bfr2d_v2.0:
 .. figure:: _static/eORCA025_bfr2d_v2.0.png
