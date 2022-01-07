@@ -7,6 +7,12 @@ Summary
 
 Compare to eORCA025.L121-OPM021, we improve the model behavior at the tip of Antarctic Peninsula and sss restoring is applied as a corretion from 021 run.
 
+Input files
+===========
+All the inputs files needed to run this configuration are here: https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-OPM026/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-OPM026/eORCA025.L121-OPM026_input.tar
+
+A detailed description of each file is given in :ref:`eORCA025_input_files`
+
 Namelist
 ========
 

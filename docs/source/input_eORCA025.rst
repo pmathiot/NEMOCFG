@@ -1,3 +1,5 @@
+.. _eORCA025_input_files:
+
 ********************
 eORCA025 input files
 ********************
