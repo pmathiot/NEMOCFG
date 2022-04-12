@@ -1,0 +1,12 @@
+% Number of cells in each direction %
+ 2D nbcellsx,nbcellsy;
+% Name of the common file : an include file (paramfile) OR a module (parammodule) %  
+ parammodule par_oce ;
+
+USE ONLY_FIXED_GRIDS;
+
+% Variables which are not grid dependent %
+% notgriddep :: name of the variable; %
+notgriddep :: nstop;
+
+%USE DEBUG;%

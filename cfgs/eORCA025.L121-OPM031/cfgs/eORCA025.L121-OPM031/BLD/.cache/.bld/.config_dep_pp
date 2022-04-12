@@ -1,0 +1,311 @@
+DEP_PP::ioipsl__calendar.f90               
+DEP_PP::ioipsl__defprec.f90                
+DEP_PP::ioipsl__errioipsl.f90              
+DEP_PP::ioipsl__flincom.f90                
+DEP_PP::ioipsl__fliocom.f90                
+DEP_PP::ioipsl__getincom.f90               
+DEP_PP::ioipsl__histcom.f90                
+DEP_PP::ioipsl__ioipsl.f90                 
+DEP_PP::ioipsl__mathelp.f90                
+DEP_PP::ioipsl__nc4interface.F90           
+DEP_PP::ioipsl__restcom.f90                
+DEP_PP::ioipsl__stringop.f90               
+DEP_PP::nemo__asmbkg.F90                   
+DEP_PP::nemo__asminc.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__asmpar.F90                   
+DEP_PP::nemo__bdy_oce.F90                  
+DEP_PP::nemo__bdydta.F90                   
+DEP_PP::nemo__bdydyn.F90                   
+DEP_PP::nemo__bdydyn2d.F90                 
+DEP_PP::nemo__bdydyn3d.F90                 
+DEP_PP::nemo__bdyice.F90                   
+DEP_PP::nemo__bdyini.F90                   
+DEP_PP::nemo__bdylib.F90                   
+DEP_PP::nemo__bdytides.F90                 
+DEP_PP::nemo__bdytra.F90                   
+DEP_PP::nemo__bdyvol.F90                   
+DEP_PP::nemo__c1d.F90                      
+DEP_PP::nemo__closea.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__cool_skin.F90                ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__cpl_oasis3.F90               
+DEP_PP::nemo__crs.F90                      
+DEP_PP::nemo__crsdom.F90                   
+DEP_PP::nemo__crsdomwri.F90                
+DEP_PP::nemo__crsfld.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__crsini.F90                   
+DEP_PP::nemo__crslbclnk.F90                
+DEP_PP::nemo__cyclone.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__daymod.F90                   
+DEP_PP::nemo__ddatetoymdhms.h90            
+DEP_PP::nemo__depth_e3.F90                 ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dia25h.F90                   
+DEP_PP::nemo__diaar5.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diacfl.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diadct.F90                   
+DEP_PP::nemo__diaharm.F90                  
+DEP_PP::nemo__diahsb.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diahth.F90                   
+DEP_PP::nemo__dianam.F90                   
+DEP_PP::nemo__diaobs.F90                   
+DEP_PP::nemo__diaprod.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diaptr.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diawri.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__diurnal_bulk.F90             
+DEP_PP::nemo__divhor.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dom_oce.F90                  
+DEP_PP::nemo__domain.F90                   
+DEP_PP::nemo__domhgr.F90                   
+DEP_PP::nemo__dommsk.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__domngb.F90                   
+DEP_PP::nemo__domvvl.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__domwri.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__domzgr.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dtatsd.F90                   
+DEP_PP::nemo__dtauvd.F90                   
+DEP_PP::nemo__dynadv.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynadv_cen2.F90              ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynadv_ubs.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dyncor_c1d.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dyndmp.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynhpg.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynkeg.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynldf.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynldf_iso.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynldf_lap_blp.F90           ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynnxt.F90                   
+DEP_PP::nemo__dynspg.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynspg_exp.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynspg_ts.F90                ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynvor.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynzad.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__dynzdf.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__eosbn2.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__find_obs_proc.h90            
+DEP_PP::nemo__fldread.F90                  
+DEP_PP::nemo__flo4rk.F90                   
+DEP_PP::nemo__flo_oce.F90                  
+DEP_PP::nemo__floats.F90                   
+DEP_PP::nemo__floblk.F90                   
+DEP_PP::nemo__flodom.F90                   
+DEP_PP::nemo__florst.F90                   
+DEP_PP::nemo__flowri.F90                   
+DEP_PP::nemo__geo2ocean.F90                ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__greg2jul.h90                 
+DEP_PP::nemo__grt_cir_dis.h90              
+DEP_PP::nemo__grt_cir_dis_saa.h90          
+DEP_PP::nemo__icb_oce.F90                  
+DEP_PP::nemo__icbclv.F90                   
+DEP_PP::nemo__icbdia.F90                   
+DEP_PP::nemo__icbdyn.F90                   
+DEP_PP::nemo__icbini.F90                   
+DEP_PP::nemo__icblbc.F90                   
+DEP_PP::nemo__icbrst.F90                   
+DEP_PP::nemo__icbstp.F90                   
+DEP_PP::nemo__icbthm.F90                   
+DEP_PP::nemo__icbtrj.F90                   
+DEP_PP::nemo__icbutl.F90                   
+DEP_PP::nemo__ice.F90                      
+DEP_PP::nemo__ice1d.F90                    
+DEP_PP::nemo__icealb.F90                   
+DEP_PP::nemo__icecor.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icectl.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedia.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn_adv.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn_adv_pra.F90           ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn_adv_umx.F90           ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn_rdgrft.F90            
+DEP_PP::nemo__icedyn_rhg.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icedyn_rhg_evp.F90           ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__iceistate.F90                
+DEP_PP::nemo__iceitd.F90                   
+DEP_PP::nemo__icerst.F90                   
+DEP_PP::nemo__icesbc.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icestp.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icetab.F90                   
+DEP_PP::nemo__icethd.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icethd_da.F90                
+DEP_PP::nemo__icethd_dh.F90                
+DEP_PP::nemo__icethd_do.F90                
+DEP_PP::nemo__icethd_ent.F90               
+DEP_PP::nemo__icethd_pnd.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icethd_sal.F90               
+DEP_PP::nemo__icethd_zdf.F90               
+DEP_PP::nemo__icethd_zdf_bl99.F90          
+DEP_PP::nemo__iceupdate.F90                ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__icevar.F90                   
+DEP_PP::nemo__icewri.F90                   
+DEP_PP::nemo__in_out_manager.F90           
+DEP_PP::nemo__iom.F90                      
+DEP_PP::nemo__iom_def.F90                  
+DEP_PP::nemo__iom_nf90.F90                 
+DEP_PP::nemo__isf_oce.F90                  
+DEP_PP::nemo__isfcav.F90                   
+DEP_PP::nemo__isfcavgam.F90                
+DEP_PP::nemo__isfcavmlt.F90                
+DEP_PP::nemo__isfcpl.F90                   
+DEP_PP::nemo__isfdiags.F90                 
+DEP_PP::nemo__isfhdiv.F90                  
+DEP_PP::nemo__isfload.F90                  
+DEP_PP::nemo__isfpar.F90                   
+DEP_PP::nemo__isfparmlt.F90                
+DEP_PP::nemo__isfrst.F90                   
+DEP_PP::nemo__isfstp.F90                   
+DEP_PP::nemo__isftbl.F90                   
+DEP_PP::nemo__isfutils.F90                 
+DEP_PP::nemo__istate.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__jul2greg.h90                 
+DEP_PP::nemo__julian.F90                   ::greg2jul.h90::H::jul2greg.h90::H
+DEP_PP::nemo__lbc_lnk_multi_generic.h90    
+DEP_PP::nemo__lbc_nfd_ext_generic.h90      
+DEP_PP::nemo__lbc_nfd_generic.h90          
+DEP_PP::nemo__lbc_nfd_nogather_generic.h90 
+DEP_PP::nemo__lbclnk.F90                   ::lbc_lnk_multi_generic.h90::H::mpp_lnk_generic.h90::H::mpp_nfd_generic.h90::H
+DEP_PP::nemo__lbcnfd.F90                   ::lbc_nfd_ext_generic.h90::H::lbc_nfd_generic.h90::H::lbc_nfd_nogather_generic.h90::H
+DEP_PP::nemo__ldfc1d_c2d.F90               
+DEP_PP::nemo__ldfdyn.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__ldfslp.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__ldftra.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__lib_cray.f90                 
+DEP_PP::nemo__lib_fortran.F90              ::lib_fortran_generic.h90::H
+DEP_PP::nemo__lib_fortran_generic.h90      
+DEP_PP::nemo__lib_mpp.F90                  ::mpp_allreduce_generic.h90::H::mpp_loc_generic.h90::H
+DEP_PP::nemo__linquad.h90                  
+DEP_PP::nemo__maxdist.h90                  
+DEP_PP::nemo__mpp_allreduce_generic.h90    
+DEP_PP::nemo__mpp_lnk_generic.h90          
+DEP_PP::nemo__mpp_loc_generic.h90          
+DEP_PP::nemo__mpp_map.F90                  
+DEP_PP::nemo__mpp_nfd_generic.h90          
+DEP_PP::nemo__mppini.F90                   
+DEP_PP::nemo__nemo.f90                     
+DEP_PP::nemo__nemogcm.F90                  
+DEP_PP::nemo__obs_averg_h2d.F90            
+DEP_PP::nemo__obs_const.F90                
+DEP_PP::nemo__obs_conv.F90                 ::obs_conv_functions.h90::H
+DEP_PP::nemo__obs_conv_functions.h90       
+DEP_PP::nemo__obs_fbm.F90                  
+DEP_PP::nemo__obs_grd_bruteforce.h90       
+DEP_PP::nemo__obs_grid.F90                 ::find_obs_proc.h90::H::linquad.h90::H::maxdist.h90::H::obs_grd_bruteforce.h90::H::obs_level_search.h90::H
+DEP_PP::nemo__obs_inter_h2d.F90            ::obsinter_h2d.h90::H
+DEP_PP::nemo__obs_inter_sup.F90            
+DEP_PP::nemo__obs_inter_z1d.F90            ::obsinter_z1d.h90::H
+DEP_PP::nemo__obs_level_search.h90         
+DEP_PP::nemo__obs_mpp.F90                  
+DEP_PP::nemo__obs_oper.F90                 
+DEP_PP::nemo__obs_prep.F90                 
+DEP_PP::nemo__obs_profiles.F90             
+DEP_PP::nemo__obs_profiles_def.F90         
+DEP_PP::nemo__obs_read_altbias.F90         
+DEP_PP::nemo__obs_read_prof.F90            
+DEP_PP::nemo__obs_read_surf.F90            
+DEP_PP::nemo__obs_readmdt.F90              
+DEP_PP::nemo__obs_rot_vel.F90              
+DEP_PP::nemo__obs_sort.F90                 
+DEP_PP::nemo__obs_sstbias.F90              
+DEP_PP::nemo__obs_surf_def.F90             
+DEP_PP::nemo__obs_types.F90                
+DEP_PP::nemo__obs_utils.F90                ::ddatetoymdhms.h90::H::grt_cir_dis.h90::H::grt_cir_dis_saa.h90::H::str_c_to_for.h90::H
+DEP_PP::nemo__obs_write.F90                
+DEP_PP::nemo__obsinter_h2d.h90             
+DEP_PP::nemo__obsinter_z1d.h90             
+DEP_PP::nemo__oce.F90                      
+DEP_PP::nemo__ocealb.F90                   
+DEP_PP::nemo__par_kind.F90                 
+DEP_PP::nemo__par_oce.F90                  
+DEP_PP::nemo__phycst.F90                   
+DEP_PP::nemo__prtctl.F90                   
+DEP_PP::nemo__restart.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbc_ice.F90                  
+DEP_PP::nemo__sbc_oce.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbcapr.F90                   
+DEP_PP::nemo__sbcblk.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbcblk_algo_coare.F90        
+DEP_PP::nemo__sbcblk_algo_coare3p5.F90     
+DEP_PP::nemo__sbcblk_algo_ecmwf.F90        
+DEP_PP::nemo__sbcblk_algo_ncar.F90         
+DEP_PP::nemo__sbccpl.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbcdcy.F90                   
+DEP_PP::nemo__sbcflx.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbcfwb.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__sbcice_cice.F90              
+DEP_PP::nemo__sbcice_if.F90                
+DEP_PP::nemo__sbcmod.F90                   
+DEP_PP::nemo__sbcrnf.F90                   
+DEP_PP::nemo__sbcssm.F90                   
+DEP_PP::nemo__sbcssr.F90                   
+DEP_PP::nemo__sbctide.F90                  
+DEP_PP::nemo__sbcwave.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__shapiro.F90                  
+DEP_PP::nemo__solfrac_mod.F90              
+DEP_PP::nemo__sshwzv.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__step.F90                     
+DEP_PP::nemo__step_c1d.F90                 
+DEP_PP::nemo__step_diu.F90                 
+DEP_PP::nemo__step_oce.F90                 
+DEP_PP::nemo__stopar.F90                   
+DEP_PP::nemo__stopts.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__storng.F90                   
+DEP_PP::nemo__stpctl.F90                   
+DEP_PP::nemo__str_c_to_for.h90             
+DEP_PP::nemo__tide.h90                     
+DEP_PP::nemo__tide_mod.F90                 ::tide.h90::H
+DEP_PP::nemo__tideini.F90                  
+DEP_PP::nemo__timing.F90                   
+DEP_PP::nemo__traadv.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traadv_cen.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traadv_fct.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traadv_mus.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traadv_qck.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traadv_ubs.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trabbc.F90                   
+DEP_PP::nemo__trabbl.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__tradmp.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traisf.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traldf.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traldf_iso.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traldf_lap_blp.F90           ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traldf_triad.F90             ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__tramle.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__tranpc.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__tranxt.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__traqsr.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trasbc.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trazdf.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trc_oce.F90                  
+DEP_PP::nemo__trd_oce.F90                  
+DEP_PP::nemo__trddyn.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdglo.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdini.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdken.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdmxl.F90                   
+DEP_PP::nemo__trdmxl_oce.F90               
+DEP_PP::nemo__trdmxl_rst.F90               
+DEP_PP::nemo__trdpen.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdtra.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdtrc.F90                   
+DEP_PP::nemo__trdvor.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__trdvor_oce.F90               
+DEP_PP::nemo__updtide.F90                  
+DEP_PP::nemo__usrdef_fmask.F90             ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__usrdef_hgr.F90               
+DEP_PP::nemo__usrdef_istate.F90            
+DEP_PP::nemo__usrdef_nam.F90               
+DEP_PP::nemo__usrdef_sbc.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__usrdef_zgr.F90               ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__vectopt_loop_substitute.h90  
+DEP_PP::nemo__wet_dry.F90                  ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdf_oce.F90                  
+DEP_PP::nemo__zdfddm.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdfdrg.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdfevd.F90                   
+DEP_PP::nemo__zdfgls.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdfiwm.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdfmxl.F90                   
+DEP_PP::nemo__zdfosm.F90                   
+DEP_PP::nemo__zdfphy.F90                   
+DEP_PP::nemo__zdfric.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zdfsh2.F90                   
+DEP_PP::nemo__zdfswm.F90                   
+DEP_PP::nemo__zdftke.F90                   ::vectopt_loop_substitute.h90::H
+DEP_PP::nemo__zpshde.F90                   ::vectopt_loop_substitute.h90::H
