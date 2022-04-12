@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>eORCA025.L121-OPM031 &mdash; NEMO@IGE  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AMUXL025 simulations" href="simu_AMUXL025.html" />
+    <link rel="prev" title="eORCA025.L121-OPM027" href="simu_eORCA025_OPM027.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> NEMO@IGE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Input files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input_DATA.html">Original data set</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA12.html">eORCA12 input files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input_eORCA025.html">eORCA025 input files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mask files</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mask_eORCA025.html">eORCA025 mask files</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NEMO simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="simu_eORCA025.html">eORCA025 simulations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM006.html">eORCA025.L121-OPM006</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM016.html">eORCA025.L121-OPM016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM017.html">eORCA025.L121-OPM017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM018.html">eORCA025.L121-OPM018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM019.html">eORCA025.L121-OPM019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM020.html">eORCA025.L121-OPM020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM021.html">eORCA025.L121-OPM021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM022.html">eORCA025.L121-OPM022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM026.html">eORCA025.L121-OPM026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simu_eORCA025_OPM027.html">eORCA025.L121-OPM027</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eORCA025.L121-OPM031</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-files">Input files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namelist">Namelist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#namelist-oce">namelist_oce</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Input files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-changes">Code changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring">Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-indicators">Global indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regional-indicators">Regional indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-indicators">Local indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#amundsen-belingshausen-seas">Amundsen/Belingshausen seas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ice-shelves">Ice shelves</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#amery">Amery</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#ross">Ross</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#getz">Getz</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pine-island">Pine island</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#george-vi">George VI</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filschner-ronne">Filschner Ronne</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#riiser">Riiser</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#fimbul">Fimbul</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#evaluation">Evaluation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL025.html">AMUXL025 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL12.html">AMUXL12 simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simu_AMUXL36.html">AMUXL36 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ELMER simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simu_ANT50.GL1.html">ANT50.GL1 simulations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html">NEMO tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#drakkar-tools">DRAKKAR tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools_nemo.html#others-tools">OTHERS tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html">HPC centres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HPC_centres.html#parallelisation">Parallelisation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html">NetCDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#restructuredtext">reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#cmip6-data">CMIP6 data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#git">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous.html#conda">CONDA</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEMO@IGE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="simu_eORCA025.html">eORCA025 simulations</a> &raquo;</li>
+        
+      <li>eORCA025.L121-OPM031</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/simu_eORCA025_OPM031.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eorca025-l121-opm031">
+<h1>eORCA025.L121-OPM031<a class="headerlink" href="#eorca025-l121-opm031" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Compare to eORCA025.L121-OPM026, we perturbed the atmospheric forcing by adding the IPSLCM6 LR SSP585 monthly 2260-2300 anomaly (wrt 1974-2014) to all the forcing variables.</p>
+</div>
+<div class="section" id="input-files">
+<h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
+<p>All the inputs files needed to run this configuration are here: <a class="reference external" href="https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-OPM026/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-OPM026/eORCA025.L121-OPM026_input.tar">https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/catalog/meomopendap/extract/eORCA025.L121/eORCA025.L121-OPM026/catalog.html?dataset=meomscanpublic/eORCA025.L121/eORCA025.L121-OPM026/eORCA025.L121-OPM026_input.tar</a></p>
+<p>A detailed description of each file is given in <a class="reference internal" href="input_eORCA025.html#eorca025-input-files"><span class="std std-ref">eORCA025 input files</span></a></p>
+<p>Pertubed forcing set on demand.</p>
+</div>
+<div class="section" id="namelist">
+<h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
+<p>Except the sbcblk namelist block, no change compare to eORCA025.L121-OPM026.</p>
+<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM026/EXPREF">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM026/EXPREF</a></p>
+<div class="section" id="namelist-oce">
+<h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>change atmospheric forcing file name:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Input files<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Except the atmospheric forcings, no change in the input files.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="code-changes">
+<h2>Code changes<a class="headerlink" href="#code-changes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>No changes wrt OPM026.</p></li>
+</ul>
+<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/src/">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/src/</a></p>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-indicators">
+<span id="eorca025-l121-opm031-monitoring"></span><h3>Global indicators<a class="headerlink" href="#global-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot you can find a time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>AMOC at rapid array</p></li>
+<li><p>AMHT at rapid array</p></li>
+<li><p>Net global heat fluxes</p></li>
+<li><p>mean sst in the southern ocean (see box in the map)</p></li>
+<li><p>mean sst in the North West Corner (see box in the map)</p></li>
+<li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
+</ul>
+<img alt="_images/VALGLO_OPM027.png" src="_images/VALGLO_OPM027.png" />
+</div>
+<div class="section" id="regional-indicators">
+<h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
+<p>On these plot, you can find time series of:</p>
+<ul class="simple">
+<li><p>ACC transport</p></li>
+<li><p>Maximum of the Weddell and Ross Gyre (box where the max compute show in the map)</p></li>
+<li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
+<li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
+</ul>
+<img alt="_images/VALSO_OPM027.png" src="_images/VALSO_OPM027.png" />
+</div>
+<div class="section" id="local-indicators">
+<h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
+<p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
+<img alt="_images/VALSI_OPM027.png" src="_images/VALSI_OPM027.png" />
+</div>
+<div class="section" id="amundsen-belingshausen-seas">
+<h3>Amundsen/Belingshausen seas<a class="headerlink" href="#amundsen-belingshausen-seas" title="Permalink to this headline">¶</a></h3>
+<p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
+<img alt="_images/VALAMU_OPM027.png" src="_images/VALAMU_OPM027.png" />
+</div>
+<div class="section" id="ice-shelves">
+<h3>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="amery">
+<h4>Amery<a class="headerlink" href="#amery" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/AMER_eORCA025.L121-OPM031.png" src="_images/AMER_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="ross">
+<h4>Ross<a class="headerlink" href="#ross" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/ROSS_eORCA025.L121-OPM031.png" src="_images/ROSS_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="getz">
+<h4>Getz<a class="headerlink" href="#getz" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/GETZ_eORCA025.L121-OPM031.png" src="_images/GETZ_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="pine-island">
+<h4>Pine island<a class="headerlink" href="#pine-island" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/PINE_eORCA025.L121-OPM031.png" src="_images/PINE_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="george-vi">
+<h4>George VI<a class="headerlink" href="#george-vi" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/GEVI_eORCA025.L121-OPM031.png" src="_images/GEVI_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="filschner-ronne">
+<h4>Filschner Ronne<a class="headerlink" href="#filschner-ronne" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/FRIS_eORCA025.L121-OPM031.png" src="_images/FRIS_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="riiser">
+<h4>Riiser<a class="headerlink" href="#riiser" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/RIIS_eORCA025.L121-OPM031.png" src="_images/RIIS_eORCA025.L121-OPM031.png" />
+</div>
+<div class="section" id="fimbul">
+<h4>Fimbul<a class="headerlink" href="#fimbul" title="Permalink to this headline">¶</a></h4>
+<img alt="_images/FIMB_eORCA025.L121-OPM031.png" src="_images/FIMB_eORCA025.L121-OPM031.png" />
+</div>
+</div>
+</div>
+<div class="section" id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
+<p>Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM027 (XXXX-XXXX) and OPM026 (2009-2018) simulations by sectors.</p>
+<a class="reference internal image-reference" href="_static/WAIS_OPM031_2009.png"><img alt="_static/WAIS_OPM031_2009.png" src="_static/WAIS_OPM031_2009.png" /></a>
+<a class="reference internal image-reference" href="_static/EAIS_OPM031_2009.png"><img alt="_static/EAIS_OPM031_2009.png" src="_static/EAIS_OPM031_2009.png" /></a>
+<a class="reference internal image-reference" href="_static/WEDD_OPM031_2009.png"><img alt="_static/WEDD_OPM031_2009.png" src="_static/WEDD_OPM031_2009.png" /></a>
+<p>Map of ice shelf melt for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018) over the last decade of the simulations  with bottom temperature.</p>
+<a class="reference internal image-reference" href="_images/melt_sector_OPM026_2009-2018.png"><img alt="_images/melt_sector_OPM026_2009-2018.png" src="_images/melt_sector_OPM026_2009-2018.png" style="width: 472.40000000000003px; height: 708.6px;" /></a>
+<a class="reference internal image-reference" href="_static/melt_sector_OPM031_2009-2018.png"><img alt="_static/melt_sector_OPM031_2009-2018.png" src="_static/melt_sector_OPM031_2009-2018.png" /></a>
+<p>Map of barotropic stream function for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018).</p>
+<img alt="_static/BSF_PERT_IPSL_comb.png" src="_static/BSF_PERT_IPSL_comb.png" />
+<p>Map of bottomT and bottomS for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018).</p>
+<img alt="_static/BOTS_PERT_IPSL_comb.png" src="_static/BOTS_PERT_IPSL_comb.png" />
+<img alt="_static/BOTT_PERT_IPSL_comb.png" src="_static/BOTT_PERT_IPSL_comb.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="simu_AMUXL025.html" class="btn btn-neutral float-right" title="AMUXL025 simulations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="simu_eORCA025_OPM027.html" class="btn btn-neutral float-left" title="eORCA025.L121-OPM027" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, DRAKKAR.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -16,3 +16,5 @@ eORCA025 simulations
    simu_eORCA025_OPM021
    simu_eORCA025_OPM022
    simu_eORCA025_OPM026
+   simu_eORCA025_OPM027
+   simu_eORCA025_OPM031
