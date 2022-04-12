@@ -253,13 +253,47 @@
 <div class="section" id="namelist">
 <h2>Namelist<a class="headerlink" href="#namelist" title="Permalink to this headline">¶</a></h2>
 <p>Except the sbcblk namelist block, no change compare to eORCA025.L121-OPM026.</p>
-<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM026/EXPREF">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM026/EXPREF</a></p>
+<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM027/EXPREF">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/cfgs/eORCA025.L121-OPM027/EXPREF</a></p>
 <div class="section" id="namelist-oce">
 <h3>namelist_oce<a class="headerlink" href="#namelist-oce" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>change atmospheric forcing file name:</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">&amp;namsbc_blk    !   namsbc_blk  generic Bulk formula                     (ln_blk =T)</span>
+<span class="go">!-----------------------------------------------------------------------</span>
+<span class="go">   !                    !  bulk algorithm :</span>
+<span class="go">   ln_NCAR      = .true.    ! &quot;NCAR&quot;      algorithm   (Large and Yeager 2008)</span>
+<span class="go">   ln_COARE_3p0 = .false.   ! &quot;COARE 3.0&quot; algorithm   (Fairall et al. 2003)</span>
+<span class="go">   ln_COARE_3p5 = .false.   ! &quot;COARE 3.5&quot; algorithm   (Edson et al. 2013)</span>
+<span class="go">   ln_ECMWF     = .false.   ! &quot;ECMWF&quot;     algorithm   (IFS cycle 31)</span>
+<span class="go">      !</span>
+<span class="go">      rn_zqt      =  2.       !  Air temperature &amp; humidity reference height (m)</span>
+<span class="go">      rn_zu       = 10.       !  Wind vector reference height (m)</span>
+<span class="go">      ln_Cd_L12   = .false.   !  air-ice drags = F(ice concentration) (Lupkes et al. 2012)</span>
+<span class="go">      ln_Cd_L15   = .false.   !  air-ice drags = F(ice concentration) (Lupkes et al. 2015)</span>
+<span class="go">      ln_taudif   = .false.   !  HF tau contribution: use &quot;mean of stress module - module of the mean stress&quot; data</span>
+<span class="go">      rn_pfac     = 1.        !  multiplicative factor for precipitation (total &amp; snow)</span>
+<span class="go">      rn_efac     = 1.        !  multiplicative factor for evaporation (0. or 1.)</span>
+<span class="go">      rn_vfac     = 0.        !  multiplicative factor for ocean &amp; ice velocity used to</span>
+<span class="go">      !                       !  calculate the wind stress (0.=absolute or 1.=relative winds)</span>
+<span class="go">   cn_dir = &#39;./&#39;</span>
+<span class="go">   !_______!__________________!___________________!___________!_____________!_________!___________!______________________________!__________!______!</span>
+<span class="go">   !       !  file name       ! frequency (hours) ! variable  ! time interp.!  clim   ! &#39;yearly&#39;/ ! weights filename             ! rotation !  lsm !</span>
+<span class="go">   !       !                  !  (if &lt;0  months)  !   name    !   (logical) !  (T/F)  ! &#39;monthly&#39; !                              !  paring  !      !</span>
+<span class="go">   !_______!__________________!___________________!___________!_____________!_________!___________!______________________________!__________!______!</span>
+<span class="go">   sn_wndi = &#39;drowned_uas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;uas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bicubic.nc&#39; , &#39;U1&#39; ,   &#39;&#39;</span>
+<span class="go">   sn_wndj = &#39;drowned_vas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;vas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bicubic.nc&#39; , &#39;V1&#39; ,   &#39;&#39;</span>
+<span class="go">   sn_qsr  = &#39;drowned_rsds_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;rsds&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_qlw  = &#39;drowned_rlds_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;rlds&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_tair = &#39;drowned_tas_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;tas&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_humi = &#39;drowned_huss_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;huss&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_prec = &#39;drowned_tprecip_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;,  3.  ,  &#39;tprecip&#39;,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_snow = &#39;drowned_prsn_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;   ,  3.  ,  &#39;prsn&#39;   ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_slp  = &#39;drowned_psl_JRA55_perturbed_A1B_HadCM3_21602200-19792019_anomaly&#39;    ,  3.  ,  &#39;psl&#39;    ,    .true.   , .false. , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_cc   = &#39;NOT USED&#39;             , 24.         ,  &#39;CC&#39;     ,   .false.   , .false. , &#39;yearly&#39;  , &#39;&#39;                                        , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">   sn_tdif = &#39;NOT USED&#39;             , 24.         , &#39;taudif&#39;  ,   .false.   , .true.  , &#39;yearly&#39;  , &#39;eORCA025_JRA55_do_c3.0_weights_bilin.nc&#39; , &#39;&#39;   ,   &#39;&#39;</span>
+<span class="go">/</span>
 </pre></div>
 </div>
 </div>
@@ -277,7 +311,7 @@
 <ul class="simple">
 <li><p>No changes wrt OPM026.</p></li>
 </ul>
-<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/src/">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM026/src/</a></p>
+<p>Full files are available here: <a class="reference external" href="https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM027/src/">https://github.com/pmathiot/NEMOCFG/tree/main/cfgs/eORCA025.L121-OPM027/src/</a></p>
 </div>
 <div class="section" id="monitoring">
 <h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
@@ -293,7 +327,7 @@
 <li><p>mean sst in the North West Corner (see box in the map)</p></li>
 <li><p>sea ice extent (arctic/ant in summer/winter)</p></li>
 </ul>
-<img alt="_static/VALGLO_PERT.png" src="_static/VALGLO_PERT.png" />
+<img alt="_images/VALGLO_OPM027.png" src="_images/VALGLO_OPM027.png" />
 </div>
 <div class="section" id="regional-indicators">
 <h3>Regional indicators<a class="headerlink" href="#regional-indicators" title="Permalink to this headline">¶</a></h3>
@@ -304,17 +338,17 @@
 <li><p>Mean bottom salinity over the main dense water formation hot spot (West Ross and West FRIS)</p></li>
 <li><p>Mean bottom temperature over East Ross and Amudsen sea to monitor CDW intrusion</p></li>
 </ul>
-<img alt="_static/VALSO_PERT.png" src="_static/VALSO_PERT.png" />
+<img alt="_images/VALSO_OPM027.png" src="_images/VALSO_OPM027.png" />
 </div>
 <div class="section" id="local-indicators">
 <h3>Local indicators<a class="headerlink" href="#local-indicators" title="Permalink to this headline">¶</a></h3>
 <p>These plots monitor the evolution of ice shelf melting and the corresponding shelf properties (ROSS, FRIS, PINE, GETZ)</p>
-<img alt="_static/VALSI_PERT.png" src="_static/VALSI_PERT.png" />
+<img alt="_images/VALSI_OPM027.png" src="_images/VALSI_OPM027.png" />
 </div>
 <div class="section" id="amundsen-belingshausen-seas">
 <h3>Amundsen/Belingshausen seas<a class="headerlink" href="#amundsen-belingshausen-seas" title="Permalink to this headline">¶</a></h3>
 <p>These plot monitoring the evolution of temperature, salinity and ice shelf melt in Amundsen sea.</p>
-<img alt="_static/VALAMU_PERT.png" src="_static/VALAMU_PERT.png" />
+<img alt="_images/VALAMU_OPM027.png" src="_images/VALAMU_OPM027.png" />
 </div>
 <div class="section" id="ice-shelves">
 <h3>Ice shelves<a class="headerlink" href="#ice-shelves" title="Permalink to this headline">¶</a></h3>
@@ -354,18 +388,18 @@
 </div>
 <div class="section" id="evaluation">
 <h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
-<p>Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM027 (XXXX-XXXX) and OPM026 (2009-2018) simulations by sectors.</p>
-<a class="reference internal image-reference" href="_static/WAIS_OPM027_2009.png"><img alt="_static/WAIS_OPM027_2009.png" src="_static/WAIS_OPM027_2009.png" /></a>
-<a class="reference internal image-reference" href="_static/EAIS_OPM027_2009.png"><img alt="_static/EAIS_OPM027_2009.png" src="_static/EAIS_OPM027_2009.png" /></a>
-<a class="reference internal image-reference" href="_static/WEDD_OPM027_2009.png"><img alt="_static/WEDD_OPM027_2009.png" src="_static/WEDD_OPM027_2009.png" /></a>
-<p>Map of ice shelf melt for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018) over the last decade of the simulations  with bottom temperature.</p>
+<p>Ice shelf melt: the pictures below are the climatological melt for all the ice shelves in NEMO for the OPM027 (y30-40) and OPM026 (2009-2018) simulations by sectors.</p>
+<a class="reference internal image-reference" href="_images/WAIS_OPM027.png"><img alt="_images/WAIS_OPM027.png" src="_images/WAIS_OPM027.png" style="width: 462.24px; height: 781.11px;" /></a>
+<a class="reference internal image-reference" href="_images/EAIS_OPM027.png"><img alt="_images/EAIS_OPM027.png" src="_images/EAIS_OPM027.png" style="width: 462.24px; height: 781.11px;" /></a>
+<a class="reference internal image-reference" href="_images/WEDD_OPM027.png"><img alt="_images/WEDD_OPM027.png" src="_images/WEDD_OPM027.png" style="width: 462.24px; height: 781.11px;" /></a>
+<p>Map of ice shelf melt for both simulations OPM027 (y30-40) and OPM026 (2009-2018) over the last decade of the simulations  with bottom temperature.</p>
 <a class="reference internal image-reference" href="_images/melt_sector_OPM026_2009-2018.png"><img alt="_images/melt_sector_OPM026_2009-2018.png" src="_images/melt_sector_OPM026_2009-2018.png" style="width: 472.40000000000003px; height: 708.6px;" /></a>
-<a class="reference internal image-reference" href="_images/melt_sector_OPM021_2009-2018.png"><img alt="_images/melt_sector_OPM021_2009-2018.png" src="_images/melt_sector_OPM021_2009-2018.png" style="width: 472.40000000000003px; height: 708.6px;" /></a>
-<p>Map of barotropic stream function for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018).</p>
-<img alt="_static/BSF_PERT_HADCM3.png" src="_static/BSF_PERT_HADCM3.png" />
-<p>Map of bottomT and bottomS for both simulations OPM027 (XXXX-XXXX) and OPM026 (2009-2018).</p>
-<img alt="_static/BOTS_PERT_HADCM3_comb.png" src="_static/BOTS_PERT_HADCM3_comb.png" />
-<img alt="_static/BOTT_PERT_HADCM3_comb.png" src="_static/BOTT_PERT_HADCM3_comb.png" />
+<a class="reference internal image-reference" href="_images/melt_sector_OPM027_y30-40.png"><img alt="_images/melt_sector_OPM027_y30-40.png" src="_images/melt_sector_OPM027_y30-40.png" style="width: 472.40000000000003px; height: 708.6px;" /></a>
+<p>Map of barotropic stream function for both simulations OPM027 (y30-40) and OPM026 (2009-2018).</p>
+<img alt="_images/BSF_OPM026_OPM027.png" src="_images/BSF_OPM026_OPM027.png" />
+<p>Map of bottomT and bottomS for both simulations OPM027 (y30-40) and OPM026 (2009-2018).</p>
+<img alt="_images/BOTS_OPM026_OPM027_comb.png" src="_images/BOTS_OPM026_OPM027_comb.png" />
+<img alt="_images/BOTT_OPM026_OPM027_comb.png" src="_images/BOTT_OPM026_OPM027_comb.png" />
 </div>
 </div>
 
